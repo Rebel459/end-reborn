@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "progression_reborn:block/nether_rose_ore"
-  }
-}
