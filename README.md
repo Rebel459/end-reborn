@@ -1,2 +1,2 @@
-# progression-reborn
-Public GitHub repo for Progression Reborn. Licensed under Legacy License
+# end-reborn
+Public GitHub repo for End Reborn. Licensed under Legacy License
