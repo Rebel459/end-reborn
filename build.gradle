@@ -71,7 +71,7 @@ java {
 }
 
 loom {
-	accessWidenerPath = file("src/main/resources/progression_reborn.accesswidener")
+	accessWidenerPath = file("src/main/resources/end_reborn.accesswidener")
 }
 
 // Datagen
@@ -82,7 +82,7 @@ fabricApi {
 
 loom {
 	mods {
-		"progression_reborn" {
+		"end_reborn" {
 			sourceSet sourceSets.main
 		}
 	}

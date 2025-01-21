@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "progression_reborn",
+	"id": "end_reborn",
 	"version": "${version}",
 	"name": "Progression Reborn",
 	"description": "Completely reimagines and rebalances early and mid-game progression in a vanilla-like fashion. The definitive survival progression overhaul mod.",
@@ -16,15 +16,15 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.legacy.progression_reborn.ProgressionReborn"
+			"net.legacy.end_reborn.EndReborn"
 		],
 		"fabric-datagen": [
-			"net.legacy.progression_reborn.datagen.PRDataGenerator"
+			"net.legacy.end_reborn.datagen.ERDataGenerator"
 		]
 	},
-	"accessWidener": "progression_reborn.accesswidener",
+	"accessWidener": "end_reborn.accesswidener",
 	"mixins": [
-		"progression_reborn.mixins.json"
+		"end_reborn.mixins.json"
 	],
 	"depends": {
 		"minecraft": ">=1.21.3 <=1.21.4",
