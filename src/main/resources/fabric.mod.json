@@ -18,6 +18,9 @@
 		"main": [
 			"net.legacy.end_reborn.EndReborn"
 		],
+		"client": [
+			"net.legacy.end_reborn.EndRebornClient"
+		],
 		"fabric-datagen": [
 			"net.legacy.end_reborn.datagen.ERDataGenerator"
 		]

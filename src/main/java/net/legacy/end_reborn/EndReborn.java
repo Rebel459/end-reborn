@@ -40,7 +40,6 @@ public class EndReborn implements ModInitializer {
 		ERGearItems.init();
 		ERBlocks.init();
 		ERCreativeInventorySorting.init();
-		ERBlockRenderLayers.init();
 		ERTrimItemModels.init();
 
 		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
