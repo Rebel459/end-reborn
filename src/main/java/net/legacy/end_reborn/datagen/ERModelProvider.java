@@ -27,7 +27,8 @@ import org.jetbrains.annotations.NotNull;
 
 public final class ERModelProvider extends FabricModelProvider {
 	private static final List<ItemModelGenerators.TrimMaterialData> TRIM_MATERIALS = List.of(
-			new ItemModelGenerators.TrimMaterialData("rose_ingot", ERTrimMaterials.REMNANT, Map.of())
+			new ItemModelGenerators.TrimMaterialData("remnant", ERTrimMaterials.REMNANT, Map.of()),
+			new ItemModelGenerators.TrimMaterialData("crystalline", ERTrimMaterials.CRYSTALLINE, Map.of())
 	);
 
 	public static final List<Pair<BooleanProperty, Function<ResourceLocation, Variant>>> MULTIFACE_GENERATOR_NO_UV_LOCK = List.of(
@@ -62,15 +63,10 @@ public final class ERModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateBlockStateModels(@NotNull BlockModelGenerators generator) {
-		/*generator.createTrivialCube(ERBlocks.COPPER_BLOCK);
-		generator.createTrivialCube(ERBlocks.NETHER_ROSE_ORE);
-		generator.createTrivialCube(ERBlocks.RAW_ROSE_BLOCK);
-		generator.createTrivialCube(ERBlocks.ROSE_BLOCK);
-		generator.createTrivialCube(ERBlocks.POLISHED_ROSE);
-		generator.createTrivialCube(ERBlocks.POLISHED_CUT_ROSE);
-		generator.createTrivialCube(ERBlocks.ROSE_LAMP);
-		generator.createDoor(ERBlocks.ROSE_DOOR);
-		generator.createTrapdoor(ERBlocks.ROSE_TRAPDOOR);*/
+		generator.createTrivialCube(ERBlocks.CHORUS_PLANKS);
+		generator.createTrivialCube(ERBlocks.CHORUS_MOSAIC);
+		generator.createDoor(ERBlocks.CHORUS_DOOR);
+		generator.createTrapdoor(ERBlocks.CHORUS_TRAPDOOR);
 
 	}
 
