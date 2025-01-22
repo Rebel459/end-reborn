@@ -21,6 +21,21 @@ public final class ERItems {
             new Properties()
                     .stacksTo(64)
     );
+    public static final Item REMNANT_SCRAP = register("remnant_scrap",
+            Item::new,
+            new Properties()
+                    .stacksTo(64)
+    );
+    public static final Item CHORUS_SPINE = register("chorus_spine",
+            Item::new,
+            new Properties()
+                    .stacksTo(64)
+    );
+    public static final Item CRYSTALLINE_SHARD = register("crystalline_shard",
+            Item::new,
+            new Properties()
+                    .stacksTo(64)
+    );
     public static final SmithingTemplateItem REMNANT_UPGRADE_SMITHING_TEMPLATE = register("remnant_upgrade_smithing_template",
             ERItems::createRemnantUpgradeTemplate,
             new Properties()

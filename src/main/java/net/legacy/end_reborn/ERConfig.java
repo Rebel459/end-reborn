@@ -33,7 +33,7 @@ public class ERConfig {
       mod_integration_datapacks = config.get("mod_integration_datapacks").getAsBoolean();
 
     } catch (final IOException e) {
-      System.err.println("An error occurred, delete the progression reborn config file in your config/ folder and relaunch");
+      System.err.println("An error occurred, delete the end reborn config file in your config/ folder and relaunch");
     }
   }
 

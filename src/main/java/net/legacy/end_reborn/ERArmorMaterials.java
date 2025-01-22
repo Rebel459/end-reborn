@@ -8,19 +8,12 @@ import net.minecraft.world.item.equipment.ArmorType;
 import java.util.EnumMap;
 
 public interface ERArmorMaterials {
-    ArmorMaterial COPPER = new net.minecraft.world.item.equipment.ArmorMaterial(7, Util.make(new EnumMap(ArmorType.class), enumMap -> {
-        enumMap.put(ArmorType.BOOTS, 1);
-        enumMap.put(ArmorType.LEGGINGS, 3);
-        enumMap.put(ArmorType.CHESTPLATE, 4);
-        enumMap.put(ArmorType.HELMET, 2);
-        enumMap.put(ArmorType.BODY, 6);
-    }), 9, SoundEvents.ARMOR_EQUIP_IRON, 0.0F, 0.0F, ERItemTags.REPAIRS_COPPER_ARMOR, EREquipmentAssets.COPPER);
+    ArmorMaterial REMNANT = new net.minecraft.world.item.equipment.ArmorMaterial(41, Util.make(new EnumMap(ArmorType.class), enumMap -> {
+        enumMap.put(ArmorType.BOOTS, 3);
+        enumMap.put(ArmorType.LEGGINGS, 6);
+        enumMap.put(ArmorType.CHESTPLATE, 8);
+        enumMap.put(ArmorType.HELMET, 3);
+        enumMap.put(ArmorType.BODY, 12);
+    }), 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ERItemTags.REPAIRS_REMNANT_ARMOR, EREquipmentAssets.REMNANT);
 
-    ArmorMaterial ROSE = new net.minecraft.world.item.equipment.ArmorMaterial(10, Util.make(new EnumMap(ArmorType.class), enumMap -> {
-        enumMap.put(ArmorType.BOOTS, 2);
-        enumMap.put(ArmorType.LEGGINGS, 4);
-        enumMap.put(ArmorType.CHESTPLATE, 4);
-        enumMap.put(ArmorType.HELMET, 2);
-        enumMap.put(ArmorType.BODY, 6);
-    }), 25, SoundEvents.ARMOR_EQUIP_GOLD, 2F, 0.0F, ERItemTags.REPAIRS_ROSE_ARMOR, EREquipmentAssets.ROSE);
 }
