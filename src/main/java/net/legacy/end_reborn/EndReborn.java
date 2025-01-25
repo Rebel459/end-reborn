@@ -25,24 +25,20 @@ import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
  */
 public class EndReborn implements ModInitializer {
 
-	public static final ResourceKey<PlacedFeature> NETHER_ROSE_ORE = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"ore_rose_nether"));
+	//public static final ResourceKey<PlacedFeature> NETHER_ROSE_ORE = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"ore_rose_nether"));
 
 	@Override
 	public void onInitialize() {
-		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("progression_reborn");
-		try {
-			ERConfig.main(); // Delete this during Datagen
-		} catch (IOException e) {
-			throw new RuntimeException(e);
-		}
+		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("end_reborn");
 
 		ERItems.init();
 		ERGearItems.init();
 		ERBlocks.init();
+		ERBlocks.registerBlockProperties();
 		ERCreativeInventorySorting.init();
 		ERTrimItemModels.init();
 
-		BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
+		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
 
 		ResourceManagerHelper.registerBuiltinResourcePack(
 				ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_asset_overrides"), modContainer.get(),

@@ -30,7 +30,7 @@ public final class ERBlockRenderLayers {
 	public static void init() {
 		BlockRenderLayerMap renderLayerRegistry = BlockRenderLayerMap.INSTANCE;
 
-/*		renderLayerRegistry.putBlock(ERBlocks.ROSE_DOOR, RenderType.cutout());*/
+		renderLayerRegistry.putBlock(ERBlocks.CHORUS_DOOR, RenderType.cutout());
 
 	}
 }

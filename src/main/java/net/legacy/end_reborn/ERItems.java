@@ -13,6 +13,8 @@ import net.minecraft.world.item.Item.Properties;
 
 import java.util.function.Function;
 
+import static net.minecraft.world.item.Items.registerBlock;
+
 public final class ERItems {
 
     // Items
@@ -41,6 +43,27 @@ public final class ERItems {
             new Properties()
                     .stacksTo(64)
                     .rarity(Rarity.UNCOMMON)
+    );
+
+    // Boats
+    public static final BoatItem CHORUS_RAFT = register("chorus_raft",
+            properties -> new BoatItem(EREntityTypes.CHORUS_RAFT, properties),
+            new Item.Properties()
+                    .stacksTo(1)
+    );
+    public static final BoatItem CHORUS_CHEST_RAFT = register("chorus_chest_raft",
+            properties -> new BoatItem(EREntityTypes.CHORUS_CHEST_RAFT, properties),
+            new Item.Properties()
+                    .stacksTo(1)
+    );
+
+    public static final Item CHORUS_SIGN = registerBlock(ERBlocks.CHORUS_SIGN,
+            (block, properties) -> new SignItem(block, ERBlocks.CHORUS_WALL_SIGN, properties),
+            new Item.Properties().stacksTo(16)
+    );
+    public static final Item CHORUS_HANGING_SIGN = registerBlock(ERBlocks.CHORUS_HANGING_SIGN,
+            (block, properties) -> new HangingSignItem(block, ERBlocks.CHORUS_WALL_HANGING_SIGN, properties),
+            new Item.Properties().stacksTo(16)
     );
 
     public static void init() {

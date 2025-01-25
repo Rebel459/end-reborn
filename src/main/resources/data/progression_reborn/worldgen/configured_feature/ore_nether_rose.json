@@ -10,7 +10,7 @@
           "predicate_type": "minecraft:block_match"
         },
         "state": {
-          "Name": "progression_reborn:nether_rose_ore"
+          "Name": "minecraft:netherrack"
         }
       }
     ]

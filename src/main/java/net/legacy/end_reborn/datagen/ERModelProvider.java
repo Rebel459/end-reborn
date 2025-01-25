@@ -9,13 +9,16 @@ import java.util.function.Function;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.legacy.end_reborn.*;
+import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.blockstates.Variant;
 import net.minecraft.client.data.models.blockstates.VariantProperties;
+import net.minecraft.client.model.BoatModel;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.equipment.EquipmentAsset;
@@ -63,15 +66,25 @@ public final class ERModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateBlockStateModels(@NotNull BlockModelGenerators generator) {
-		generator.createTrivialCube(ERBlocks.CHORUS_PLANKS);
-		generator.createTrivialCube(ERBlocks.CHORUS_MOSAIC);
+		generator.createTrivialCube(ERBlocks.REMNANT_BLOCK);
+		generator.createTrivialCube(ERBlocks.FORGOTTEN_REMAINS);
 		generator.createDoor(ERBlocks.CHORUS_DOOR);
 		generator.createTrapdoor(ERBlocks.CHORUS_TRAPDOOR);
 
+		BlockModelGenerators.BlockFamilyProvider chorusFamily = generator.family(ERBlocks.CHORUS_PLANKS);
+		chorusFamily.skipGeneratingModelsFor.add(ERBlocks.CHORUS_DOOR);
+		chorusFamily.skipGeneratingModelsFor.add(ERBlocks.CHORUS_TRAPDOOR);
+		chorusFamily.generateFor(ERBlocks.FAMILY_CHORUS);
+		generator.woodProvider(ERBlocks.CHORUS_BLOCK).logWithHorizontal(ERBlocks.CHORUS_BLOCK);
+		generator.woodProvider(ERBlocks.STRIPPED_CHORUS_BLOCK).logWithHorizontal(ERBlocks.STRIPPED_CHORUS_BLOCK);
+		generator.createHangingSign(ERBlocks.STRIPPED_CHORUS_BLOCK, ERBlocks.CHORUS_HANGING_SIGN, ERBlocks.CHORUS_WALL_HANGING_SIGN);
 	}
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
+		generator.generateFlatItem(ERItems.CHORUS_RAFT, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.CHORUS_CHEST_RAFT, ModelTemplates.FLAT_ITEM);
+
 		/*generator.generateTrimmableItem(ERGearItems.COPPER_HELMET, EREquipmentAssets.COPPER, "helmet", false);
 		generator.generateTrimmableItem(ERGearItems.COPPER_CHESTPLATE, EREquipmentAssets.COPPER, "chestplate", false);
 		generator.generateTrimmableItem(ERGearItems.COPPER_LEGGINGS, EREquipmentAssets.COPPER, "leggings", false);

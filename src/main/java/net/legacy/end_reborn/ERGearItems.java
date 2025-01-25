@@ -11,7 +11,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item.Properties;
 
 import java.util.function.Function;
-Items
+
 public final class ERGearItems {
 
     // Tools

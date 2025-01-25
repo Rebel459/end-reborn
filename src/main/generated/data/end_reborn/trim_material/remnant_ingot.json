@@ -1,0 +1,11 @@
+{
+  "asset_name": "remnant_ingot",
+  "description": {
+    "color": "#555555",
+    "translate": "trim_material.end_reborn.remnant_ingot"
+  },
+  "ingredient": "end_reborn:remnant_ingot",
+  "override_armor_assets": {
+    "minecraft:remnant": "remnant_ingot_darker"
+  }
+}

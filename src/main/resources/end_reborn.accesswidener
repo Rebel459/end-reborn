@@ -6,3 +6,6 @@ accessible method net/minecraft/world/item/equipment/trim/TrimMaterials register
 accessible method net/minecraft/world/item/equipment/trim/TrimMaterials register (Lnet/minecraft/data/worldgen/BootstrapContext;Lnet/minecraft/resources/ResourceKey;Lnet/minecraft/world/item/Item;Lnet/minecraft/network/chat/Style;Ljava/util/Map;)V
 accessible method net/minecraft/world/item/SmithingTemplateItem createNetheriteUpgradeIconList ()Ljava/util/List;
 accessible method net/minecraft/world/item/SmithingTemplateItem createNetheriteUpgradeMaterialList ()Ljava/util/List;
+accessible method net/minecraft/world/entity/EntityType raftFactory (Ljava/util/function/Supplier;)Lnet/minecraft/world/entity/EntityType$EntityFactory;
+accessible method net/minecraft/world/entity/EntityType chestRaftFactory (Ljava/util/function/Supplier;)Lnet/minecraft/world/entity/EntityType$EntityFactory;
+accessible field net/minecraft/client/data/models/BlockModelGenerators$BlockFamilyProvider skipGeneratingModelsFor Ljava/util/Set;
