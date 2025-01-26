@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "end_reborn:block/cut_ametrur",
+    "side": "end_reborn:block/cut_ametrur",
+    "top": "end_reborn:block/cut_ametrur"
+  }
+}

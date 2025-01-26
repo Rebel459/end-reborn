@@ -14,6 +14,6 @@ public interface ERArmorMaterials {
         enumMap.put(ArmorType.CHESTPLATE, 8);
         enumMap.put(ArmorType.HELMET, 3);
         enumMap.put(ArmorType.BODY, 12);
-    }), 18, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ERItemTags.REPAIRS_REMNANT_ARMOR, EREquipmentAssets.REMNANT);
+    }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ERItemTags.REPAIRS_REMNANT_ARMOR, EREquipmentAssets.REMNANT);
 
 }

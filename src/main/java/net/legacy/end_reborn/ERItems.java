@@ -18,6 +18,11 @@ import static net.minecraft.world.item.Items.registerBlock;
 public final class ERItems {
 
     // Items
+    public static final Item FRACTURED_EYE = register("fractured_eye",
+            Item::new,
+            new Properties()
+                    .stacksTo(64)
+    );
     public static final Item REMNANT_INGOT = register("remnant_ingot",
             Item::new,
             new Properties()

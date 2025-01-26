@@ -11,7 +11,10 @@ import net.legacy.end_reborn.client.ERBlockRenderLayers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
+import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.io.IOException;
@@ -25,11 +28,20 @@ import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
  */
 public class EndReborn implements ModInitializer {
 
-	//public static final ResourceKey<PlacedFeature> NETHER_ROSE_ORE = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"ore_rose_nether"));
+	public static final ResourceKey<PlacedFeature> END_IRON_ORE = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"end_iron_ore"));
+	public static final ResourceKey<PlacedFeature> FORGOTTEN_REMAINS = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"forgotten_remains"));
+	public static final ResourceKey<PlacedFeature> PURPUR = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"purpur_cluster"));
+	public static final ResourceKey<PlacedFeature> AMETRUR = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"ametrur_cluster"));
+	public static final ResourceKey<PlacedFeature> RAW_CRYSTALLINE_BLOCK = ResourceKey.create(PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(MOD_ID,"crystalline_clump"));
 
 	@Override
 	public void onInitialize() {
 		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("end_reborn");
+		try {
+			ERConfig.main();
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 
 		ERItems.init();
 		ERGearItems.init();
@@ -38,7 +50,11 @@ public class EndReborn implements ModInitializer {
 		ERCreativeInventorySorting.init();
 		ERTrimItemModels.init();
 
-		//BiomeModifications.addFeature(BiomeSelectors.foundInTheNether(), GenerationStep.Decoration.UNDERGROUND_ORES, NETHER_ROSE_ORE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.UNDERGROUND_DECORATION, END_IRON_ORE);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.UNDERGROUND_ORES, FORGOTTEN_REMAINS);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.UNDERGROUND_ORES, PURPUR);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.UNDERGROUND_DECORATION, AMETRUR);
+		BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.VEGETAL_DECORATION, RAW_CRYSTALLINE_BLOCK);
 
 		ResourceManagerHelper.registerBuiltinResourcePack(
 				ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_asset_overrides"), modContainer.get(),

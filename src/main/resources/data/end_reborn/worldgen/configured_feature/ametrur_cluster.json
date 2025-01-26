@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 64,
+    "discard_chance_on_air_exposure": 1,
+    "targets": [
+      {
+        "target": {
+          "block": "end_reborn:purpur",
+          "predicate_type": "minecraft:block_match"
+        },
+        "state": {
+          "Name": "end_reborn:ametrur"
+        }
+      }
+    ]
+  }
+}

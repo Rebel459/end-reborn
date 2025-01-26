@@ -25,8 +25,12 @@ public final class ERBlockLootProvider extends FabricBlockLootTableProvider {
 
 	@Override
 	public void generate() {
-/*		this.dropSelf(ERBlocks.COPPER_BLOCK);
-		this.add(ERBlocks.POLISHED_CUT_ROSE_SLAB, this::createSlabItemTable);*/
+		this.dropSelf(ERBlocks.CRACKED_END_STONE_BRICKS);
+		this.dropSelf(ERBlocks.FORGOTTEN_REMAINS);
+		this.dropSelf(ERBlocks.REMNANT_BLOCK);
+		this.add(ERBlocks.CHORUS_MOSAIC_SLAB, this::createSlabItemTable);
+		this.add(ERBlocks.CHORUS_SLAB, this::createSlabItemTable);
+		this.add(ERBlocks.CUT_AMETRUR_SLAB, this::createSlabItemTable);
 	}
 
 	public LootTable.@NotNull Builder createMultifaceBlockDrops(Block drop) {

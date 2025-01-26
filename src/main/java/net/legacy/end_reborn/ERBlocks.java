@@ -32,10 +32,15 @@ public class ERBlocks {
     public static final BlockSetType CHORUS_SET = BlockSetTypeBuilder.copyOf(BlockSetType.BAMBOO).register(ERConstants.id("chorus"));
     public static final WoodType CHORUS_WOOD_TYPE = WoodTypeBuilder.copyOf(WoodType.BAMBOO).register(ERConstants.id("chorus"), CHORUS_SET);
 
-    // Cracked End Stone Bricks
+    // End Stone
     public static final Block CRACKED_END_STONE_BRICKS = register("cracked_end_stone_bricks",
             Block::new,
             Properties.ofFullCopy(Blocks.END_STONE_BRICKS)
+    );
+
+    public static final Block END_IRON_ORE = register("end_iron_ore",
+            Block::new,
+            Properties.ofFullCopy(Blocks.END_STONE)
     );
 
     // Remnant
@@ -57,7 +62,7 @@ public class ERBlocks {
     );
 
     // Crystalline
-    public static final Block RAW_CRYSTALLINE = register("raw_crystalline",
+    public static final Block RAW_CRYSTALLINE_BLOCK = register("raw_crystalline_block",
             Block::new,
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_LIGHT_GRAY)
@@ -103,7 +108,7 @@ public class ERBlocks {
             BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)
     );
     public static final Block CUT_AMETRUR_PILLAR = register("cut_ametrur_pillar",
-            Block::new,
+            RotatedPillarBlock::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_PILLAR)
     );
     public static final Block CUT_AMETRUR_STAIRS = register("cut_ametrur_stairs",
@@ -123,6 +128,10 @@ public class ERBlocks {
             Block::new,
             BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)
     );
+    public static final BlockFamily FAMILY_AMETRUR = BlockFamilies.familyBuilder(CUT_AMETRUR)
+            .slab(CUT_AMETRUR_SLAB)
+            .stairs(CUT_AMETRUR_STAIRS)
+            .getFamily();
 
     // Chorus Woodset
     public static final Block CHORUS_PLANKS = register("chorus_planks",
@@ -258,15 +267,20 @@ public class ERBlocks {
     public static final BlockFamily FAMILY_CHORUS = BlockFamilies.familyBuilder(CHORUS_PLANKS)
             .button(CHORUS_BUTTON)
             .slab(CHORUS_SLAB)
-            .slab(CHORUS_MOSAIC_SLAB)
             .stairs(CHORUS_STAIRS)
-            .stairs(CHORUS_MOSAIC_STAIRS)
             .fence(CHORUS_FENCE)
             .fenceGate(CHORUS_FENCE_GATE)
             .pressurePlate(CHORUS_PRESSURE_PLATE)
             .sign(CHORUS_SIGN, CHORUS_WALL_SIGN)
             .door(CHORUS_DOOR)
             .trapdoor(CHORUS_TRAPDOOR)
+            .recipeGroupPrefix("wooden")
+            .recipeUnlockedBy("has_planks")
+            .getFamily();
+
+    public static final BlockFamily FAMILY_CHORUS_MOSAIC = BlockFamilies.familyBuilder(CHORUS_MOSAIC)
+            .slab(CHORUS_MOSAIC_SLAB)
+            .stairs(CHORUS_MOSAIC_STAIRS)
             .recipeGroupPrefix("wooden")
             .recipeUnlockedBy("has_planks")
             .getFamily();

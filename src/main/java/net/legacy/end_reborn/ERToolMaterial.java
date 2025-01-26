@@ -21,7 +21,7 @@ public record ERToolMaterial(
         TagKey<Block> incorrectBlocksForDrops, int durability, float speed, float attackDamageBonus, int enchantmentValue, TagKey<Item> repairItems
 ) {
 
-    public static final net.minecraft.world.item.ToolMaterial REMNANT = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2501, 10.0F, 4.0F, 18, ERItemTags.REMNANT_TOOL_MATERIALS);
+    public static final net.minecraft.world.item.ToolMaterial REMNANT = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2501, 10.0F, 4.0F, 15, ERItemTags.REMNANT_TOOL_MATERIALS);
 
     private Item.Properties applyCommonProperties(Item.Properties properties) {
         return properties.durability(this.durability).repairable(this.repairItems).enchantable(this.enchantmentValue);

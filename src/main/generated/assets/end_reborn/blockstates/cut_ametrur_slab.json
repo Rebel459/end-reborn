@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "end_reborn:block/cut_ametrur_slab"
+    },
+    "type=double": {
+      "model": "end_reborn:block/cut_ametrur"
+    },
+    "type=top": {
+      "model": "end_reborn:block/cut_ametrur_slab_top"
+    }
+  }
+}

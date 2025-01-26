@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ERTrimMaterials {
-    public static final List<String> TRIM_MATERIALS = List.of("remnant_ingot", "remnant_ingot_darker", "crystalline");
+    public static final List<String> TRIM_MATERIALS = List.of("remnant_ingot", "remnant_ingot_darker", "crystalline_shard");
 
     public static final ResourceKey<TrimMaterial> REMNANT = createResourceKey("remnant_ingot");
     public static final ResourceKey<TrimMaterial> REMNANT_DARKER = createResourceKey("remnant_ingot_darker");

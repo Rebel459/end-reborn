@@ -32,5 +32,9 @@ public final class ERBlockRenderLayers {
 
 		renderLayerRegistry.putBlock(ERBlocks.CHORUS_DOOR, RenderType.cutout());
 
+		renderLayerRegistry.putBlock(ERBlocks.CRYSTALLINE_LANTERN, RenderType.cutout());
+
+		//BlockRenderLayerMap.INSTANCE.putBlock(ERBlocks.CRYSTALLINE_LANTERN, RenderType.translucent());
+
 	}
 }

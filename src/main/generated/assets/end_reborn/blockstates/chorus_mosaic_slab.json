@@ -4,7 +4,7 @@
       "model": "end_reborn:block/chorus_mosaic_slab"
     },
     "type=double": {
-      "model": "end_reborn:block/chorus_planks"
+      "model": "end_reborn:block/chorus_mosaic"
     },
     "type=top": {
       "model": "end_reborn:block/chorus_mosaic_slab_top"

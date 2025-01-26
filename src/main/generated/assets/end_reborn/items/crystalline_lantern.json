@@ -1,6 +1,6 @@
 {
   "model": {
     "type": "minecraft:model",
-    "model": "end_reborn:block/crystalline_lantern"
+    "model": "end_reborn:item/crystalline_lantern"
   }
 }

@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:end_stone",
+    "minecraft:blackstone",
+    {
+      "id": "enderscape:mirestone",
+      "required": false
+    }
+  ]
+}
