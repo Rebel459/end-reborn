@@ -32,6 +32,12 @@ public class ERBlocks {
     public static final BlockSetType CHORUS_SET = BlockSetTypeBuilder.copyOf(BlockSetType.BAMBOO).register(ERConstants.id("chorus"));
     public static final WoodType CHORUS_WOOD_TYPE = WoodTypeBuilder.copyOf(WoodType.BAMBOO).register(ERConstants.id("chorus"), CHORUS_SET);
 
+    // Cracked End Stone Bricks
+    public static final Block CRACKED_END_STONE_BRICKS = register("cracked_end_stone_bricks",
+            Block::new,
+            Properties.ofFullCopy(Blocks.END_STONE_BRICKS)
+    );
+
     // Remnant
     public static final Block REMNANT_BLOCK = register("remnant_block",
             Block::new,
