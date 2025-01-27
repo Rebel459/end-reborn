@@ -112,7 +112,6 @@ public final class ERModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(ERItems.CHORUS_RAFT, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.CHORUS_CHEST_RAFT, ModelTemplates.FLAT_ITEM);
 
-		generator.generateFlatItem(ERItems.FRACTURED_EYE, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.REMNANT_INGOT, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.REMNANT_SCRAP, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.CHORUS_SPINE, ModelTemplates.FLAT_ITEM);
