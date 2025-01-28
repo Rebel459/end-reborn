@@ -19,6 +19,7 @@ public final class ERDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ERBlockTagProvider::new);
 		pack.addProvider(ERBlockLootProvider::new);
 		pack.addProvider(ERRegistryProvider::new);
+		pack.addProvider(ERRecipeProvider::new);
 
 	}
 

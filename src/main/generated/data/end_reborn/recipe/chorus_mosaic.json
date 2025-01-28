@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "stone_chest",
+  "key": {
+    "#": "end_reborn:chorus_planks"
+  },
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "end_reborn:chorus_mosaic"
+  }
+}

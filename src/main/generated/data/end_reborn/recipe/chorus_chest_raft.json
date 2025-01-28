@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "chest_boat",
+  "ingredients": [
+    "minecraft:chest",
+    "end_reborn:chorus_raft"
+  ],
+  "result": {
+    "count": 1,
+    "id": "end_reborn:chorus_chest_raft"
+  }
+}
