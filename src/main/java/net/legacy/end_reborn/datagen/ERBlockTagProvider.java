@@ -3,9 +3,12 @@ package net.legacy.end_reborn.datagen;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.legacy.end_reborn.ERBlockTags;
 import net.legacy.end_reborn.ERBlocks;
+import net.legacy.end_reborn.ERItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 
 public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider {
@@ -15,48 +18,71 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 
 	@Override
 	protected void addTags(@NotNull HolderLookup.Provider arg) {
-		/*this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
-				.add(ERBlocks.COPPER_BLOCK)
-				.add(ERBlocks.NETHER_ROSE_ORE)
-				.add(ERBlocks.POLISHED_ROSE)
-				.add(ERBlocks.POLISHED_CUT_ROSE)
-				.add(ERBlocks.POLISHED_CUT_ROSE_SLAB)
-				.add(ERBlocks.POLISHED_CUT_ROSE_STAIRS)
-				.add(ERBlocks.ROSE_LAMP)
-				.add(ERBlocks.ROSE_TRAPDOOR)
-				.add(ERBlocks.ROSE_DOOR)
-				.add(ERBlocks.ROSE_BLOCK);
+		this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+				.add(ERBlocks.CHORUS_BLOCK)
+				.add(ERBlocks.STRIPPED_CHORUS_BLOCK)
+				.add(ERBlocks.CHORUS_DOOR)
+				.add(ERBlocks.CHORUS_TRAPDOOR)
+				.add(ERBlocks.CHORUS_PLANKS)
+				.add(ERBlocks.CHORUS_SLAB)
+				.add(ERBlocks.CHORUS_STAIRS)
+				.add(ERBlocks.CHORUS_MOSAIC)
+				.add(ERBlocks.CHORUS_MOSAIC_SLAB)
+				.add(ERBlocks.CHORUS_MOSAIC_STAIRS)
+				.add(ERBlocks.CHORUS_FENCE)
+				.add(ERBlocks.CHORUS_FENCE_GATE)
+				.add(ERBlocks.CHORUS_SIGN)
+				.add(ERBlocks.CHORUS_HANGING_SIGN)
+				.add(ERBlocks.CHORUS_PRESSURE_PLATE)
+				.add(ERBlocks.CHORUS_BUTTON)
+				.add(ERBlocks.CHORUS_MOSAIC_SLAB)
+				.add(ERBlocks.CHORUS_SLAB);
 
+		// Chorus Blocks
+		
+		this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+				.add(ERBlocks.PURPUR)
+				.add(ERBlocks.AMETRUR)
+				.add(ERBlocks.CUT_AMETRUR)
+				.add(ERBlocks.CUT_AMETRUR_PILLAR)
+				.add(ERBlocks.CUT_AMETRUR_SLAB)
+				.add(ERBlocks.CUT_AMETRUR_STAIRS)
+				.add(ERBlocks.RAW_CRYSTALLINE_BLOCK)
+				.add(ERBlocks.CRYSTALLINE_BLOCK)
+				.add(ERBlocks.CRYSTALLINE_LAMP)
+				.add(ERBlocks.CRYSTALLINE_LANTERN)
+				.add(ERBlocks.FORGOTTEN_REMAINS)
+				.add(ERBlocks.REMNANT_BLOCK)
+				.add(ERBlocks.CRACKED_END_STONE_BRICKS)
+				.add(ERBlocks.END_IRON_ORE);
+		
 		this.getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-				.add(ERBlocks.COPPER_BLOCK)
-				.add(ERBlocks.NETHER_ROSE_ORE)
-				.add(ERBlocks.POLISHED_ROSE)
-				.add(ERBlocks.POLISHED_CUT_ROSE)
-				.add(ERBlocks.POLISHED_CUT_ROSE_SLAB)
-				.add(ERBlocks.POLISHED_CUT_ROSE_STAIRS)
-				.add(ERBlocks.ROSE_LAMP)
-				.add(ERBlocks.ROSE_TRAPDOOR)
-				.add(ERBlocks.ROSE_DOOR)
-				.add(ERBlocks.ROSE_BLOCK);
+				.add(ERBlocks.END_IRON_ORE)
+				.add(ERBlocks.RAW_CRYSTALLINE_BLOCK)
+				.add(ERBlocks.CRYSTALLINE_BLOCK)
+				.add(ERBlocks.CRYSTALLINE_LAMP)
+				.add(ERBlocks.CRYSTALLINE_LANTERN)
+				.add(ERBlocks.END_IRON_ORE);
 
 		this.getOrCreateTagBuilder(BlockTags.STAIRS)
-			.add(ERBlocks.POLISHED_CUT_ROSE_STAIRS);
+				.add(ERBlocks.CUT_AMETRUR_STAIRS)
+				.add(ERBlocks.CHORUS_STAIRS)
+				.add(ERBlocks.CHORUS_MOSAIC_STAIRS);
 
 		this.getOrCreateTagBuilder(BlockTags.SLABS)
-				.add(ERBlocks.POLISHED_CUT_ROSE_SLAB);
+				.add(ERBlocks.CUT_AMETRUR_SLAB)
+				.add(ERBlocks.CHORUS_STAIRS)
+				.add(ERBlocks.CHORUS_MOSAIC_STAIRS);
 
 		this.getOrCreateTagBuilder(BlockTags.DOORS)
-				.add(ERBlocks.ROSE_DOOR);
+				.add(ERBlocks.CHORUS_DOOR);
 
 		this.getOrCreateTagBuilder(BlockTags.TRAPDOORS)
-				.add(ERBlocks.ROSE_TRAPDOOR);
+				.add(ERBlocks.CHORUS_TRAPDOOR);
 
 		this.getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
-				.add(ERBlocks.COPPER_BLOCK)
-				.add(ERBlocks.ROSE_BLOCK);
+				.add(ERBlocks.REMNANT_BLOCK);
 
-		this.getOrCreateTagBuilder(BlockTags.PIGLIN_REPELLENTS)
-				.add(ERBlocks.ROSE_LAMP);*/
 	}
 
 }

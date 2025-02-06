@@ -19,51 +19,13 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 	@Override
 	protected void addTags(@NotNull HolderLookup.Provider arg) {
-//		this.getOrCreateTagBuilder(ERItemTags.COPPER_TOOL_MATERIALS)
-//				.add(Items.COPPER_INGOT);
-//		this.getOrCreateTagBuilder(ERItemTags.REPAIRS_COPPER_ARMOR)
-//				.add(Items.COPPER_INGOT);
-//
-//		this.getOrCreateTagBuilder(ERItemTags.ROSE_TOOL_MATERIALS)
-//				.add(ERItems.ROSE_INGOT)
-//				.add(ERItems.ROSE_ALLOY);
-//		this.getOrCreateTagBuilder(ERItemTags.REPAIRS_ROSE_ARMOR)
-//				.add(ERItems.ROSE_INGOT)
-//				.add(ERItems.ROSE_ALLOY);
-//
-//		this.getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
-//				.add(ERItems.ROSE_INGOT);
-//
-//		this.getOrCreateTagBuilder(ItemTags.IRON_TOOL_MATERIALS)
-//				.add(ERItems.IRON_ALLOY);
-//		this.getOrCreateTagBuilder(ItemTags.REPAIRS_IRON_ARMOR)
-//				.add(ERItems.IRON_ALLOY);
-//
-//		this.getOrCreateTagBuilder(ItemTags.NETHERITE_TOOL_MATERIALS)
-//				.add(Items.NETHERITE_SCRAP);
-//		this.getOrCreateTagBuilder(ItemTags.REPAIRS_NETHERITE_ARMOR)
-//				.add(Items.NETHERITE_SCRAP);
-//
-//		this.getOrCreateTagBuilder(ItemTags.PIGLIN_LOVED)
-//				.add(ERItems.RAW_GOLD_NUGGET)
-//				.add(ERItems.ENCHANTED_GOLDEN_CARROT)
-//				.add(ERItems.ROSE_UPGRADE_SMITHING_TEMPLATE)
-//				.add(ERGearItems.ROSE_SWORD)
-//				.add(ERGearItems.ROSE_AXE)
-//				.add(ERGearItems.ROSE_PICKAXE)
-//				.add(ERGearItems.ROSE_SHOVEL)
-//				.add(ERGearItems.ROSE_HOE)
-//				.add(ERGearItems.ROSE_HELMET)
-//				.add(ERGearItems.ROSE_CHESTPLATE)
-//				.add(ERGearItems.ROSE_LEGGINGS)
-//				.add(ERGearItems.ROSE_BOOTS)
-//				.add(ERGearItems.ROSE_HORSE_ARMOR);
-//
-//		this.getOrCreateTagBuilder(ItemTags.PIGLIN_SAFE_ARMOR)
-//				.add(ERGearItems.ROSE_HELMET)
-//				.add(ERGearItems.ROSE_CHESTPLATE)
-//				.add(ERGearItems.ROSE_LEGGINGS)
-//				.add(ERGearItems.ROSE_BOOTS);
+		this.getOrCreateTagBuilder(ERItemTags.REMNANT_TOOL_MATERIALS)
+				.add(ERItems.REMNANT_INGOT);
+		this.getOrCreateTagBuilder(ERItemTags.REPAIRS_REMNANT_ARMOR)
+				.add(ERItems.REMNANT_INGOT);
+
+		this.getOrCreateTagBuilder(ItemTags.BEACON_PAYMENT_ITEMS)
+				.add(ERItems.REMNANT_INGOT);
 
 		this.getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
 				.add(ERGearItems.REMNANT_HELMET)
@@ -74,11 +36,25 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 		this.getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
 				.add(ERItems.REMNANT_INGOT)
 				.add(ERItems.CRYSTALLINE_SHARD);
+		this.getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
+				.add(ERGearItems.REMNANT_HELMET);
+		this.getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
+				.add(ERGearItems.REMNANT_CHESTPLATE);
+		this.getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
+				.add(ERGearItems.REMNANT_LEGGINGS);
+		this.getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
+				.add(ERGearItems.REMNANT_BOOTS);
 
-//		this.getOrCreateTagBuilder(ItemTags.HORSE_FOOD)
-//				.add(ERItems.ENCHANTED_GOLDEN_CARROT);
-//		this.getOrCreateTagBuilder(ItemTags.HORSE_TEMPT_ITEMS)
-//				.add(ERItems.ENCHANTED_GOLDEN_CARROT);
+		this.getOrCreateTagBuilder(ItemTags.SWORDS)
+				.add(ERGearItems.REMNANT_SWORD);
+		this.getOrCreateTagBuilder(ItemTags.AXES)
+				.add(ERGearItems.REMNANT_AXE);
+		this.getOrCreateTagBuilder(ItemTags.PICKAXES)
+				.add(ERGearItems.REMNANT_PICKAXE);
+		this.getOrCreateTagBuilder(ItemTags.SHOVELS)
+				.add(ERGearItems.REMNANT_SHOVEL);
+		this.getOrCreateTagBuilder(ItemTags.HOES)
+				.add(ERGearItems.REMNANT_HOE);
 	}
 
 }

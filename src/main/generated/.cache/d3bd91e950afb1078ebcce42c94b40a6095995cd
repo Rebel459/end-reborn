@@ -1,3 +1,15 @@
 // 1.21.4	-999999999-01-01T00:00:00	Progression Reborn/Tags for minecraft:item
+b4eb71e5dcccaca164568c57dd384945f9370716 data/end_reborn/tags/item/remnant_tool_materials.json
+b4eb71e5dcccaca164568c57dd384945f9370716 data/end_reborn/tags/item/repairs_remnant_armor.json
+ca4c533d0259fcd1844900680622cbfee9c52bf4 data/minecraft/tags/item/axes.json
+b4eb71e5dcccaca164568c57dd384945f9370716 data/minecraft/tags/item/beacon_payment_items.json
+d0d60dd7c98f68e2dc5ffb8648e5fd1be2458606 data/minecraft/tags/item/chest_armor.json
+b234c117339bb0a29bc8aec80a8d31d0daf886c3 data/minecraft/tags/item/foot_armor.json
+d5ed28862e7da3077255b9d99b422a24e94ef9c3 data/minecraft/tags/item/head_armor.json
+85360e7db034c32a4f34437152cf096b3c265477 data/minecraft/tags/item/hoes.json
+372411b243f68d92822e743ec90196ebbd604982 data/minecraft/tags/item/leg_armor.json
+fe20298809f90fdf747966f259b4c4baae92b9ca data/minecraft/tags/item/pickaxes.json
+53688be987da717e016d1dca147b244cfd473e74 data/minecraft/tags/item/shovels.json
+631806970774192641ac54c7273555fa9b2486fc data/minecraft/tags/item/swords.json
 994bf9ef3c73f7854576d2673438e16d1576ab5f data/minecraft/tags/item/trim_materials.json
 77b7933f1d6e276f43d387a71fa4404e4f27a2ab data/minecraft/tags/item/trimmable_armor.json
