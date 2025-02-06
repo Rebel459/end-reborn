@@ -1,0 +1,22 @@
+{
+  "criteria": {
+    "has_rose_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "end_reborn:chorus_spine"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "end_reborn:chorus_planks"
+    ]
+  }
+}

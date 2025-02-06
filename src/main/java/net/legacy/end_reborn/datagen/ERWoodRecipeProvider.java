@@ -24,6 +24,6 @@ public final class ERWoodRecipeProvider {
         FrozenRecipeProvider.woodenTrapdoor(provider, exporter, ERBlocks.CHORUS_TRAPDOOR, ERBlocks.CHORUS_PLANKS);
         FrozenRecipeProvider.woodenSign(provider, exporter, ERItems.CHORUS_SIGN, ERBlocks.CHORUS_PLANKS);
         provider.hangingSign(ERItems.CHORUS_HANGING_SIGN, ERBlocks.STRIPPED_CHORUS_BLOCK);
-        // Add Mosaic recipe separately
+        // Planks to Mosaic is handled separately
     }
 }

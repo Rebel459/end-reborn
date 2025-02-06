@@ -2,6 +2,7 @@ package net.legacy.end_reborn.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.legacy.end_reborn.ERBlocks;
 import net.legacy.end_reborn.ERGearItems;
 import net.legacy.end_reborn.ERItems;
 import net.legacy.end_reborn.ERItemTags;
@@ -55,6 +56,10 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(ERGearItems.REMNANT_SHOVEL);
 		this.getOrCreateTagBuilder(ItemTags.HOES)
 				.add(ERGearItems.REMNANT_HOE);
+
+		this.getOrCreateTagBuilder(ERItemTags.CHORUS_BLOCKS)
+				.add(ERBlocks.CHORUS_BLOCK.asItem())
+				.add(ERBlocks.STRIPPED_CHORUS_BLOCK.asItem());
 	}
 
 }

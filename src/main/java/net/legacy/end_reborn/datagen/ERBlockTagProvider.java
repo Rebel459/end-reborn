@@ -3,12 +3,9 @@ package net.legacy.end_reborn.datagen;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.legacy.end_reborn.ERBlockTags;
 import net.legacy.end_reborn.ERBlocks;
-import net.legacy.end_reborn.ERItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.NotNull;
 
 public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider {
@@ -37,8 +34,6 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.CHORUS_BUTTON)
 				.add(ERBlocks.CHORUS_MOSAIC_SLAB)
 				.add(ERBlocks.CHORUS_SLAB);
-
-		// Chorus Blocks
 		
 		this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
 				.add(ERBlocks.PURPUR)
@@ -55,7 +50,7 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.REMNANT_BLOCK)
 				.add(ERBlocks.CRACKED_END_STONE_BRICKS)
 				.add(ERBlocks.END_IRON_ORE);
-		
+
 		this.getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
 				.add(ERBlocks.END_IRON_ORE)
 				.add(ERBlocks.RAW_CRYSTALLINE_BLOCK)
@@ -63,6 +58,10 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.CRYSTALLINE_LAMP)
 				.add(ERBlocks.CRYSTALLINE_LANTERN)
 				.add(ERBlocks.END_IRON_ORE);
+
+		this.getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+				.add(ERBlocks.FORGOTTEN_REMAINS)
+				.add(ERBlocks.REMNANT_BLOCK);
 
 		this.getOrCreateTagBuilder(BlockTags.STAIRS)
 				.add(ERBlocks.CUT_AMETRUR_STAIRS)
