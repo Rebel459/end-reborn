@@ -2,14 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "end_reborn:chorus_slab"
+    "#": "end_reborn:cut_ametrur"
   },
   "pattern": [
-    "#",
-    "#"
+    "###"
   ],
   "result": {
-    "count": 1,
-    "id": "end_reborn:chorus_mosaic"
+    "count": 6,
+    "id": "end_reborn:cut_ametrur_slab"
   }
 }

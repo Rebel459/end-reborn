@@ -13,18 +13,20 @@
                 {
                   "condition": "minecraft:match_tool",
                   "predicate": {
-                    "enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
+                    "predicates": {
+                      "minecraft:enchantments": [
+                        {
+                          "enchantments": "minecraft:silk_touch",
+                          "levels": {
+                            "min": 1
+                          }
                         }
-                      }
-                    ]
+                      ]
+                    }
                   }
                 }
               ],
-              "name": "end_reborn:end_iron_ore"
+              "name": "end_reborn:raw_crystalline_block"
             },
             {
               "type": "minecraft:item",
@@ -33,21 +35,31 @@
                   "add": false,
                   "count": {
                     "type": "minecraft:uniform",
-                    "max": 6.0,
+                    "max": 3.0,
                     "min": 2.0
                   },
                   "function": "minecraft:set_count"
                 },
                 {
                   "enchantment": "minecraft:fortune",
-                  "formula": "minecraft:ore_drops",
-                  "function": "minecraft:apply_bonus"
+                  "formula": "minecraft:uniform_bonus_count",
+                  "function": "minecraft:apply_bonus",
+                  "parameters": {
+                    "bonusMultiplier": 1
+                  }
+                },
+                {
+                  "function": "minecraft:limit_count",
+                  "limit": {
+                    "max": 3.0,
+                    "min": 1.0
+                  }
                 },
                 {
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "minecraft:iron_nugget"
+              "name": "end_reborn:crystalline_shard"
             }
           ]
         }
@@ -55,5 +67,5 @@
       "rolls": 1.0
     }
   ],
-  "random_sequence": "end_reborn:blocks/end_iron_ore"
+  "random_sequence": "end_reborn:blocks/raw_crystalline_block"
 }

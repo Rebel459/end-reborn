@@ -26,8 +26,34 @@ public final class ERBlockLootProvider extends FabricBlockLootTableProvider {
 	@Override
 	public void generate() {
 		this.dropSelf(ERBlocks.CRACKED_END_STONE_BRICKS);
+		// End Iron Ore
 		this.dropSelf(ERBlocks.FORGOTTEN_REMAINS);
 		this.dropSelf(ERBlocks.REMNANT_BLOCK);
+		this.dropSelf(ERBlocks.AMETRUR);
+		this.dropSelf(ERBlocks.CUT_AMETRUR_STAIRS);
+		this.dropSelf(ERBlocks.CUT_AMETRUR_PILLAR);
+		this.dropSelf(ERBlocks.PURPUR);
+		// Raw Crystalline Block
+		this.dropSelf(ERBlocks.CRYSTALLINE_BLOCK);
+		this.dropSelf(ERBlocks.CRYSTALLINE_LANTERN);
+		this.dropSelf(ERBlocks.CRYSTALLINE_LAMP);
+		this.dropSelf(ERBlocks.REMNANT_BLOCK);
+		this.dropSelf(ERBlocks.CHORUS_BLOCK);
+		this.dropSelf(ERBlocks.STRIPPED_CHORUS_BLOCK);
+		this.dropSelf(ERBlocks.CHORUS_DOOR);
+		this.dropSelf(ERBlocks.CHORUS_TRAPDOOR);
+		this.dropSelf(ERBlocks.CHORUS_PLANKS);
+		this.dropSelf(ERBlocks.CHORUS_SLAB);
+		this.dropSelf(ERBlocks.CHORUS_STAIRS);
+		this.dropSelf(ERBlocks.CHORUS_MOSAIC);
+		this.dropSelf(ERBlocks.CHORUS_MOSAIC_SLAB);
+		this.dropSelf(ERBlocks.CHORUS_MOSAIC_STAIRS);
+		this.dropSelf(ERBlocks.CHORUS_FENCE);
+		this.dropSelf(ERBlocks.CHORUS_FENCE_GATE);
+		this.dropSelf(ERBlocks.CHORUS_SIGN);
+		this.dropSelf(ERBlocks.CHORUS_HANGING_SIGN);
+		this.dropSelf(ERBlocks.CHORUS_PRESSURE_PLATE);
+		this.dropSelf(ERBlocks.CHORUS_BUTTON);
 		this.add(ERBlocks.CHORUS_MOSAIC_SLAB, this::createSlabItemTable);
 		this.add(ERBlocks.CHORUS_SLAB, this::createSlabItemTable);
 		this.add(ERBlocks.CUT_AMETRUR_SLAB, this::createSlabItemTable);

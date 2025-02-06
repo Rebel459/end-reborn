@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_remnant": {
+    "has_ametrur": {
       "conditions": {
         "items": [
           {
-            "items": "end_reborn:remnant_scrap"
+            "items": "end_reborn:ametrur"
           }
         ]
       },
@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "end_reborn:remnant_ingot"
+        "recipe": "end_reborn:cut_ametrur_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -21,12 +21,12 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_remnant"
+      "has_ametrur"
     ]
   ],
   "rewards": {
     "recipes": [
-      "end_reborn:remnant_ingot"
+      "end_reborn:cut_ametrur_stairs"
     ]
   }
 }

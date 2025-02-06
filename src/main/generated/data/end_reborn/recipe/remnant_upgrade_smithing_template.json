@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "remnant_upgrade_smithing_template",
+  "key": {
+    "#": "minecraft:diamond",
+    "U": "end_reborn:remnant_upgrade_smithing_template",
+    "X": "minecraft:end_stone"
+  },
+  "pattern": [
+    "#U#",
+    "#X#",
+    "###"
+  ],
+  "result": {
+    "count": 2,
+    "id": "end_reborn:remnant_upgrade_smithing_template"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "end_reborn:chorus_spine",
+    "end_reborn:chorus_spine",
+    "end_reborn:chorus_spine",
+    "end_reborn:chorus_spine",
+    "end_reborn:chorus_spine",
+    "end_reborn:chorus_spine",
+    "end_reborn:chorus_spine",
+    "end_reborn:chorus_spine",
+    "end_reborn:chorus_spine"
+  ],
+  "result": {
+    "count": 1,
+    "id": "end_reborn:chorus_block"
+  }
+}
