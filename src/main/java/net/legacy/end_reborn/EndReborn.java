@@ -45,6 +45,7 @@ public class EndReborn implements ModInitializer {
 
 		ERItems.init();
 		ERGearItems.init();
+		ERDefaultItemComponents.init();
 		ERBlocks.init();
 		ERBlocks.registerBlockProperties();
 		ERCreativeInventorySorting.init();
@@ -70,5 +71,4 @@ public class EndReborn implements ModInitializer {
 			);
 		}
 	}
-
 }
