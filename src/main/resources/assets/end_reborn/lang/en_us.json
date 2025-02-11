@@ -43,6 +43,8 @@
   "item.end_reborn.remnant_upgrade_smithing_template": "Remnant Upgrade Smithing Template",
   "item.end_reborn.smithing_template.remnant_upgrade.applies_to": "Netherite Equipment",
   "item.end_reborn.smithing_template.remnant_upgrade.ingredients": "Remnant Ingot",
+  "item.end_reborn.smithing_template.remnant_upgrade.base_slot_description": "Add netherite armor, weapon, or tool",
+  "item.end_reborn.smithing_template.remnant_upgrade.additions_slot_description": "Add Remnant Ingot",
   "item.end_reborn.chorus_raft": "Chorus Raft",
   "item.end_reborn.chorus_chest_raft": "Chorus Raft with Chest",
   "item.end_reborn.remnant_sword": "Remnant Sword",
