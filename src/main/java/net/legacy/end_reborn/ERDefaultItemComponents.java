@@ -34,6 +34,12 @@ public class ERDefaultItemComponents {
             });
         });
 
+        DefaultItemComponentEvents.MODIFY.register(context -> {
+            context.modify(Items.POPPED_CHORUS_FRUIT, builder -> {
+                builder.set(DataComponents.FOOD, ERFoods.POPPED_CHORUS_FRUIT);
+            });
+        });
+
     }
     public static ItemAttributeModifiers createNetheriteHelmetAttributes() {
         return ItemAttributeModifiers.builder()
