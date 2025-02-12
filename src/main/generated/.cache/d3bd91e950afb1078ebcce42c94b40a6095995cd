@@ -1,5 +1,6 @@
 // 1.21.4	-999999999-01-01T00:00:00	Progression Reborn/Tags for minecraft:item
 8ca0c7182feb67fcc639aead2b4eeb88972a20be data/end_reborn/tags/item/chorus_blocks.json
+b4eb71e5dcccaca164568c57dd384945f9370716 data/end_reborn/tags/item/gravity_immune.json
 b4eb71e5dcccaca164568c57dd384945f9370716 data/end_reborn/tags/item/remnant_tool_materials.json
 b4eb71e5dcccaca164568c57dd384945f9370716 data/end_reborn/tags/item/repairs_remnant_armor.json
 ca4c533d0259fcd1844900680622cbfee9c52bf4 data/minecraft/tags/item/axes.json

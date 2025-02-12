@@ -8,6 +8,8 @@ import org.jetbrains.annotations.NotNull;
 public class ERItemTags {
     public static final TagKey<Item> REMNANT_TOOL_MATERIALS = bind("remnant_tool_materials");
     public static final TagKey<Item> REPAIRS_REMNANT_ARMOR = bind("repairs_remnant_armor");
+    public static final TagKey<Item> GRAVITY_IMMUNE = bind("gravity_immune");
+    public static final TagKey<Item> VOID_IMMUNE = bind("void_immune");
     public static final TagKey<Item> CHORUS_BLOCKS = bind("chorus_blocks");
 
     @NotNull
