@@ -44,7 +44,7 @@ public class ERBlocks {
     );
 
     // Remnant
-    public static final Block REMNANT_BLOCK = register("remnant_block",
+    public static final Block REMNIUM_BLOCK = register("remnium_block",
             Block::new,
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_GRAY)

@@ -18,12 +18,23 @@ import static net.minecraft.world.item.Items.registerBlock;
 public final class ERItems {
 
     // Items
-    public static final Item REMNANT_INGOT = register("remnant_ingot",
+    public static final Item REMNIUM_INGOT = register("remnium_ingot",
             Item::new,
             new Properties()
                     .stacksTo(64)
     );
-    public static final Item REMNANT_SCRAP = register("remnant_scrap",
+    public static final Item REMNIUM_SCRAP = register("remnium_scrap",
+            Item::new,
+            new Properties()
+                    .stacksTo(64)
+    );
+    public static final SmithingTemplateItem REMNIUM_UPGRADE_SMITHING_TEMPLATE = register("remnium_upgrade_smithing_template",
+            ERItems::createRemnantUpgradeTemplate,
+            new Properties()
+                    .stacksTo(64)
+                    .rarity(Rarity.UNCOMMON)
+    );
+    public static final Item FEATHERZEAL_INGOT = register("featherzeal_ingot",
             Item::new,
             new Properties()
                     .stacksTo(64)
@@ -37,12 +48,6 @@ public final class ERItems {
             Item::new,
             new Properties()
                     .stacksTo(64)
-    );
-    public static final SmithingTemplateItem REMNANT_UPGRADE_SMITHING_TEMPLATE = register("remnant_upgrade_smithing_template",
-            ERItems::createRemnantUpgradeTemplate,
-            new Properties()
-                    .stacksTo(64)
-                    .rarity(Rarity.UNCOMMON)
     );
 
     // Boats
@@ -75,10 +80,10 @@ public final class ERItems {
 
     public static SmithingTemplateItem createRemnantUpgradeTemplate(Item.Properties properties) {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnant_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnant_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnant_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnant_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnium_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnium_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnium_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnium_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties

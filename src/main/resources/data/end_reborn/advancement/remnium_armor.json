@@ -1,0 +1,45 @@
+{
+  "parent": "minecraft:end/find_end_city",
+  "criteria": {
+    "remnium_armor": {
+      "conditions": {
+        "items": [
+          {
+            "items": "end_reborn:remnium_helmet"
+          },
+          {
+            "items": "end_reborn:remnium_chestplate"
+          },
+          {
+            "items": "end_reborn:remnium_leggings"
+          },
+          {
+            "items": "end_reborn:remnium_boots"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.end_reborn.remnium_armor.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "end_reborn:remnium_chestplate"
+    },
+    "title": {
+      "translate": "advancements.end_reborn.remnium_armor.title"
+    }
+  },
+  "requirements": [
+    [
+      "remnium_armor"
+    ]
+  ],
+  "rewards": {
+    "experience": 100
+  }
+}

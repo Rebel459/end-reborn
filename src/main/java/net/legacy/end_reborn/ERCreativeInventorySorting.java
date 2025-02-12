@@ -10,7 +10,7 @@ public class ERCreativeInventorySorting {
 
 	public static void init() {
 		// Ingredients
-		addAfterInCombat(Items.NETHERITE_INGOT, ERItems.REMNANT_INGOT);
+		addBeforeInCombat(Items.NETHERITE_INGOT, ERItems.REMNIUM_INGOT);
 	}
 
 	private static void addAfterInNaturalBlocks(ItemLike comparedItem, ItemLike item) {
@@ -63,6 +63,10 @@ public class ERCreativeInventorySorting {
 
 	private static void addAfterInCombat(ItemLike comparedItem, ItemLike item) {
 		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.COMBAT);
+	}
+
+	private static void addBeforeInCombat(ItemLike comparedItem, ItemLike item) {
+		FrozenCreativeTabs.addBefore(comparedItem, item, CreativeModeTabs.COMBAT);
 	}
 
 	private static void addBeforeInSpawnEggs(ItemLike comparedItem, ItemLike item) {

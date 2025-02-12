@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "end_reborn:remnium_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "end_reborn:remnium_ingot"
+  }
+}

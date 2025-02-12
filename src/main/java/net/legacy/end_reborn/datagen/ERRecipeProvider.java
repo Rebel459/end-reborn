@@ -52,23 +52,29 @@ public final class ERRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy("has_planks", this.has(ERBlocks.CHORUS_PLANKS))
                         .save(exporter);
 
-                // REMNANT
+                // REMNIUM
 
-                this.shaped(RecipeCategory.MISC, ERItems.REMNANT_UPGRADE_SMITHING_TEMPLATE, 2)
+                this.shaped(RecipeCategory.MISC, ERItems.REMNIUM_UPGRADE_SMITHING_TEMPLATE, 2)
                         .group("remnant_upgrade_smithing_template")
                         .define('#', Ingredient.of(Items.DIAMOND))
-                        .define('U', Ingredient.of(ERItems.REMNANT_UPGRADE_SMITHING_TEMPLATE))
-                        .define('X', Ingredient.of(Blocks.END_STONE))
+                        .define('U', Ingredient.of(ERItems.REMNIUM_UPGRADE_SMITHING_TEMPLATE))
+                        .define('X', Ingredient.of(Blocks.COBBLED_DEEPSLATE))
                         .pattern("#U#")
                         .pattern("#X#")
                         .pattern("###")
-                        .unlockedBy("has_remnant_template", this.has(ERItems.REMNANT_UPGRADE_SMITHING_TEMPLATE))
+                        .unlockedBy("has_remnant_template", this.has(ERItems.REMNIUM_UPGRADE_SMITHING_TEMPLATE))
                         .save(exporter);
 
-                this.shapeless(RecipeCategory.MISC, ERItems.REMNANT_INGOT)
-                        .requires(Ingredient.of(Items.IRON_INGOT), 4)
-                        .requires(Ingredient.of(ERItems.REMNANT_SCRAP), 4)
-                        .unlockedBy("has_remnant", this.has(ERItems.REMNANT_SCRAP))
+                // Remnium Ingot
+
+                this.shapeless(RecipeCategory.MISC, ERBlocks.REMNIUM_BLOCK)
+                        .requires(Ingredient.of(ERItems.REMNIUM_INGOT), 9)
+                        .unlockedBy("has_remnant", this.has(ERItems.REMNIUM_SCRAP))
+                        .save(exporter);
+
+                this.shapeless(RecipeCategory.MISC, ERItems.REMNIUM_INGOT, 9)
+                        .requires(Ingredient.of(ERBlocks.REMNIUM_BLOCK))
+                        .unlockedBy("has_remnant", this.has(ERItems.REMNIUM_SCRAP))
                         .save(exporter);
 
                 // Remnant Equipment
