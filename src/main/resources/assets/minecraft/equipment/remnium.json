@@ -2,17 +2,17 @@
   "layers": {
     "horse_body": [
       {
-        "texture": "minecraft:remnant"
+        "texture": "minecraft:remnium"
       }
     ],
     "humanoid": [
       {
-        "texture": "minecraft:remnant"
+        "texture": "minecraft:remnium"
       }
     ],
     "humanoid_leggings": [
       {
-        "texture": "minecraft:remnant"
+        "texture": "minecraft:remnium"
       }
     ]
   }
