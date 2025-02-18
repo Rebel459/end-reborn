@@ -1,0 +1,220 @@
+{
+  "block.crystalline_block.break": {
+    "sounds": [
+      {
+        "name": "end_reborn:block/crystalline_block/break1",
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/break1",
+        "pitch": 0.9,
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/break2",
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/break2",
+        "pitch": 0.9,
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/break3",
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/break3",
+        "pitch": 0.9,
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/break4",
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/break4",
+        "pitch": 0.9,
+        "volume": 0.7
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.crystalline_block.fall": {
+    "sounds": [
+      "end_reborn:block/crystalline_block/step1",
+      "end_reborn:block/crystalline_block/step2",
+      "end_reborn:block/crystalline_block/step3",
+      "end_reborn:block/crystalline_block/step4"
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.crystalline_block.hit": {
+    "sounds": [
+      "end_reborn:block/crystalline_block/step1",
+      "end_reborn:block/crystalline_block/step2",
+      "end_reborn:block/crystalline_block/step3",
+      "end_reborn:block/crystalline_block/step4"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.crystalline_block.place": {
+    "sounds": [
+      {
+        "name": "end_reborn:block/crystalline_block/place1",
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/place1",
+        "pitch": 0.9,
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/place2",
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/place2",
+        "pitch": 0.9,
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/place3",
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/place3",
+        "pitch": 0.9,
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/place4",
+        "volume": 0.7
+      },
+      {
+        "name": "end_reborn:block/crystalline_block/place4",
+        "pitch": 0.9,
+        "volume": 0.7
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.crystalline_block.step": {
+    "sounds": [
+      "end_reborn:block/crystalline_block/step1",
+      "end_reborn:block/crystalline_block/step2",
+      "end_reborn:block/crystalline_block/step3",
+      "end_reborn:block/crystalline_block/step4"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.raw_crystalline_block.break": {
+    "sounds": [
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break1",
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break1",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break2",
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break2",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break3",
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break3",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break4",
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break4",
+        "pitch": 0.9,
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.raw_crystalline_block.fall": {
+    "sounds": [
+      "end_reborn:block/raw_crystalline_block/step1",
+      "end_reborn:block/raw_crystalline_block/step2",
+      "end_reborn:block/raw_crystalline_block/step3",
+      "end_reborn:block/raw_crystalline_block/step4"
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.raw_crystalline_block.hit": {
+    "sounds": [
+      "end_reborn:block/raw_crystalline_block/step1",
+      "end_reborn:block/raw_crystalline_block/step2",
+      "end_reborn:block/raw_crystalline_block/step3",
+      "end_reborn:block/raw_crystalline_block/step4"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.raw_crystalline_block.place": {
+    "sounds": [
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break1",
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break1",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break2",
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break2",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break3",
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break3",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break4",
+        "volume": 0.8
+      },
+      {
+        "name": "end_reborn:block/raw_crystalline_block/break4",
+        "pitch": 0.9,
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.raw_crystalline_block.step": {
+    "sounds": [
+      "end_reborn:block/raw_crystalline_block/step1",
+      "end_reborn:block/raw_crystalline_block/step2",
+      "end_reborn:block/raw_crystalline_block/step3",
+      "end_reborn:block/raw_crystalline_block/step4"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  }
+}

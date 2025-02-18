@@ -18,13 +18,13 @@ public abstract class ERItemEntityMixin extends Entity {
     @Shadow
     public abstract ItemStack getItem();
 
-    protected ERItemEntityMixin(EntityType<?> type, Level world) {
-        super(type, world);
+    protected ERItemEntityMixin(EntityType<?> type, Level level) {
+        super(type, level);
     }
 
     @Inject(at = @At("TAIL"), method = "tick()V")
     private void dropItem(CallbackInfo info) {
-        if ((getItem().is(ERItemTags.GRAVITY_IMMUNE))) {
+        if ((getItem().is(ERItemTags.VOID_IMMUNE))) {
             if (!isNoGravity() && !level().isClientSide() && !getItem().isEmpty()) {
             setNoGravity(true);
         }

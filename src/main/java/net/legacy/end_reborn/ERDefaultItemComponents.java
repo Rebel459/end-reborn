@@ -36,6 +36,7 @@ public class ERDefaultItemComponents {
 
         DefaultItemComponentEvents.MODIFY.register(context -> {
             context.modify(Items.POPPED_CHORUS_FRUIT, builder -> {
+                builder.set(DataComponents.CONSUMABLE, ERConsumables.POPPED_CHORUS_FRUIT);
                 builder.set(DataComponents.FOOD, ERFoods.POPPED_CHORUS_FRUIT);
             });
         });

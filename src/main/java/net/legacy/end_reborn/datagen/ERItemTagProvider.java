@@ -20,8 +20,6 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 	@Override
 	protected void addTags(@NotNull HolderLookup.Provider arg) {
-		//this.getOrCreateTagBuilder(ERItemTags.GRAVITY_IMMUNE)
-				//.add(ERItems.REMNIUM_INGOT);
 		//this.getOrCreateTagBuilder(ERItemTags.VOID_IMMUNE)
 				//.add(ERItems.REMNIUM_INGOT);
 

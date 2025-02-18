@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.frozenblock.lib.item.api.FuelRegistry;
+import net.legacy.end_reborn.sound.ERBlockSounds;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -69,7 +70,7 @@ public class ERBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(3.0F)
                     .lightLevel(blockStatex -> 7)
-                    .sound(SoundType.AMETHYST)
+                    .sound(ERBlockSounds.RAW_CRYSTALLINE_BLOCK)
     );
     public static final Block CRYSTALLINE_BLOCK = register("crystalline_block",
             Block::new,
@@ -78,7 +79,7 @@ public class ERBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(3.5F)
                     .lightLevel(blockStatex -> 14)
-                    .sound(SoundType.AMETHYST)
+                    .sound(ERBlockSounds.CRYSTALLINE_BLOCK)
     );
     public static final Block CRYSTALLINE_LAMP = register("crystalline_lamp",
             Block::new,
@@ -87,7 +88,7 @@ public class ERBlocks {
                     .requiresCorrectToolForDrops()
                     .strength(3.5F)
                     .lightLevel(blockStatex -> 14)
-                    .sound(SoundType.AMETHYST)
+                    .sound(ERBlockSounds.CRYSTALLINE_BLOCK)
     );
     public static final Block CRYSTALLINE_LANTERN = register("crystalline_lantern",
             LanternBlock::new,
@@ -97,7 +98,7 @@ public class ERBlocks {
                     .forceSolidOn()
                     .strength(3.5F)
                     .lightLevel(blockStatex -> 14)
-                    .sound(SoundType.LANTERN)
+                    .sound(ERBlockSounds.CRYSTALLINE_BLOCK)
                     .noOcclusion()
                     .pushReaction(PushReaction.DESTROY)
     );
