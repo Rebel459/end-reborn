@@ -63,12 +63,12 @@ public class EndReborn implements ModInitializer {
 				ResourcePackActivationType.ALWAYS_ENABLED
 		);
 
-		if (FabricLoader.getInstance().isModLoaded("legacies_and_legends") && ERConfig.mod_integration_datapacks) {
-			ResourceManagerHelper.registerBuiltinResourcePack(
-					ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_legacies_and_legends_integration"), modContainer.get(),
-					Component.translatable("pack.end_reborn.legacies_and_legends_integration"),
-					ResourcePackActivationType.ALWAYS_ENABLED
-			);
-		}
+		//if (FabricLoader.getInstance().isModLoaded("legacies_and_legends") && ERConfig.mod_integration_datapacks) {
+		//	ResourceManagerHelper.registerBuiltinResourcePack(
+		//			ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_legacies_and_legends_integration"), modContainer.get(),
+		//			Component.translatable("pack.end_reborn.legacies_and_legends_integration"),
+		//			ResourcePackActivationType.ALWAYS_ENABLED
+		//	);
+		//}
 	}
 }
