@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "horse_body": [
+      {
+        "texture": "minecraft:featherzeal"
+      }
+    ],
+    "humanoid": [
+      {
+        "texture": "minecraft:featherzeal"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "minecraft:featherzeal"
+      }
+    ]
+  }
+}

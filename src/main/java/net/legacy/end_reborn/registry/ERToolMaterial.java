@@ -1,5 +1,6 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.registry;
 
+import net.legacy.end_reborn.tag.ERItemTags;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -21,7 +22,8 @@ public record ERToolMaterial(
         TagKey<Block> incorrectBlocksForDrops, int durability, float speed, float attackDamageBonus, int enchantmentValue, TagKey<Item> repairItems
 ) {
 
-    public static final net.minecraft.world.item.ToolMaterial REMNIUM = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2501, 10.0F, 4.0F, 15, ERItemTags.REMNIUM_TOOL_MATERIALS);
+    public static final net.minecraft.world.item.ToolMaterial REMNIUM = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2501, 9.0F, 4.0F, 15, ERItemTags.REMNIUM_TOOL_MATERIALS);
+    public static final net.minecraft.world.item.ToolMaterial FEATHERZEAL = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2031, 10.0F, 4.0F, 15, ERItemTags.FEATHERZEAL_TOOL_MATERIALS);
 
     private Item.Properties applyCommonProperties(Item.Properties properties) {
         return properties.durability(this.durability).repairable(this.repairItems).enchantable(this.enchantmentValue);

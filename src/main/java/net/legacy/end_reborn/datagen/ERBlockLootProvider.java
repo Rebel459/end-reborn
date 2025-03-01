@@ -3,7 +3,7 @@ package net.legacy.end_reborn.datagen;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.legacy.end_reborn.ERBlocks;
+import net.legacy.end_reborn.registry.ERBlocks;
 import net.minecraft.advancements.critereon.StatePropertiesPredicate;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;

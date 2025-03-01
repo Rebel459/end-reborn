@@ -1,8 +1,9 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.registry;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import net.legacy.end_reborn.ERConstants;
 import net.minecraft.resources.ResourceLocation;
 import net.ramixin.mixson.Mixson;
 import net.ramixin.mixson.events.ModificationEvent;

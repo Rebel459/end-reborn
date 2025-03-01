@@ -9,16 +9,14 @@ import java.util.function.Function;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.legacy.end_reborn.*;
-import net.minecraft.client.data.models.ModelProvider;
+import net.legacy.end_reborn.registry.*;
 import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.blockstates.Variant;
 import net.minecraft.client.data.models.blockstates.VariantProperties;
-import net.minecraft.client.model.BoatModel;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.vehicle.Boat;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.equipment.EquipmentAsset;
@@ -104,10 +102,10 @@ public final class ERModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
-		generator.generateTrimmableItem(ERGearItems.REMNIUM_HELMET, EREquipmentAssets.REMNIUM, "helmet", false);
-		generator.generateTrimmableItem(ERGearItems.REMNIUM_CHESTPLATE, EREquipmentAssets.REMNIUM, "chestplate", false);
-		generator.generateTrimmableItem(ERGearItems.REMNIUM_LEGGINGS, EREquipmentAssets.REMNIUM, "leggings", false);
-		generator.generateTrimmableItem(ERGearItems.REMNIUM_BOOTS, EREquipmentAssets.REMNIUM, "boots", false);
+		generator.generateTrimmableItem(EREquipmentItems.REMNIUM_HELMET, EREquipmentAssets.REMNIUM, "helmet", false);
+		generator.generateTrimmableItem(EREquipmentItems.REMNIUM_CHESTPLATE, EREquipmentAssets.REMNIUM, "chestplate", false);
+		generator.generateTrimmableItem(EREquipmentItems.REMNIUM_LEGGINGS, EREquipmentAssets.REMNIUM, "leggings", false);
+		generator.generateTrimmableItem(EREquipmentItems.REMNIUM_BOOTS, EREquipmentAssets.REMNIUM, "boots", false);
 
 		generator.generateFlatItem(ERItems.CHORUS_RAFT, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.CHORUS_CHEST_RAFT, ModelTemplates.FLAT_ITEM);
@@ -118,12 +116,12 @@ public final class ERModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(ERItems.CRYSTALLINE_SHARD, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.REMNIUM_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
-		generator.generateFlatItem(ERGearItems.REMNIUM_SWORD, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(ERGearItems.REMNIUM_AXE, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(ERGearItems.REMNIUM_PICKAXE, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(ERGearItems.REMNIUM_SHOVEL, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(ERGearItems.REMNIUM_HOE, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(ERGearItems.REMNIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNIUM_SWORD, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNIUM_AXE, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNIUM_PICKAXE, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNIUM_SHOVEL, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNIUM_HOE, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
 
 		this.registerArmorTrims(generator, Items.TURTLE_HELMET, EquipmentAssets.TURTLE_SCUTE, "helmet", false);
 		this.registerArmorTrims(generator, Items.LEATHER_HELMET, EquipmentAssets.LEATHER, "helmet", true);
@@ -151,15 +149,15 @@ public final class ERModelProvider extends FabricModelProvider {
 		this.registerArmorTrims(generator, Items.NETHERITE_LEGGINGS, EquipmentAssets.NETHERITE, "leggings", false);
 		this.registerArmorTrims(generator, Items.NETHERITE_BOOTS, EquipmentAssets.NETHERITE, "boots", false);
 
-		this.registerArmorTrimsRemnantDarker(generator, ERGearItems.REMNIUM_HELMET, EREquipmentAssets.REMNIUM, "helmet", false);
-		this.registerArmorTrimsRemnantDarker(generator, ERGearItems.REMNIUM_CHESTPLATE, EREquipmentAssets.REMNIUM, "chestplate", false);
-		this.registerArmorTrimsRemnantDarker(generator, ERGearItems.REMNIUM_LEGGINGS, EREquipmentAssets.REMNIUM, "leggings", false);
-		this.registerArmorTrimsRemnantDarker(generator, ERGearItems.REMNIUM_BOOTS, EREquipmentAssets.REMNIUM, "boots", false);
+		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNIUM_HELMET, EREquipmentAssets.REMNIUM, "helmet", false);
+		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNIUM_CHESTPLATE, EREquipmentAssets.REMNIUM, "chestplate", false);
+		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNIUM_LEGGINGS, EREquipmentAssets.REMNIUM, "leggings", false);
+		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNIUM_BOOTS, EREquipmentAssets.REMNIUM, "boots", false);
 
-		this.registerArmorTrimsNotRemnant(generator, ERGearItems.REMNIUM_HELMET, EREquipmentAssets.REMNIUM, "helmet", false);
-		this.registerArmorTrimsNotRemnant(generator, ERGearItems.REMNIUM_CHESTPLATE, EREquipmentAssets.REMNIUM, "chestplate", false);
-		this.registerArmorTrimsNotRemnant(generator, ERGearItems.REMNIUM_LEGGINGS, EREquipmentAssets.REMNIUM, "leggings", false);
-		this.registerArmorTrimsNotRemnant(generator, ERGearItems.REMNIUM_BOOTS, EREquipmentAssets.REMNIUM, "boots", false);
+		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNIUM_HELMET, EREquipmentAssets.REMNIUM, "helmet", false);
+		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNIUM_CHESTPLATE, EREquipmentAssets.REMNIUM, "chestplate", false);
+		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNIUM_LEGGINGS, EREquipmentAssets.REMNIUM, "leggings", false);
+		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNIUM_BOOTS, EREquipmentAssets.REMNIUM, "boots", false);
 
 	}
 

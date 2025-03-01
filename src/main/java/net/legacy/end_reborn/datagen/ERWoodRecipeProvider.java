@@ -1,9 +1,9 @@
 package net.legacy.end_reborn.datagen;
 
 import net.frozenblock.lib.recipe.api.FrozenRecipeProvider;
-import net.legacy.end_reborn.ERBlocks;
-import net.legacy.end_reborn.ERItemTags;
-import net.legacy.end_reborn.ERItems;
+import net.legacy.end_reborn.registry.ERBlocks;
+import net.legacy.end_reborn.tag.ERItemTags;
+import net.legacy.end_reborn.registry.ERItems;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 

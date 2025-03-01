@@ -3,7 +3,7 @@ package net.legacy.end_reborn.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
 import net.legacy.end_reborn.ERConstants;
-import net.legacy.end_reborn.ERTrimMaterials;
+import net.legacy.end_reborn.registry.ERTrimMaterials;
 import net.minecraft.core.*;
 import net.minecraft.core.registries.Registries;
 

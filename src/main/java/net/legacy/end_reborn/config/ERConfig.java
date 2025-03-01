@@ -1,4 +1,4 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

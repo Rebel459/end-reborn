@@ -1,13 +1,8 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.food;
 
 import net.minecraft.sounds.SoundEvents;
-import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.item.component.Consumable;
-import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
-
-import java.util.List;
 
 public class ERConsumables {
     public static final Consumable POPPED_CHORUS_FRUIT = fastFood()

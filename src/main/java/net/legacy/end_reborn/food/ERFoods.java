@@ -1,4 +1,4 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.food;
 
 import net.minecraft.world.food.FoodProperties;
 

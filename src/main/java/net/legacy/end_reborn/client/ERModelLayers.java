@@ -5,7 +5,7 @@ import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.legacy.end_reborn.ERConstants;
-import net.legacy.end_reborn.EREntityTypes;
+import net.legacy.end_reborn.registry.EREntityTypes;
 import net.minecraft.client.model.RaftModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.builders.LayerDefinition;

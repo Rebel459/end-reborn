@@ -1,11 +1,9 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.tag;
 
+import net.legacy.end_reborn.ERConstants;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.tags.BiomeTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.biome.Biome;
-import net.minecraft.world.level.biome.Biomes;
 import org.jetbrains.annotations.NotNull;
 
 public class ERBiomeTags {

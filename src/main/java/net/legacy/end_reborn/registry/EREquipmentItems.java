@@ -1,6 +1,7 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.registry;
 
 import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
+import net.legacy.end_reborn.ERConstants;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -19,7 +20,7 @@ import net.minecraft.world.item.Item.Properties;
 
 import java.util.function.Function;
 
-public final class ERGearItems {
+public final class EREquipmentItems {
 
     // Tools
     public static final SwordItem REMNIUM_SWORD = register("remnium_sword", settings -> new SwordItem(ERToolMaterial.REMNIUM, 3f, -2.4f, settings
@@ -43,6 +44,22 @@ public final class ERGearItems {
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
 
+    public static final SwordItem FEATHERZEAL_SWORD = register("featherzeal_sword", settings -> new SwordItem(ERToolMaterial.FEATHERZEAL, 3f, -2.4f, settings
+            .stacksTo(1)
+    ));
+    public static final PickaxeItem FEATHERZEAL_PICKAXE = register("featherzeal_pickaxe", settings -> new PickaxeItem(ERToolMaterial.FEATHERZEAL, 1f, -2.8f, settings
+            .stacksTo(1)
+    ));
+    public static final AxeItem FEATHERZEAL_AXE = register("featherzeal_axe", settings -> new AxeItem(ERToolMaterial.FEATHERZEAL, 6f, -3.1f, settings
+            .stacksTo(1)
+    ));
+    public static final ShovelItem FEATHERZEAL_SHOVEL = register("featherzeal_shovel", settings -> new ShovelItem(ERToolMaterial.FEATHERZEAL, 1.5f, -3f, settings
+            .stacksTo(1)
+    ));
+    public static final HoeItem FEATHERZEAL_HOE = register("featherzeal_hoe", settings -> new HoeItem(ERToolMaterial.FEATHERZEAL, -2f, -1f, settings
+            .stacksTo(1)
+    ));
+
     // Armor
     public static final ArmorItem REMNIUM_HELMET = register("remnium_helmet", settings -> new ArmorItem(ERArmorMaterials.REMNIUM, ArmorType.HELMET, settings
             .stacksTo(1)
@@ -61,10 +78,28 @@ public final class ERGearItems {
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
 
+    public static final ArmorItem FEATHERZEAL_HELMET = register("featherzeal_helmet", settings -> new ArmorItem(ERArmorMaterials.FEATHERZEAL, ArmorType.HELMET, settings
+            .stacksTo(1)
+    ));
+    public static final ArmorItem FEATHERZEAL_CHESTPLATE = register("featherzeal_chestplate", settings -> new ArmorItem(ERArmorMaterials.FEATHERZEAL, ArmorType.CHESTPLATE, settings
+            .stacksTo(1)
+    ));
+    public static final ArmorItem FEATHERZEAL_LEGGINGS = register("featherzeal_leggings", settings -> new ArmorItem(ERArmorMaterials.FEATHERZEAL, ArmorType.LEGGINGS, settings
+            .stacksTo(1)
+    ));
+    public static final ArmorItem FEATHERZEAL_BOOTS = register("featherzeal_boots", settings -> new ArmorItem(ERArmorMaterials.FEATHERZEAL, ArmorType.BOOTS, settings
+            .stacksTo(1)
+    ));
+
     public static final AnimalArmorItem REMNIUM_HORSE_ARMOR = register("remnium_horse_armor", settings -> new AnimalArmorItem(ERArmorMaterials.REMNIUM, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
+
+    public static final AnimalArmorItem FEATHERZEAL_HORSE_ARMOR = register("featherzeal_horse_armor", settings -> new AnimalArmorItem(ERArmorMaterials.FEATHERZEAL, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
+            .stacksTo(1)
+    ));
+
     public static void init() {
     }
 

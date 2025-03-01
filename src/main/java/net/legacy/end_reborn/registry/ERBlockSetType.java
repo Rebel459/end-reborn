@@ -1,9 +1,8 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.registry;
 
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.sounds.SoundEvents;
 
 public class ERBlockSetType {
 

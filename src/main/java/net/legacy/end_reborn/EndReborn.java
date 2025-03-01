@@ -7,14 +7,13 @@ import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
-import net.legacy.end_reborn.client.ERBlockRenderLayers;
+import net.legacy.end_reborn.config.ERConfig;
+import net.legacy.end_reborn.registry.*;
+import net.legacy.end_reborn.tag.ERBiomeTags;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.tags.BiomeTags;
-import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.levelgen.SurfaceRules;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
 import java.io.IOException;
@@ -44,8 +43,8 @@ public class EndReborn implements ModInitializer {
 		}
 
 		ERItems.init();
-		ERGearItems.init();
-		ERDefaultItemComponents.init();
+		EREquipmentItems.init();
+		ERItemComponents.init();
 		ERBlocks.init();
 		ERBlocks.registerBlockProperties();
 		ERCreativeInventorySorting.init();

@@ -1,15 +1,18 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.registry;
 
 import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
+import net.legacy.end_reborn.ERConstants;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item.Properties;
+import net.minecraft.world.item.component.DamageResistant;
 
 import java.util.function.Function;
 
@@ -22,11 +25,13 @@ public final class ERItems {
             Item::new,
             new Properties()
                     .stacksTo(64)
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item REMNIUM_SCRAP = register("remnium_scrap",
             Item::new,
             new Properties()
                     .stacksTo(64)
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final SmithingTemplateItem REMNIUM_UPGRADE_SMITHING_TEMPLATE = register("remnium_upgrade_smithing_template",
             ERItems::createRemnantUpgradeTemplate,
@@ -38,6 +43,17 @@ public final class ERItems {
             Item::new,
             new Properties()
                     .stacksTo(64)
+    );
+    public static final Item FEATHERZEAL_SCRAP = register("featherzeal_scrap",
+            Item::new,
+            new Properties()
+                    .stacksTo(64)
+    );
+    public static final SmithingTemplateItem FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE = register("featherzeal_upgrade_smithing_template",
+            ERItems::createRemnantUpgradeTemplate,
+            new Properties()
+                    .stacksTo(64)
+                    .rarity(Rarity.UNCOMMON)
     );
     public static final Item CHORUS_SPINE = register("chorus_spine",
             Item::new,
@@ -84,6 +100,18 @@ public final class ERItems {
                 Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnium_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
                 Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnium_upgrade.base_slot_description"))),
                 Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnium_upgrade.additions_slot_description"))),
+                SmithingTemplateItem.createNetheriteUpgradeIconList(),
+                SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
+                properties
+        );
+    }
+
+    public static SmithingTemplateItem createFeatherzealUpgradeTemplate(Item.Properties properties) {
+        return new SmithingTemplateItem(
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.featherzeal_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.featherzeal_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.featherzeal_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.featherzeal_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties

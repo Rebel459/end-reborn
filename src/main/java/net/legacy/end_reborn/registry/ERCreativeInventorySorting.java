@@ -1,10 +1,9 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.registry;
 
 import net.frozenblock.lib.item.api.FrozenCreativeTabs;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
-import net.minecraft.world.level.block.Blocks;
 
 public class ERCreativeInventorySorting {
 

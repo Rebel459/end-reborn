@@ -2,13 +2,12 @@ package net.legacy.end_reborn.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.legacy.end_reborn.ERBlocks;
-import net.legacy.end_reborn.ERGearItems;
-import net.legacy.end_reborn.ERItems;
-import net.legacy.end_reborn.ERItemTags;
+import net.legacy.end_reborn.registry.ERBlocks;
+import net.legacy.end_reborn.registry.EREquipmentItems;
+import net.legacy.end_reborn.registry.ERItems;
+import net.legacy.end_reborn.tag.ERItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -20,8 +19,19 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
 	@Override
 	protected void addTags(@NotNull HolderLookup.Provider arg) {
-		//this.getOrCreateTagBuilder(ERItemTags.VOID_IMMUNE)
-				//.add(ERItems.REMNIUM_INGOT);
+		this.getOrCreateTagBuilder(ERItemTags.VOID_IMMUNE)
+				.add(ERItems.FEATHERZEAL_INGOT)
+				.add(ERItems.FEATHERZEAL_SCRAP)
+				.add(EREquipmentItems.FEATHERZEAL_SWORD)
+				.add(EREquipmentItems.FEATHERZEAL_AXE)
+				.add(EREquipmentItems.FEATHERZEAL_PICKAXE)
+				.add(EREquipmentItems.FEATHERZEAL_SHOVEL)
+				.add(EREquipmentItems.FEATHERZEAL_HOE)
+				.add(EREquipmentItems.FEATHERZEAL_HELMET)
+				.add(EREquipmentItems.FEATHERZEAL_CHESTPLATE)
+				.add(EREquipmentItems.FEATHERZEAL_LEGGINGS)
+				.add(EREquipmentItems.FEATHERZEAL_BOOTS)
+				.add(EREquipmentItems.FEATHERZEAL_HORSE_ARMOR);
 
 		this.getOrCreateTagBuilder(ERItemTags.REMNIUM_TOOL_MATERIALS)
 				.add(ERItems.REMNIUM_INGOT);
@@ -32,33 +42,33 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(ERItems.REMNIUM_INGOT);
 
 		this.getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-				.add(ERGearItems.REMNIUM_HELMET)
-				.add(ERGearItems.REMNIUM_CHESTPLATE)
-				.add(ERGearItems.REMNIUM_LEGGINGS)
-				.add(ERGearItems.REMNIUM_BOOTS);
+				.add(EREquipmentItems.REMNIUM_HELMET)
+				.add(EREquipmentItems.REMNIUM_CHESTPLATE)
+				.add(EREquipmentItems.REMNIUM_LEGGINGS)
+				.add(EREquipmentItems.REMNIUM_BOOTS);
 
 		this.getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
 				.add(ERItems.REMNIUM_INGOT)
 				.add(ERItems.CRYSTALLINE_SHARD);
 		this.getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
-				.add(ERGearItems.REMNIUM_HELMET);
+				.add(EREquipmentItems.REMNIUM_HELMET);
 		this.getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
-				.add(ERGearItems.REMNIUM_CHESTPLATE);
+				.add(EREquipmentItems.REMNIUM_CHESTPLATE);
 		this.getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
-				.add(ERGearItems.REMNIUM_LEGGINGS);
+				.add(EREquipmentItems.REMNIUM_LEGGINGS);
 		this.getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
-				.add(ERGearItems.REMNIUM_BOOTS);
+				.add(EREquipmentItems.REMNIUM_BOOTS);
 
 		this.getOrCreateTagBuilder(ItemTags.SWORDS)
-				.add(ERGearItems.REMNIUM_SWORD);
+				.add(EREquipmentItems.REMNIUM_SWORD);
 		this.getOrCreateTagBuilder(ItemTags.AXES)
-				.add(ERGearItems.REMNIUM_AXE);
+				.add(EREquipmentItems.REMNIUM_AXE);
 		this.getOrCreateTagBuilder(ItemTags.PICKAXES)
-				.add(ERGearItems.REMNIUM_PICKAXE);
+				.add(EREquipmentItems.REMNIUM_PICKAXE);
 		this.getOrCreateTagBuilder(ItemTags.SHOVELS)
-				.add(ERGearItems.REMNIUM_SHOVEL);
+				.add(EREquipmentItems.REMNIUM_SHOVEL);
 		this.getOrCreateTagBuilder(ItemTags.HOES)
-				.add(ERGearItems.REMNIUM_HOE);
+				.add(EREquipmentItems.REMNIUM_HOE);
 
 		this.getOrCreateTagBuilder(ERItemTags.CHORUS_BLOCKS)
 				.add(ERBlocks.CHORUS_BLOCK.asItem())

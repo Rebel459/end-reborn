@@ -1,4 +1,4 @@
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.registry;
 import java.util.function.Function;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityType;
@@ -7,7 +7,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.frozenblock.lib.item.api.FuelRegistry;
+import net.legacy.end_reborn.ERConstants;
 import net.legacy.end_reborn.sound.ERBlockSounds;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;

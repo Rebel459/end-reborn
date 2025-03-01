@@ -16,10 +16,9 @@
  * along with this program; if not, see <https://www.gnu.org/licenses/>.
  */
 
-package net.legacy.end_reborn;
+package net.legacy.end_reborn.registry;
 
-import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.frozenblock.lib.entity.api.spawnplacement.FrozenSpawnPlacementTypes;
+import net.legacy.end_reborn.ERConstants;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -27,13 +26,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.SpawnPlacementTypes;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.vehicle.Boat;
-import net.minecraft.world.entity.vehicle.ChestBoat;
 import net.minecraft.world.entity.vehicle.ChestRaft;
 import net.minecraft.world.entity.vehicle.Raft;
-import net.minecraft.world.level.levelgen.Heightmap;
 import org.jetbrains.annotations.NotNull;
 
 public final class EREntityTypes {
@@ -57,10 +51,6 @@ public final class EREntityTypes {
 			.eyeHeight(0.5625F)
 			.clientTrackingRange(10)
 	);
-
-	private EREntityTypes() {
-		throw new UnsupportedOperationException("WWEntityTypes contains only static declarations.");
-	}
 
 	public static void init() {
 	}
