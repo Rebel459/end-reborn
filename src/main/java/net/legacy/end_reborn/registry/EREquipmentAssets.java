@@ -1,5 +1,6 @@
 package net.legacy.end_reborn.registry;
 
+import net.legacy.end_reborn.ERConstants;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
@@ -10,7 +11,7 @@ public interface EREquipmentAssets {
     ResourceKey<EquipmentAsset> REMNANT = createId("remnant");
     ResourceKey<EquipmentAsset> FEATHERZEAL = createId("featherzeal");
 
-    static ResourceKey<EquipmentAsset> createId(String name) {
-        return ResourceKey.create(ROOT_ID, ResourceLocation.withDefaultNamespace(name));
+    static ResourceKey<EquipmentAsset> createId(String path) {
+        return ResourceKey.create(ROOT_ID, ERConstants.id(path));
     }
 }

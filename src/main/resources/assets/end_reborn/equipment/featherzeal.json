@@ -2,17 +2,17 @@
   "layers": {
     "horse_body": [
       {
-        "texture": "minecraft:featherzeal"
+        "texture": "end_reborn:featherzeal"
       }
     ],
     "humanoid": [
       {
-        "texture": "minecraft:featherzeal"
+        "texture": "end_reborn:featherzeal"
       }
     ],
     "humanoid_leggings": [
       {
-        "texture": "minecraft:featherzeal"
+        "texture": "end_reborn:featherzeal"
       }
     ]
   }
