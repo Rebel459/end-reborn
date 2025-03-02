@@ -23,23 +23,23 @@ import java.util.function.Function;
 public final class EREquipmentItems {
 
     // Tools
-    public static final SwordItem REMNIUM_SWORD = register("remnium_sword", settings -> new SwordItem(ERToolMaterial.REMNIUM, 3f, -2.4f, settings
+    public static final SwordItem REMNANT_SWORD = register("remnant_sword", settings -> new SwordItem(ERToolMaterial.REMNANT, 3f, -2.4f, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
-    public static final PickaxeItem REMNIUM_PICKAXE = register("remnium_pickaxe", settings -> new PickaxeItem(ERToolMaterial.REMNIUM, 1f, -2.8f, settings
+    public static final PickaxeItem REMNANT_PICKAXE = register("remnant_pickaxe", settings -> new PickaxeItem(ERToolMaterial.REMNANT, 1f, -2.8f, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
-    public static final AxeItem REMNIUM_AXE = register("remnium_axe", settings -> new AxeItem(ERToolMaterial.REMNIUM, 6f, -3.1f, settings
+    public static final AxeItem REMNANT_AXE = register("remnant_axe", settings -> new AxeItem(ERToolMaterial.REMNANT, 5f, -3.0f, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
-    public static final ShovelItem REMNIUM_SHOVEL = register("remnium_shovel", settings -> new ShovelItem(ERToolMaterial.REMNIUM, 1.5f, -3f, settings
+    public static final ShovelItem REMNANT_SHOVEL = register("remnant_shovel", settings -> new ShovelItem(ERToolMaterial.REMNANT, 1.5f, -3f, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
-    public static final HoeItem REMNIUM_HOE = register("remnium_hoe", settings -> new HoeItem(ERToolMaterial.REMNIUM, -2f, -1f, settings
+    public static final HoeItem REMNANT_HOE = register("remnant_hoe", settings -> new HoeItem(ERToolMaterial.REMNANT, -2f, -1f, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
@@ -50,7 +50,7 @@ public final class EREquipmentItems {
     public static final PickaxeItem FEATHERZEAL_PICKAXE = register("featherzeal_pickaxe", settings -> new PickaxeItem(ERToolMaterial.FEATHERZEAL, 1f, -2.8f, settings
             .stacksTo(1)
     ));
-    public static final AxeItem FEATHERZEAL_AXE = register("featherzeal_axe", settings -> new AxeItem(ERToolMaterial.FEATHERZEAL, 6f, -3.1f, settings
+    public static final AxeItem FEATHERZEAL_AXE = register("featherzeal_axe", settings -> new AxeItem(ERToolMaterial.FEATHERZEAL, 5f, -3.0f, settings
             .stacksTo(1)
     ));
     public static final ShovelItem FEATHERZEAL_SHOVEL = register("featherzeal_shovel", settings -> new ShovelItem(ERToolMaterial.FEATHERZEAL, 1.5f, -3f, settings
@@ -61,19 +61,19 @@ public final class EREquipmentItems {
     ));
 
     // Armor
-    public static final ArmorItem REMNIUM_HELMET = register("remnium_helmet", settings -> new ArmorItem(ERArmorMaterials.REMNIUM, ArmorType.HELMET, settings
+    public static final ArmorItem REMNANT_HELMET = register("remnant_helmet", settings -> new ArmorItem(ERArmorMaterials.REMNANT, ArmorType.HELMET, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
-    public static final ArmorItem REMNIUM_CHESTPLATE = register("remnium_chestplate", settings -> new ArmorItem(ERArmorMaterials.REMNIUM, ArmorType.CHESTPLATE, settings
+    public static final ArmorItem REMNANT_CHESTPLATE = register("remnant_chestplate", settings -> new ArmorItem(ERArmorMaterials.REMNANT, ArmorType.CHESTPLATE, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
-    public static final ArmorItem REMNIUM_LEGGINGS = register("remnium_leggings", settings -> new ArmorItem(ERArmorMaterials.REMNIUM, ArmorType.LEGGINGS, settings
+    public static final ArmorItem REMNANT_LEGGINGS = register("remnant_leggings", settings -> new ArmorItem(ERArmorMaterials.REMNANT, ArmorType.LEGGINGS, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
-    public static final ArmorItem REMNIUM_BOOTS = register("remnium_boots", settings -> new ArmorItem(ERArmorMaterials.REMNIUM, ArmorType.BOOTS, settings
+    public static final ArmorItem REMNANT_BOOTS = register("remnant_boots", settings -> new ArmorItem(ERArmorMaterials.REMNANT, ArmorType.BOOTS, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));
@@ -91,7 +91,7 @@ public final class EREquipmentItems {
             .stacksTo(1)
     ));
 
-    public static final AnimalArmorItem REMNIUM_HORSE_ARMOR = register("remnium_horse_armor", settings -> new AnimalArmorItem(ERArmorMaterials.REMNIUM, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
+    public static final AnimalArmorItem REMNANT_HORSE_ARMOR = register("remnant_horse_armor", settings -> new AnimalArmorItem(ERArmorMaterials.REMNANT, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
             .stacksTo(1)
             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     ));

@@ -14,7 +14,7 @@ import java.util.List;
 public final class ERTrimItemModels {
     private static final List<String> ARMORS = List.of("helmet", "chestplate", "leggings", "boots");
     private static final List<String> ARMOR_MATERIALS = List.of("leather", "chainmail", "iron", "golden", "diamond", "netherite");
-    private static final List<String> ARMOR_MATERIALS_REMNIUM = List.of("remnium");
+    private static final List<String> ARMOR_MATERIALS_REMNANT = List.of("remnant");
 
     @SuppressWarnings("UnnecessaryReturnStatement")
     private ERTrimItemModels() {
@@ -26,7 +26,7 @@ public final class ERTrimItemModels {
          * Add trim materials to each armor.
          */
         ARMORS.forEach(armor -> ARMOR_MATERIALS.forEach(armorMaterial -> registerAddTrimsToArmor(armor, armorMaterial)));
-        ARMORS.forEach(armor -> ARMOR_MATERIALS_REMNIUM.forEach(armorMaterial -> registerAddTrimsToArmorRemnant(armor, armorMaterial)));
+        ARMORS.forEach(armor -> ARMOR_MATERIALS_REMNANT.forEach(armorMaterial -> registerAddTrimsToArmorRemnant(armor, armorMaterial)));
 
         // (dare to be different)
         registerAddTrimsToArmor("helmet", "turtle");

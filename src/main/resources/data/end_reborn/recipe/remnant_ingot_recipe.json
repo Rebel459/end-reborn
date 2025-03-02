@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "end_reborn:remnant_scrap",
+    "end_reborn:remnant_scrap",
+    "end_reborn:remnant_scrap",
+    "end_reborn:remnant_scrap"
+  ],
+  "result": {
+    "count": 1,
+    "id": "end_reborn:remnant_ingot"
+  }
+}

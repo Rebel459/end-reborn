@@ -1,8 +1,0 @@
-{
-  "asset_name": "remnium_ingot_darker",
-  "description": {
-    "color": "#555555",
-    "translate": "trim_material.end_reborn.remnium_ingot_darker"
-  },
-  "ingredient": "end_reborn:remnium_ingot"
-}

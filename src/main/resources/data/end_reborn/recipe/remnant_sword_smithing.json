@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "end_reborn:remnant_upgrade_smithing_template",
+  "base": "minecraft:diamond_sword",
+  "addition": "end_reborn:remnant_ingot",
+  "result": {
+    "id": "end_reborn:remnant_sword"
+  }
+}

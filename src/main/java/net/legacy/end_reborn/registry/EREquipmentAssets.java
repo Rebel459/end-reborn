@@ -7,7 +7,7 @@ import net.minecraft.world.item.equipment.EquipmentAsset;
 
 public interface EREquipmentAssets {
     ResourceKey<? extends Registry<EquipmentAsset>> ROOT_ID = ResourceKey.createRegistryKey(ResourceLocation.withDefaultNamespace("equipment_asset"));
-    ResourceKey<EquipmentAsset> REMNIUM = createId("remnium");
+    ResourceKey<EquipmentAsset> REMNANT = createId("remnant");
     ResourceKey<EquipmentAsset> FEATHERZEAL = createId("featherzeal");
 
     static ResourceKey<EquipmentAsset> createId(String name) {

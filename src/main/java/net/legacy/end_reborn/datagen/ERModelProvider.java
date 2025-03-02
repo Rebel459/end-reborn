@@ -28,13 +28,13 @@ import org.jetbrains.annotations.NotNull;
 
 public final class ERModelProvider extends FabricModelProvider {
 	private static final List<ItemModelGenerators.TrimMaterialData> TRIM_MATERIALS = List.of(
-			new ItemModelGenerators.TrimMaterialData("remnium_ingot", ERTrimMaterials.REMNIUM, Map.of()),
+			new ItemModelGenerators.TrimMaterialData("remnant_ingot", ERTrimMaterials.REMNANT, Map.of()),
 			new ItemModelGenerators.TrimMaterialData("crystalline_shard", ERTrimMaterials.CRYSTALLINE, Map.of())
 	);
-	private static final List<ItemModelGenerators.TrimMaterialData> TRIM_MATERIALS_REMNIUM_ONLY = List.of(
-			new ItemModelGenerators.TrimMaterialData("remnium_ingot", ERTrimMaterials.REMNIUM, Map.of())
+	private static final List<ItemModelGenerators.TrimMaterialData> TRIM_MATERIALS_REMNANT_ONLY = List.of(
+			new ItemModelGenerators.TrimMaterialData("remnant_ingot", ERTrimMaterials.REMNANT, Map.of())
 	);
-	private static final List<ItemModelGenerators.TrimMaterialData> TRIM_MATERIALS_NOT_REMNIUM = List.of(
+	private static final List<ItemModelGenerators.TrimMaterialData> TRIM_MATERIALS_NOT_REMNANT = List.of(
 			new ItemModelGenerators.TrimMaterialData("crystalline_shard", ERTrimMaterials.CRYSTALLINE, Map.of())
 	);
 
@@ -71,7 +71,7 @@ public final class ERModelProvider extends FabricModelProvider {
 	@Override
 	public void generateBlockStateModels(@NotNull BlockModelGenerators generator) {
 		generator.createTrivialCube(ERBlocks.CRACKED_END_STONE_BRICKS);
-		generator.createTrivialCube(ERBlocks.REMNIUM_BLOCK);
+		generator.createTrivialCube(ERBlocks.REMNANT_BLOCK);
 		generator.createTrivialCube(ERBlocks.FORGOTTEN_REMAINS);
 		generator.createTrivialCube(ERBlocks.CRYSTALLINE_LAMP);
 		generator.createTrivialCube(ERBlocks.CRYSTALLINE_BLOCK);
@@ -102,26 +102,45 @@ public final class ERModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
-		generator.generateTrimmableItem(EREquipmentItems.REMNIUM_HELMET, EREquipmentAssets.REMNIUM, "helmet", false);
-		generator.generateTrimmableItem(EREquipmentItems.REMNIUM_CHESTPLATE, EREquipmentAssets.REMNIUM, "chestplate", false);
-		generator.generateTrimmableItem(EREquipmentItems.REMNIUM_LEGGINGS, EREquipmentAssets.REMNIUM, "leggings", false);
-		generator.generateTrimmableItem(EREquipmentItems.REMNIUM_BOOTS, EREquipmentAssets.REMNIUM, "boots", false);
+		generator.generateTrimmableItem(EREquipmentItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
+		generator.generateTrimmableItem(EREquipmentItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
+		generator.generateTrimmableItem(EREquipmentItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
+		generator.generateTrimmableItem(EREquipmentItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
+
+		generator.generateTrimmableItem(EREquipmentItems.FEATHERZEAL_HELMET, EREquipmentAssets.FEATHERZEAL, "helmet", false);
+		generator.generateTrimmableItem(EREquipmentItems.FEATHERZEAL_CHESTPLATE, EREquipmentAssets.FEATHERZEAL, "chestplate", false);
+		generator.generateTrimmableItem(EREquipmentItems.FEATHERZEAL_LEGGINGS, EREquipmentAssets.FEATHERZEAL, "leggings", false);
+		generator.generateTrimmableItem(EREquipmentItems.FEATHERZEAL_BOOTS, EREquipmentAssets.FEATHERZEAL, "boots", false);
 
 		generator.generateFlatItem(ERItems.CHORUS_RAFT, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.CHORUS_CHEST_RAFT, ModelTemplates.FLAT_ITEM);
 
-		generator.generateFlatItem(ERItems.REMNIUM_INGOT, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(ERItems.REMNIUM_SCRAP, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.CHORUS_SPINE, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.CRYSTALLINE_SHARD, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(ERItems.REMNIUM_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
-		generator.generateFlatItem(EREquipmentItems.REMNIUM_SWORD, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(EREquipmentItems.REMNIUM_AXE, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(EREquipmentItems.REMNIUM_PICKAXE, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(EREquipmentItems.REMNIUM_SHOVEL, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(EREquipmentItems.REMNIUM_HOE, ModelTemplates.FLAT_ITEM);
-		generator.generateFlatItem(EREquipmentItems.REMNIUM_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_INGOT, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_SCRAP, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+
+		generator.generateFlatItem(ERItems.FEATHERZEAL_INGOT, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_SCRAP, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
+
+		generator.generateFlatItem(EREquipmentItems.REMNANT_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNANT_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNANT_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNANT_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(EREquipmentItems.REMNANT_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+
+		generator.generateFlatItem(EREquipmentItems.REMNANT_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+
+		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
 
 		this.registerArmorTrims(generator, Items.TURTLE_HELMET, EquipmentAssets.TURTLE_SCUTE, "helmet", false);
 		this.registerArmorTrims(generator, Items.LEATHER_HELMET, EquipmentAssets.LEATHER, "helmet", true);
@@ -149,15 +168,15 @@ public final class ERModelProvider extends FabricModelProvider {
 		this.registerArmorTrims(generator, Items.NETHERITE_LEGGINGS, EquipmentAssets.NETHERITE, "leggings", false);
 		this.registerArmorTrims(generator, Items.NETHERITE_BOOTS, EquipmentAssets.NETHERITE, "boots", false);
 
-		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNIUM_HELMET, EREquipmentAssets.REMNIUM, "helmet", false);
-		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNIUM_CHESTPLATE, EREquipmentAssets.REMNIUM, "chestplate", false);
-		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNIUM_LEGGINGS, EREquipmentAssets.REMNIUM, "leggings", false);
-		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNIUM_BOOTS, EREquipmentAssets.REMNIUM, "boots", false);
+		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
+		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
+		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
+		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
 
-		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNIUM_HELMET, EREquipmentAssets.REMNIUM, "helmet", false);
-		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNIUM_CHESTPLATE, EREquipmentAssets.REMNIUM, "chestplate", false);
-		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNIUM_LEGGINGS, EREquipmentAssets.REMNIUM, "leggings", false);
-		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNIUM_BOOTS, EREquipmentAssets.REMNIUM, "boots", false);
+		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
+		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
+		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
+		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
 
 	}
 
@@ -195,7 +214,7 @@ public final class ERModelProvider extends FabricModelProvider {
 		ResourceLocation armorModelId = TextureMapping.getItemTexture(armor);
 		ResourceLocation armorTextures = TextureMapping.getItemTexture(armor);
 		ResourceLocation armorOverlayTextures = TextureMapping.getItemTexture(armor, "_overlay");
-		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS_REMNIUM_ONLY) {
+		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS_REMNANT_ONLY) {
 			ResourceLocation trimmedModelId = ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID,
 					armorModelId.getPath()).withSuffix("_" + trimMaterial.name() + "_trim");
 			ResourceLocation trimTextureId = ResourceLocation.withDefaultNamespace(
@@ -212,7 +231,7 @@ public final class ERModelProvider extends FabricModelProvider {
 		ResourceLocation armorModelId = TextureMapping.getItemTexture(armor);
 		ResourceLocation armorTextures = TextureMapping.getItemTexture(armor);
 		ResourceLocation armorOverlayTextures = TextureMapping.getItemTexture(armor, "_overlay");
-		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS_NOT_REMNIUM) {
+		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS_NOT_REMNANT) {
 			ResourceLocation trimmedModelId = ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID,
 					armorModelId.getPath()).withSuffix("_" + trimMaterial.name() + "_trim");
 			ResourceLocation trimTextureId = ResourceLocation.withDefaultNamespace(

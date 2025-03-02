@@ -28,7 +28,7 @@ public final class ERBlockLootProvider extends FabricBlockLootTableProvider {
 		this.dropSelf(ERBlocks.CRACKED_END_STONE_BRICKS);
 		// End Iron Ore
 		this.dropSelf(ERBlocks.FORGOTTEN_REMAINS);
-		this.dropSelf(ERBlocks.REMNIUM_BLOCK);
+		this.dropSelf(ERBlocks.REMNANT_BLOCK);
 		this.dropSelf(ERBlocks.AMETRUR);
 		this.dropSelf(ERBlocks.CUT_AMETRUR_STAIRS);
 		this.dropSelf(ERBlocks.CUT_AMETRUR_PILLAR);

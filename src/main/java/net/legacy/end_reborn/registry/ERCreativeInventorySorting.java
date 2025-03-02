@@ -9,7 +9,7 @@ public class ERCreativeInventorySorting {
 
 	public static void init() {
 		// Ingredients
-		addBeforeInCombat(Items.NETHERITE_INGOT, ERItems.REMNIUM_INGOT);
+		addBeforeInCombat(Items.NETHERITE_INGOT, ERItems.REMNANT_INGOT);
 	}
 
 	private static void addAfterInNaturalBlocks(ItemLike comparedItem, ItemLike item) {
