@@ -48,6 +48,8 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.CRYSTALLINE_LANTERN)
 				.add(ERBlocks.FORGOTTEN_REMAINS)
 				.add(ERBlocks.REMNANT_BLOCK)
+				.add(ERBlocks.TIMELOST_FRAGMENTS)
+				.add(ERBlocks.FEATHERZEAL_BLOCK)
 				.add(ERBlocks.CRACKED_END_STONE_BRICKS)
 				.add(ERBlocks.END_IRON_ORE);
 
@@ -61,7 +63,9 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 
 		this.getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
 				.add(ERBlocks.FORGOTTEN_REMAINS)
-				.add(ERBlocks.REMNANT_BLOCK);
+				.add(ERBlocks.REMNANT_BLOCK)
+				.add(ERBlocks.TIMELOST_FRAGMENTS)
+				.add(ERBlocks.FEATHERZEAL_BLOCK);
 
 		this.getOrCreateTagBuilder(BlockTags.STAIRS)
 				.add(ERBlocks.CUT_AMETRUR_STAIRS)
@@ -80,7 +84,8 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.CHORUS_TRAPDOOR);
 
 		this.getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
-				.add(ERBlocks.REMNANT_BLOCK);
+				.add(ERBlocks.REMNANT_BLOCK)
+				.add(ERBlocks.FEATHERZEAL_BLOCK);
 
 	}
 

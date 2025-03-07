@@ -13,6 +13,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.component.DamageResistant;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.function.Function;
 
@@ -78,13 +79,28 @@ public final class ERItems {
                     .stacksTo(1)
     );
 
+    // Signs
     public static final Item CHORUS_SIGN = registerBlock(ERBlocks.CHORUS_SIGN,
             (block, properties) -> new SignItem(block, ERBlocks.CHORUS_WALL_SIGN, properties),
-            new Item.Properties().stacksTo(16)
+            new Item.Properties()
+                    .stacksTo(16)
     );
     public static final Item CHORUS_HANGING_SIGN = registerBlock(ERBlocks.CHORUS_HANGING_SIGN,
             (block, properties) -> new HangingSignItem(block, ERBlocks.CHORUS_WALL_HANGING_SIGN, properties),
-            new Item.Properties().stacksTo(16)
+            new Item.Properties()
+                    .stacksTo(16)
+    );
+
+    // Blocks
+    public static final Item REMNANT_BLOCK = registerBlock(ERBlocks.REMNANT_BLOCK,
+            (block, properties) -> new BlockItem(ERBlocks.REMNANT_BLOCK, properties),
+            new Item.Properties()
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item FORGOTTEN_REMAINS = registerBlock(ERBlocks.FORGOTTEN_REMAINS,
+            (block, properties) -> new BlockItem(ERBlocks.FORGOTTEN_REMAINS, properties),
+            new Item.Properties()
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
 
     public static void init() {

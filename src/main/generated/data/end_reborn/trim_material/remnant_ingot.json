@@ -6,6 +6,6 @@
   },
   "ingredient": "end_reborn:remnant_ingot",
   "override_armor_assets": {
-    "minecraft:remnant": "remnant_ingot_darker"
+    "end_reborn:remnant": "remnant_ingot_darker"
   }
 }

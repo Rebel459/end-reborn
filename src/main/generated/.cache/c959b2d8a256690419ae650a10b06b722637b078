@@ -1,9 +1,9 @@
 // 1.21.4	-999999999-01-01T00:00:00	Progression Reborn/Tags for minecraft:block
-8548a4c88390e0ff649ba577d6a95e7fabd00c5d data/minecraft/tags/block/beacon_base_blocks.json
+b824fbf7b616aea33ce0161d6094491b4ea6b8ee data/minecraft/tags/block/beacon_base_blocks.json
 e6b85cbd32e4a1e50bb9e52923d79a231908ee71 data/minecraft/tags/block/doors.json
 0aa88da95963ccb1bb07ec728f07261e2aa2d085 data/minecraft/tags/block/mineable/axe.json
-193e8b9fba1d009f56ab072f97a0ce6b609d6701 data/minecraft/tags/block/mineable/pickaxe.json
-238579afa2df220476cb8be18b5a7cda28eca92d data/minecraft/tags/block/needs_diamond_tool.json
+52f4f9f35605886f6169f3d2311df7a62f435146 data/minecraft/tags/block/mineable/pickaxe.json
+6565ee20e145efd7e3febb442579a8bca70b7e32 data/minecraft/tags/block/needs_diamond_tool.json
 f891b999446c68b817cde339138d2f292118962e data/minecraft/tags/block/needs_stone_tool.json
 342642804d7bca62cb90e7fbc91676fcea715d02 data/minecraft/tags/block/slabs.json
 7e973f2978b246a61d938b1389e10302cb20c1eb data/minecraft/tags/block/stairs.json

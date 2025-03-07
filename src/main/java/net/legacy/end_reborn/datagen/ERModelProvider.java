@@ -73,6 +73,8 @@ public final class ERModelProvider extends FabricModelProvider {
 		generator.createTrivialCube(ERBlocks.CRACKED_END_STONE_BRICKS);
 		generator.createTrivialCube(ERBlocks.REMNANT_BLOCK);
 		generator.createTrivialCube(ERBlocks.FORGOTTEN_REMAINS);
+		generator.createTrivialCube(ERBlocks.FEATHERZEAL_BLOCK);
+		generator.createTrivialCube(ERBlocks.TIMELOST_FRAGMENTS);
 		generator.createTrivialCube(ERBlocks.CRYSTALLINE_LAMP);
 		generator.createTrivialCube(ERBlocks.CRYSTALLINE_BLOCK);
 		generator.createTrivialCube(ERBlocks.END_IRON_ORE);

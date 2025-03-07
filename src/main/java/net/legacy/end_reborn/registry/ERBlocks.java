@@ -45,7 +45,7 @@ public class ERBlocks {
     );
 
     // Remnant
-    public static final Block REMNANT_BLOCK = register("remnant_block",
+    public static final Block REMNANT_BLOCK = registerWithoutItem("remnant_block",
             Block::new,
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_GRAY)
@@ -53,10 +53,28 @@ public class ERBlocks {
                     .strength(50.0F, 1200.0F)
                     .sound(SoundType.NETHERITE_BLOCK)
     );
-    public static final Block FORGOTTEN_REMAINS = register("forgotten_remains",
+    public static final Block FORGOTTEN_REMAINS = registerWithoutItem("forgotten_remains",
             Block::new,
             BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_GRAY)
+                    .requiresCorrectToolForDrops()
+                    .strength(30.0F, 1200.0F)
+                    .sound(SoundType.ANCIENT_DEBRIS)
+    );
+
+    // Featherzeal
+    public static final Block FEATHERZEAL_BLOCK = register("featherzeal_block",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_GREEN)
+                    .requiresCorrectToolForDrops()
+                    .strength(50.0F, 1200.0F)
+                    .sound(SoundType.NETHERITE_BLOCK)
+    );
+    public static final Block TIMELOST_FRAGMENTS = register("timelost_fragments",
+            Block::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLUE)
                     .requiresCorrectToolForDrops()
                     .strength(30.0F, 1200.0F)
                     .sound(SoundType.ANCIENT_DEBRIS)

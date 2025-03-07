@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "end_reborn:block/timelost_fragments"
+  }
+}
