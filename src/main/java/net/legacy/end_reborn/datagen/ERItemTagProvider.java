@@ -8,6 +8,7 @@ import net.legacy.end_reborn.registry.ERItems;
 import net.legacy.end_reborn.tag.ERItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.ItemTags;
+import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.concurrent.CompletableFuture;
@@ -95,6 +96,11 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 		this.getOrCreateTagBuilder(ERItemTags.CHORUS_BLOCKS)
 				.add(ERBlocks.CHORUS_BLOCK.asItem())
 				.add(ERBlocks.STRIPPED_CHORUS_BLOCK.asItem());
+
+		this.getOrCreateTagBuilder(ItemTags.STONE_CRAFTING_MATERIALS)
+				.add(Blocks.END_STONE.asItem());
+		this.getOrCreateTagBuilder(ItemTags.STONE_TOOL_MATERIALS)
+				.add(Blocks.END_STONE.asItem());
 	}
 
 }
