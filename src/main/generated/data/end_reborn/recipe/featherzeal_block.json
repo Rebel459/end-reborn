@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "end_reborn:featherzeal_ingot",
+    "end_reborn:featherzeal_ingot",
+    "end_reborn:featherzeal_ingot",
+    "end_reborn:featherzeal_ingot",
+    "end_reborn:featherzeal_ingot",
+    "end_reborn:featherzeal_ingot",
+    "end_reborn:featherzeal_ingot",
+    "end_reborn:featherzeal_ingot",
+    "end_reborn:featherzeal_ingot"
+  ],
+  "result": {
+    "count": 1,
+    "id": "end_reborn:featherzeal_block"
+  }
+}

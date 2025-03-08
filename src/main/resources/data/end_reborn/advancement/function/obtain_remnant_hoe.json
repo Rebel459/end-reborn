@@ -1,0 +1,19 @@
+{
+  "criteria": {
+    "has_remnant_hoe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "end_reborn:remnant_hoe"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "end_reborn:obtain_netherite_hoe"
+  }
+}

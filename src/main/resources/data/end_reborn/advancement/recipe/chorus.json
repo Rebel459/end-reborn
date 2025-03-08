@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "has_rose_ingot": {
+    "has_chorus": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [

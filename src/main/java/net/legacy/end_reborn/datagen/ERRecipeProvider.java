@@ -57,7 +57,7 @@ public final class ERRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy("has_remnant_template", this.has(ERItems.REMNANT_UPGRADE_SMITHING_TEMPLATE))
                         .save(exporter);
 
-                // Remnium Ingot
+                // Remnant Ingot
 
                 this.shapeless(RecipeCategory.MISC, ERBlocks.REMNANT_BLOCK)
                         .requires(Ingredient.of(ERItems.REMNANT_INGOT), 9)
@@ -70,6 +70,33 @@ public final class ERRecipeProvider extends FabricRecipeProvider {
                         .save(exporter);
 
                 // Remnant Equipment
+
+                // FEATHERZEAL
+
+                this.shaped(RecipeCategory.MISC, ERItems.FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE, 2)
+                        .group("featherzeal_upgrade_smithing_template")
+                        .define('#', Ingredient.of(Items.DIAMOND))
+                        .define('U', Ingredient.of(ERItems.FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE))
+                        .define('X', Ingredient.of(Blocks.END_STONE))
+                        .pattern("#U#")
+                        .pattern("#X#")
+                        .pattern("###")
+                        .unlockedBy("has_featherzeal_template", this.has(ERItems.FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE))
+                        .save(exporter);
+
+                // Featherzeal Ingot
+
+                this.shapeless(RecipeCategory.MISC, ERBlocks.FEATHERZEAL_BLOCK)
+                        .requires(Ingredient.of(ERItems.FEATHERZEAL_INGOT), 9)
+                        .unlockedBy("has_featherzeal", this.has(ERItems.FEATHERZEAL_SCRAP))
+                        .save(exporter);
+
+                this.shapeless(RecipeCategory.MISC, ERItems.FEATHERZEAL_INGOT, 9)
+                        .requires(Ingredient.of(ERBlocks.FEATHERZEAL_BLOCK))
+                        .unlockedBy("has_featherzeal", this.has(ERItems.FEATHERZEAL_SCRAP))
+                        .save(exporter);
+
+                // Featherzeal Equipment
 
                 // CRYSTALLINE
 

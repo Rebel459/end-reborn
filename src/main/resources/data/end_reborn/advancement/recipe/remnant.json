@@ -1,6 +1,6 @@
 {
   "criteria": {
-    "has_rose_ingot": {
+    "has_remnant": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
@@ -16,6 +16,8 @@
   "rewards": {
     "experience": 0,
     "recipes": [
+      "end_reborn:remnant_ingot",
+      "end_reborn:remnant_block",
       "end_reborn:remnant_sword_smithing",
       "end_reborn:remnant_axe_smithing",
       "end_reborn:remnant_pickaxe_smithing",
