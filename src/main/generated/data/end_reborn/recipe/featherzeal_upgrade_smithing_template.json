@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "featherzeal_upgrade_smithing_template",
+  "group": "featherzeal_template",
   "key": {
     "#": "minecraft:diamond",
     "U": "end_reborn:featherzeal_upgrade_smithing_template",

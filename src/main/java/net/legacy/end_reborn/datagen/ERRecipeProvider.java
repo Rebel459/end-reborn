@@ -55,6 +55,7 @@ public final class ERRecipeProvider extends FabricRecipeProvider {
                         .pattern("#X#")
                         .pattern("###")
                         .unlockedBy("has_remnant_template", this.has(ERItems.REMNANT_UPGRADE_SMITHING_TEMPLATE))
+                        .group("remnant_template")
                         .save(exporter);
 
                 // Remnant Ingot
@@ -82,6 +83,7 @@ public final class ERRecipeProvider extends FabricRecipeProvider {
                         .pattern("#X#")
                         .pattern("###")
                         .unlockedBy("has_featherzeal_template", this.has(ERItems.FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE))
+                        .group("featherzeal_template")
                         .save(exporter);
 
                 // Featherzeal Ingot
