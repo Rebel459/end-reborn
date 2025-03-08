@@ -15,6 +15,7 @@ public final class ERTrimItemModels {
     private static final List<String> ARMORS = List.of("helmet", "chestplate", "leggings", "boots");
     private static final List<String> ARMOR_MATERIALS = List.of("leather", "chainmail", "iron", "golden", "diamond", "netherite");
     private static final List<String> ARMOR_MATERIALS_REMNANT = List.of("remnant");
+    private static final List<String> ARMOR_MATERIALS_FEATHERZEAL = List.of("featherzeal");
 
     @SuppressWarnings("UnnecessaryReturnStatement")
     private ERTrimItemModels() {
@@ -27,6 +28,7 @@ public final class ERTrimItemModels {
          */
         ARMORS.forEach(armor -> ARMOR_MATERIALS.forEach(armorMaterial -> registerAddTrimsToArmor(armor, armorMaterial)));
         ARMORS.forEach(armor -> ARMOR_MATERIALS_REMNANT.forEach(armorMaterial -> registerAddTrimsToArmorRemnant(armor, armorMaterial)));
+        ARMORS.forEach(armor -> ARMOR_MATERIALS_FEATHERZEAL.forEach(armorMaterial -> registerAddTrimsToArmorFeatherzeal(armor, armorMaterial)));
 
         // (dare to be different)
         registerAddTrimsToArmor("helmet", "turtle");
@@ -72,6 +74,39 @@ public final class ERTrimItemModels {
     }
 
     private static void registerAddTrimsToArmorRemnant(String armor, String armorMaterial) {
+        Mixson.registerModificationEvent(
+                ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "items/" + armorMaterial + "_" + armor),
+                ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "add_trims_to_" + armorMaterial + "_" + armor),
+                new ModificationEvent() {
+                    @Override
+                    public @NotNull JsonElement run(JsonElement elem) {
+                        JsonObject root = elem.getAsJsonObject();
+                        JsonObject model = root.getAsJsonObject("model");
+                        JsonArray cases = model.getAsJsonArray("cases");
+                        JsonObject case0 = cases.get(0).getAsJsonObject();
+
+                        ERTrimMaterials.TRIM_MATERIALS.forEach(trim -> {
+                            JsonObject newCase = case0.deepCopy();
+
+                            newCase.addProperty("when", trimMaterialId(trim).toString());
+                            newCase.getAsJsonObject("model")
+                                    .addProperty("model", itemModelId(armor, armorMaterial, trim).toString());
+
+                            cases.add(newCase);
+                        });
+
+                        return elem;
+                    }
+
+                    @Override
+                    public int ordinal() {
+                        return 0;
+                    }
+                }
+        );
+    }
+
+    private static void registerAddTrimsToArmorFeatherzeal(String armor, String armorMaterial) {
         Mixson.registerModificationEvent(
                 ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "items/" + armorMaterial + "_" + armor),
                 ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "add_trims_to_" + armorMaterial + "_" + armor),
