@@ -14,6 +14,8 @@ e8912dd24bec4c531d292443eefa9adf28051d8b data/minecraft/tags/item/head_armor.jso
 0c89154220c3b83de0123bebdab894776701191b data/minecraft/tags/item/leg_armor.json
 04b561b1d5e3e715c4ae7acf6911c788c21fe085 data/minecraft/tags/item/pickaxes.json
 cb6aadd80a421bca87bab1b32bd1cc3f2a1818cd data/minecraft/tags/item/shovels.json
+9994f212884e8264af96eaba34aa7e89696d8994 data/minecraft/tags/item/stone_crafting_materials.json
+9994f212884e8264af96eaba34aa7e89696d8994 data/minecraft/tags/item/stone_tool_materials.json
 c3714c0d7f4a03ecde1bbc8af602ed6052807216 data/minecraft/tags/item/swords.json
 0f7b05161bd003017033e6e57e24ba18b17a9449 data/minecraft/tags/item/trim_materials.json
 780bc2d0cc39fd29b5fa975e076d488faef01e7a data/minecraft/tags/item/trimmable_armor.json
