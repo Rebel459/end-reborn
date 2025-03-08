@@ -1,6 +1,11 @@
 {
   "advancements.end_reborn.remnant_armor.title": "Cover Me in Remains",
   "advancements.end_reborn.remnant_armor.description": "Get a full set of Remnant armor",
+  "advancements.end_reborn.featherzeal_armor.title": "Cover Me in Fragments",
+  "advancements.end_reborn.featherzeal_armor.description": "Get a full set of Featherzeal armor",
+
+  "pack.end_reborn.end_reborn_asset_overrides": "End Reborn Asset Overrides",
+  "pack.end_reborn.end_reborn_trailier_tales_integration": "End Reborn Trailier Tales Integration",
 
   "entity.end_reborn.chorus_chest_raft": "Chorus Raft with Chest",
 
@@ -8,6 +13,8 @@
   "block.end_reborn.end_iron_ore": "End Iron Ore",
   "block.end_reborn.remnant_block": "Block of Remnant",
   "block.end_reborn.forgotten_remains": "Forgotten Remains",
+  "block.end_reborn.featherzeal_block": "Block of Featherzeal",
+  "block.end_reborn.timelost_fragments": "Timelost Fragments",
   "block.end_reborn.raw_crystalline_block": "Block of Raw Crystalline",
   "block.end_reborn.crystalline_block": "Block of Crystalline",
   "block.end_reborn.crystalline_lamp": "Crystalline Lamp",
@@ -36,17 +43,18 @@
   "block.end_reborn.chorus_fence": "Chorus Fence",
   "block.end_reborn.chorus_door": "Chorus Door",
 
-  "item.end_reborn.remnant_ingot": "Remnant Ingot",
-  "item.end_reborn.remnant_scrap": "Remnant Scrap",
   "item.end_reborn.chorus_spine": "Chorus Spine",
   "item.end_reborn.crystalline_shard": "Crystalline Shard",
+  "item.end_reborn.chorus_raft": "Chorus Raft",
+  "item.end_reborn.chorus_chest_raft": "Chorus Raft with Chest",
+
+  "item.end_reborn.remnant_ingot": "Remnant Ingot",
+  "item.end_reborn.remnant_scrap": "Remnant Scrap",
   "item.end_reborn.remnant_upgrade_smithing_template": "Remnant Upgrade Smithing Template",
   "item.end_reborn.smithing_template.remnant_upgrade.applies_to": "Diamond Equipment",
   "item.end_reborn.smithing_template.remnant_upgrade.ingredients": "Remnant Ingot",
   "item.end_reborn.smithing_template.remnant_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
   "item.end_reborn.smithing_template.remnant_upgrade.additions_slot_description": "Add Remnant Ingot",
-  "item.end_reborn.chorus_raft": "Chorus Raft",
-  "item.end_reborn.chorus_chest_raft": "Chorus Raft with Chest",
   "item.end_reborn.remnant_sword": "Remnant Sword",
   "item.end_reborn.remnant_axe": "Remnant Axe",
   "item.end_reborn.remnant_pickaxe": "Remnant Pickaxe",
@@ -56,5 +64,27 @@
   "item.end_reborn.remnant_chestplate": "Remnant Chestplate",
   "item.end_reborn.remnant_leggings": "Remnant Leggings",
   "item.end_reborn.remnant_boots": "Remnant Boots",
-  "item.end_reborn.remnant_horse_armor": "Remnant Horse Armor"
+  "item.end_reborn.remnant_horse_armor": "Remnant Horse Armor",
+
+  "item.end_reborn.featherzeal_ingot": "Featherzeal Ingot",
+  "item.end_reborn.featherzeal_scrap": "Featherzeal Scrap",
+  "item.end_reborn.featherzeal_upgrade_smithing_template": "Featherzeal Upgrade Smithing Template",
+  "item.end_reborn.smithing_template.featherzeal_upgrade.applies_to": "Diamond Equipment",
+  "item.end_reborn.smithing_template.featherzeal_upgrade.ingredients": "Featherzeal Ingot",
+  "item.end_reborn.smithing_template.featherzeal_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
+  "item.end_reborn.smithing_template.featherzeal_upgrade.additions_slot_description": "Add Featherzeal Ingot",
+  "item.end_reborn.featherzeal_sword": "Featherzeal Sword",
+  "item.end_reborn.featherzeal_axe": "Featherzeal Axe",
+  "item.end_reborn.featherzeal_pickaxe": "Featherzeal Pickaxe",
+  "item.end_reborn.featherzeal_shovel": "Featherzeal Shovel",
+  "item.end_reborn.featherzeal_hoe": "Featherzeal Hoe",
+  "item.end_reborn.featherzeal_helmet": "Featherzeal Helmet",
+  "item.end_reborn.featherzeal_chestplate": "Featherzeal Chestplate",
+  "item.end_reborn.featherzeal_leggings": "Featherzeal Leggings",
+  "item.end_reborn.featherzeal_boots": "Featherzeal Boots",
+  "item.end_reborn.featherzeal_horse_armor": "Featherzeal Horse Armor",
+
+  "text.autoconfig.end_reborn.title": "End Reborn",
+  "text.autoconfig.end_reborn.option.loot_table_injects": "Loot Table Injects",
+  "text.autoconfig.end_reborn.option.trailier_tales_integration": "Trailier Tales Integration"
 }

@@ -2,14 +2,14 @@
 	"schemaVersion": 1,
 	"id": "end_reborn",
 	"version": "${version}",
-	"name": "Progression Reborn",
-	"description": "Completely reimagines and rebalances early and mid-game progression in a vanilla-like fashion. The definitive survival progression overhaul mod.",
+	"name": "End Reborn",
+	"description": "A lightweight, vanilla-style expansion on Minecraft's lategame and end dimension content.",
 	"authors": [
 		"Rebel459"
 	],
 	"contact": {
 		"homepage": "https://modrinth.com/user/Rebel459",
-		"sources": "https://github.com/Rebel459/progression-reborn"
+		"sources": "https://github.com/Rebel459/end-reborn"
 	},
 	"license": "Legacy License",
 	"icon": "assets/icon.png",
@@ -23,6 +23,9 @@
 		],
 		"fabric-datagen": [
 			"net.legacy.end_reborn.datagen.ERDataGenerator"
+		],
+		"modmenu": [
+			"net.legacy.end_reborn.config.ERModMenuIntegration"
 		]
 	},
 	"accessWidener": "end_reborn.accesswidener",
@@ -32,6 +35,7 @@
 	"depends": {
 		"minecraft": "1.21.4",
 		"fabric-api": "*",
-		"frozenlib": "*"
+		"frozenlib": "*",
+		"cloth-config": "*"
 	}
 }

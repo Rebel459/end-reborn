@@ -1,20 +1,20 @@
 {
   "parent": "minecraft:end/find_end_city",
   "criteria": {
-    "remnium_armor": {
+    "remnant_armor": {
       "conditions": {
         "items": [
           {
-            "items": "end_reborn:remnium_helmet"
+            "items": "end_reborn:remnant_helmet"
           },
           {
-            "items": "end_reborn:remnium_chestplate"
+            "items": "end_reborn:remnant_chestplate"
           },
           {
-            "items": "end_reborn:remnium_leggings"
+            "items": "end_reborn:remnant_leggings"
           },
           {
-            "items": "end_reborn:remnium_boots"
+            "items": "end_reborn:remnant_boots"
           }
         ]
       },
@@ -23,20 +23,20 @@
   },
   "display": {
     "description": {
-      "translate": "advancements.end_reborn.remnium_armor.description"
+      "translate": "advancements.end_reborn.remnant_armor.description"
     },
     "frame": "challenge",
     "icon": {
       "count": 1,
-      "id": "end_reborn:remnium_chestplate"
+      "id": "end_reborn:remnant_chestplate"
     },
     "title": {
-      "translate": "advancements.end_reborn.remnium_armor.title"
+      "translate": "advancements.end_reborn.remnant_armor.title"
     }
   },
   "requirements": [
     [
-      "remnium_armor"
+      "remnant_armor"
     ]
   ],
   "rewards": {

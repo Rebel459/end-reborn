@@ -66,6 +66,22 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
+                "max": 8.0,
+                "min": 3.0
+              },
+              "function": "minecraft:set_count"
+            }
+          ],
+          "name": "trailiertales:cracked_end_stone_bricks",
+          "weight": 3
+        },
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "add": false,
+              "count": {
+                "type": "minecraft:uniform",
                 "max": 6.0,
                 "min": 3.0
               },

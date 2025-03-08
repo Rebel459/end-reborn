@@ -1,4 +1,4 @@
-// 1.21.4	-999999999-01-01T00:00:00	Progression Reborn/Block Loot Tables
+// 1.21.4	-999999999-01-01T00:00:00	End Reborn/Block Loot Tables
 d4059f8f25587bab9f64b68020db453347dbae82 data/end_reborn/loot_table/blocks/ametrur.json
 8f092eeb4aa9868cff09bd4562c1ec3bf9324c96 data/end_reborn/loot_table/blocks/chorus_block.json
 e45125961f2fc6329a6ed7d5f8c010d687497c6c data/end_reborn/loot_table/blocks/chorus_button.json
@@ -15,7 +15,6 @@ d4a8e3884722458c0be3dc0cde2a0dd0c56591d4 data/end_reborn/loot_table/blocks/choru
 2418522c3c82cd5f4ae2d3f28c6c055c1c44668d data/end_reborn/loot_table/blocks/chorus_slab.json
 161223c75545eaa6236c4450345897ea3636b349 data/end_reborn/loot_table/blocks/chorus_stairs.json
 7070acf0c4820c3fddfad207cdc3770472ac7862 data/end_reborn/loot_table/blocks/chorus_trapdoor.json
-0b3b61fc5f3144205fbb79b206a778ef0ffcf339 data/end_reborn/loot_table/blocks/cracked_end_stone_bricks.json
 f75c0afbdb429f1cd4af85c8126fab7966f05176 data/end_reborn/loot_table/blocks/crystalline_block.json
 8b323f7665558e5bb9526b4b26b302ab50db16de data/end_reborn/loot_table/blocks/crystalline_lamp.json
 1162413e514a0e4ece164375ab71e72d635d76b9 data/end_reborn/loot_table/blocks/crystalline_lantern.json

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "end_reborn:block/cracked_end_stone_bricks"
-  }
-}

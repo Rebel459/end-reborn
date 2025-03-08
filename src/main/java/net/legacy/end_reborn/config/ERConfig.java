@@ -1,50 +1,35 @@
 package net.legacy.end_reborn.config;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.ConfigData;
+import me.shedaniel.autoconfig.annotation.Config;
+import me.shedaniel.autoconfig.annotation.ConfigEntry;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
+import net.legacy.end_reborn.ERConstants;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
+
 import java.nio.file.Path;
-import net.fabricmc.loader.api.FabricLoader;
 
-public class ERConfig {
+@Config(name = ERConstants.MOD_ID)
+public class ERConfig implements ConfigData {
 
-  public static boolean mod_integration_datapacks;
-
-  public ERConfig() {}
-
-  public static void main() throws IOException {
-    Path configPath = Path.of(FabricLoader.getInstance().getConfigDir().toString(), "end-reborn-config-v1.json");
-    try {
-      if (configPath.toFile().createNewFile()) {
-        JsonObject jsonObjects = getJsonObject();
-        PrintWriter pw = new PrintWriter(configPath.toString());
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        pw.print(gson.toJson(jsonObjects));
-        pw.flush();
-        pw.close();
-      }
-      JsonObject obj = (JsonObject) JsonParser.parseReader(new FileReader(configPath.toString()));
-      JsonObject config = (JsonObject) obj.get("config");
-
-      mod_integration_datapacks = config.get("mod_integration_datapacks").getAsBoolean();
-
-    } catch (final IOException e) {
-      System.err.println("An error occurred, delete the end reborn config file in your config/ folder and relaunch");
-    }
+  @Contract(pure = true)
+  public static @NotNull Path configPath(boolean json5) {
+    return Path.of("./config/" + ERConstants.MOD_ID + "." + (json5 ? "json5" : "json"));
   }
 
-  private static JsonObject getJsonObject() {
+  public static ERConfig get;
 
-    JsonObject jsonObjects = new JsonObject();
-
-    JsonObject configObject = new JsonObject();
-    configObject.addProperty("mod_integration_datapacks", true);
-    jsonObjects.add("config", configObject);
-
-    return jsonObjects;
+  public static void initClient() {
+    AutoConfig.register(ERConfig.class, JanksonConfigSerializer::new);
+    get = AutoConfig.getConfigHolder(ERConfig.class).getConfig();
   }
+
+  @ConfigEntry.Category("default")
+  public boolean loot_table_injects = true;
+
+  @ConfigEntry.Category("default")
+  public boolean trailier_tales_integration = true;
+
 }

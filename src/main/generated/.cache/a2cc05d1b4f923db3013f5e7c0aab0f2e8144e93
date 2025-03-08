@@ -1,4 +1,4 @@
-// 1.21.4	-999999999-01-01T00:00:00	Progression Reborn/Model Definitions
+// 1.21.4	-999999999-01-01T00:00:00	End Reborn/Model Definitions
 2873aba8b973e8278d0ad35431015d9a9c9acbbb assets/end_reborn/blockstates/ametrur.json
 491e4a8618b58309ad6852360b3834920f547089 assets/end_reborn/blockstates/chorus_block.json
 6f97f6dbfd4dd9c0ef487d490bf74f7d8ce550fe assets/end_reborn/blockstates/chorus_button.json
@@ -17,7 +17,6 @@ f950b0ac062d8acf6bebe04241f5f2792443bc37 assets/end_reborn/blockstates/chorus_st
 39f143ba2e4760205f609447a6bacfe4c7ca760d assets/end_reborn/blockstates/chorus_trapdoor.json
 1c12ceb04e12b36f2c531eac2ead3e71720b6fb0 assets/end_reborn/blockstates/chorus_wall_hanging_sign.json
 45d12dd5e3957ba4dda902aff02a2b8dc9bf7292 assets/end_reborn/blockstates/chorus_wall_sign.json
-9c75a77ec4a56da9c8d3b11e46cb1f87047060ad assets/end_reborn/blockstates/cracked_end_stone_bricks.json
 59db222ec5464035ae03e924528299c7d929d0bb assets/end_reborn/blockstates/crystalline_block.json
 9ded13a807d7550cf519ceebaf9593f0b3ceadf7 assets/end_reborn/blockstates/crystalline_lamp.json
 2848822156b52808f0be53495cb5ab06bb528bbc assets/end_reborn/blockstates/crystalline_lantern.json
@@ -52,7 +51,6 @@ f30e45c93d4520e1f75d28d3b1e581f42f23a043 assets/end_reborn/items/chorus_slab.jso
 7d766a5a28bfde4ce09548d88a7f8a145824d1cd assets/end_reborn/items/chorus_spine.json
 d2825595e2b336b420a88c2c28a721afac9f8dc0 assets/end_reborn/items/chorus_stairs.json
 e489a4fe61b29690a8222711a6f27b78641a50d5 assets/end_reborn/items/chorus_trapdoor.json
-2bf601b6eeedf436c95f81fcaa987d98eba3172b assets/end_reborn/items/cracked_end_stone_bricks.json
 f45fb2568bd74a0e17571cc55b8b8287fe35c06f assets/end_reborn/items/crystalline_block.json
 efd8a871e314a49699e6ec5ba6c3d7f64219f175 assets/end_reborn/items/crystalline_lamp.json
 98c3156f624766b8227c23b97595500b82c9ec55 assets/end_reborn/items/crystalline_lantern.json
@@ -135,7 +133,6 @@ ca80cb9c4a7e149e4a2f7d6d74ffacb150383fda assets/end_reborn/models/block/chorus_s
 ac1aba6106480ce6e261e6853655235a6e96b710 assets/end_reborn/models/block/chorus_trapdoor_bottom.json
 c57cffd413920ec9319890455fe41a516a10e552 assets/end_reborn/models/block/chorus_trapdoor_open.json
 db9b8ca83e9015a879c80de4bcac75a0b49a0fb8 assets/end_reborn/models/block/chorus_trapdoor_top.json
-1d48082b5052023653a15a24ab9c2146c8337c9c assets/end_reborn/models/block/cracked_end_stone_bricks.json
 e074b103dfc4d4d24e8749144f598d2c48fb8be5 assets/end_reborn/models/block/crystalline_block.json
 a90cd48464e83180575a349832a08c5a52b072e2 assets/end_reborn/models/block/crystalline_lamp.json
 93ab19c7f198f9f71318b9fd244a0402b440f6f7 assets/end_reborn/models/block/crystalline_lantern.json
