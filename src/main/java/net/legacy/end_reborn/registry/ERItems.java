@@ -51,7 +51,7 @@ public final class ERItems {
                     .stacksTo(64)
     );
     public static final SmithingTemplateItem FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE = register("featherzeal_upgrade_smithing_template",
-            ERItems::createRemnantUpgradeTemplate,
+            ERItems::createFeatherzealUpgradeTemplate,
             new Properties()
                     .stacksTo(64)
                     .rarity(Rarity.UNCOMMON)

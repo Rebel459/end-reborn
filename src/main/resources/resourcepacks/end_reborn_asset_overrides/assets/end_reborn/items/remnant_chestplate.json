@@ -89,23 +89,9 @@
       {
         "model": {
           "type": "minecraft:model",
-          "model": "end_reborn:item/remnant_chestplate_remnant_ingot_trim"
+          "model": "end_reborn:item/remnant_chestplate_rose_ingot_trim"
         },
-        "when": "end_reborn:remnant_ingot"
-      },
-      {
-        "model": {
-          "type": "minecraft:model",
-          "model": "end_reborn:item/remnant_chestplate_crystalline_shard_trim"
-        },
-        "when": "end_reborn:crystalline_shard"
-      },
-      {
-        "model": {
-          "type": "minecraft:model",
-          "model": "end_reborn:item/remnant_chestplate_nullium_trim"
-        },
-        "when": "end_reborn:nullium"
+        "when": "progression_reborn:rose_ingot"
       }
     ],
     "fallback": {

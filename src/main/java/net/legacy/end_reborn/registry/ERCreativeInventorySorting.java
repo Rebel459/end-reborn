@@ -19,6 +19,8 @@ public class ERCreativeInventorySorting {
 		addBeforeInIngredients(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ERItems.REMNANT_UPGRADE_SMITHING_TEMPLATE);
 		addAfterInIngredients(Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ERItems.FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE);
 
+		addAfterInIngredients(Items.STICK, ERItems.CHORUS_SPINE);
+
 		addAfterInBuildingBlocks(Blocks.WARPED_BUTTON, ERBlocks.CHORUS_BLOCK);
 		addAfterInBuildingBlocks(ERBlocks.CHORUS_BLOCK, ERBlocks.STRIPPED_CHORUS_BLOCK);
 		addAfterInBuildingBlocks(ERBlocks.STRIPPED_CHORUS_BLOCK, ERBlocks.CHORUS_PLANKS);
