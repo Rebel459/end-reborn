@@ -98,6 +98,9 @@ public class ERCreativeInventorySorting {
 		addAfterInCombat(EREquipmentItems.FEATHERZEAL_HELMET, EREquipmentItems.FEATHERZEAL_CHESTPLATE);
 		addAfterInCombat(EREquipmentItems.FEATHERZEAL_CHESTPLATE, EREquipmentItems.FEATHERZEAL_LEGGINGS);
 		addAfterInCombat(EREquipmentItems.FEATHERZEAL_LEGGINGS, EREquipmentItems.FEATHERZEAL_BOOTS);
+
+		addAfterInCombat(Items.DIAMOND_HORSE_ARMOR, EREquipmentItems.REMNANT_HORSE_ARMOR);
+		addBeforeInCombat(Items.WOLF_ARMOR, EREquipmentItems.FEATHERZEAL_HORSE_ARMOR);
 	}
 
 	private static void addAfterInNaturalBlocks(ItemLike comparedItem, ItemLike item) {
