@@ -82,6 +82,12 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 		this.getOrCreateTagBuilder(BlockTags.TRAPDOORS)
 				.add(ERBlocks.CHORUS_TRAPDOOR);
 
+		this.getOrCreateTagBuilder(BlockTags.FENCES)
+				.add(ERBlocks.CHORUS_FENCE);
+
+		this.getOrCreateTagBuilder(BlockTags.FENCE_GATES)
+				.add(ERBlocks.CHORUS_FENCE_GATE);
+
 		this.getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
 				.add(ERBlocks.REMNANT_BLOCK)
 				.add(ERBlocks.FEATHERZEAL_BLOCK);

@@ -7,6 +7,7 @@
   "pack.end_reborn.end_reborn_asset_overrides": "End Reborn Asset Overrides",
   "pack.end_reborn.end_reborn_trailier_tales_integration": "End Reborn Trailier Tales Integration",
 
+  "entity.end_reborn.chorus_raft": "Chorus Raft",
   "entity.end_reborn.chorus_chest_raft": "Chorus Raft with Chest",
 
   "block.end_reborn.cracked_end_stone_bricks": "Cracked End Stone Bricks",
@@ -20,6 +21,7 @@
   "block.end_reborn.crystalline_lamp": "Crystalline Lamp",
   "block.end_reborn.crystalline_lantern": "Crystalline Lantern",
   "block.end_reborn.cut_ametrur": "Cut Ametrur",
+  "block.end_reborn.cut_ametrur_pillar": "Cut Ametrur Pillar",
   "block.end_reborn.cut_ametrur_stairs": "Cut Ametrur Stairs",
   "block.end_reborn.cut_ametrur_slab": "Cut Ametrur Slab",
   "block.end_reborn.purpur": "Purpur",
