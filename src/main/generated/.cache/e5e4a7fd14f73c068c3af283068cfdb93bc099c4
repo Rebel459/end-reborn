@@ -7,6 +7,7 @@ aa2ee25bd46d0c141a386de7d36004d364f8098b data/minecraft/tags/block/fences.json
 ec54e3a9f070dce68dbe2edf7d7173f0729443d1 data/minecraft/tags/block/mineable/pickaxe.json
 6565ee20e145efd7e3febb442579a8bca70b7e32 data/minecraft/tags/block/needs_diamond_tool.json
 f891b999446c68b817cde339138d2f292118962e data/minecraft/tags/block/needs_stone_tool.json
+149ea79e6cc7e87d89ff3f753832624a6706556b data/minecraft/tags/block/planks.json
 342642804d7bca62cb90e7fbc91676fcea715d02 data/minecraft/tags/block/slabs.json
 7e973f2978b246a61d938b1389e10302cb20c1eb data/minecraft/tags/block/stairs.json
 b7850f48eb5d48b6991ce9b7b6864ebc96dbf7b3 data/minecraft/tags/block/trapdoors.json

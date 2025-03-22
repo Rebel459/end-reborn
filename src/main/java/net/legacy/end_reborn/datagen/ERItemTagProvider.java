@@ -7,6 +7,7 @@ import net.legacy.end_reborn.registry.EREquipmentItems;
 import net.legacy.end_reborn.registry.ERItems;
 import net.legacy.end_reborn.tag.ERItemTags;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
@@ -101,6 +102,31 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(Blocks.END_STONE.asItem());
 		this.getOrCreateTagBuilder(ItemTags.STONE_TOOL_MATERIALS)
 				.add(Blocks.END_STONE.asItem());
+
+		this.getOrCreateTagBuilder(ItemTags.PLANKS)
+				.add(ERBlocks.CHORUS_PLANKS.asItem());
+
+		this.getOrCreateTagBuilder(ItemTags.STAIRS)
+				.add(ERBlocks.CUT_AMETRUR_STAIRS.asItem())
+				.add(ERBlocks.CHORUS_STAIRS.asItem())
+				.add(ERBlocks.CHORUS_MOSAIC_STAIRS.asItem());
+
+		this.getOrCreateTagBuilder(ItemTags.SLABS)
+				.add(ERBlocks.CUT_AMETRUR_SLAB.asItem())
+				.add(ERBlocks.CHORUS_STAIRS.asItem())
+				.add(ERBlocks.CHORUS_MOSAIC_STAIRS.asItem());
+
+		this.getOrCreateTagBuilder(ItemTags.DOORS)
+				.add(ERBlocks.CHORUS_DOOR.asItem());
+
+		this.getOrCreateTagBuilder(ItemTags.TRAPDOORS)
+				.add(ERBlocks.CHORUS_TRAPDOOR.asItem());
+
+		this.getOrCreateTagBuilder(ItemTags.FENCES)
+				.add(ERBlocks.CHORUS_FENCE.asItem());
+
+		this.getOrCreateTagBuilder(ItemTags.FENCE_GATES)
+				.add(ERBlocks.CHORUS_FENCE_GATE.asItem());
 	}
 
 }

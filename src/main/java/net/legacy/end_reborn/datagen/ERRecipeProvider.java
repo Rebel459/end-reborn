@@ -32,6 +32,13 @@ public final class ERRecipeProvider extends FabricRecipeProvider {
 
                 ERWoodRecipeProvider.buildRecipes(this, exporter);
 
+                this.shaped(RecipeCategory.MISC, Items.STICK)
+                        .define('#', Ingredient.of(ERItems.CHORUS_SPINE))
+                        .pattern("#")
+                        .pattern("#")
+                        .unlockedBy("has_chorus_spine", this.has(ERItems.CHORUS_SPINE))
+                        .save(exporter);
+
                 this.shapeless(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CHORUS_BLOCK)
                         .requires(Ingredient.of(ERItems.CHORUS_SPINE), 9)
                         .unlockedBy("has_chorus_spine", this.has(ERItems.CHORUS_SPINE))

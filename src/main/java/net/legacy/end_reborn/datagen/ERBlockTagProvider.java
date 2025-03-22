@@ -66,6 +66,9 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.TIMELOST_FRAGMENTS)
 				.add(ERBlocks.FEATHERZEAL_BLOCK);
 
+		this.getOrCreateTagBuilder(BlockTags.PLANKS)
+				.add(ERBlocks.CHORUS_PLANKS);
+
 		this.getOrCreateTagBuilder(BlockTags.STAIRS)
 				.add(ERBlocks.CUT_AMETRUR_STAIRS)
 				.add(ERBlocks.CHORUS_STAIRS)
