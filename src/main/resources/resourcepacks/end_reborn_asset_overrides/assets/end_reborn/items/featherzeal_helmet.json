@@ -82,6 +82,27 @@
       {
         "model": {
           "type": "minecraft:model",
+          "model": "end_reborn:item/featherzeal_helmet_featherzeal_ingot_trim"
+        },
+        "when": "end_reborn:featherzeal_ingot"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "end_reborn:item/featherzeal_helmet_remnant_ingot_trim"
+        },
+        "when": "end_reborn:remnant_ingot"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "end_reborn:item/featherzeal_helmet_crystalline_shard_trim"
+        },
+        "when": "end_reborn:crystalline_shard"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
           "model": "end_reborn:item/featherzeal_helmet_echo_shard_trim"
         },
         "when": "legacies_and_legends:echo_shard"

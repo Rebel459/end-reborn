@@ -4,8 +4,5 @@
     "color": "#555555",
     "translate": "trim_material.end_reborn.remnant_ingot"
   },
-  "ingredient": "end_reborn:remnant_ingot",
-  "override_armor_assets": {
-    "end_reborn:remnant": "remnant_ingot_darker"
-  }
+  "ingredient": "end_reborn:remnant_ingot"
 }
