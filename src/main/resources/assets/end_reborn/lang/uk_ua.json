@@ -6,6 +6,7 @@
 
   "pack.end_reborn.end_reborn_asset_overrides": "Ресурси End Reborn",
   "pack.end_reborn.end_reborn_trailier_tales_integration": "Інтеграція End Reborn з Trailier Tales",
+  "pack.end_reborn.end_reborn_enderscape_integration": "Інтеграція End Reborn з Enderscape",
 
   "entity.end_reborn.chorus_raft": "Хорусовий пліт",
   "entity.end_reborn.chorus_chest_raft": "Хорусовий пліт зі скринею",
@@ -88,5 +89,6 @@
 
   "text.autoconfig.end_reborn.title": "End Reborn",
   "text.autoconfig.end_reborn.option.loot_table_injects": "Введення до таблиці здобичі",
-  "text.autoconfig.end_reborn.option.trailier_tales_integration": "Інтеграція з Trailier Tales"
+  "text.autoconfig.end_reborn.option.trailier_tales_integration": "Інтеграція з Trailier Tales",
+  "text.autoconfig.end_reborn.option.enderscape_integration": "Інтеграція з Enderscape"
 }

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 8,
+    "discard_chance_on_air_exposure": 0.5,
+    "targets": [
+      {
+        "target": {
+          "block": "minecraft:end_stone",
+          "predicate_type": "minecraft:block_match"
+        },
+        "state": {
+          "Name": "end_reborn:end_iron_ore"
+        }
+      },
+      {
+        "target": {
+          "block": "enderscape:mirestone",
+          "predicate_type": "minecraft:block_match"
+        },
+        "state": {
+          "Name": "end_reborn:mirestone_iron_ore"
+        }
+      }
+    ]
+  }
+}

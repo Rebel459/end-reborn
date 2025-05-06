@@ -35,7 +35,21 @@ public class ERBlocks {
 
     public static final Block END_IRON_ORE = register("end_iron_ore",
             Block::new,
-            Properties.ofFullCopy(Blocks.END_STONE)
+            Properties.of()
+                    .mapColor(MapColor.SAND)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(3.0F, 9.0F)
+                    .sound(ERBlockSounds.END_IRON_ORE)
+    );
+    public static final Block MIRESTONE_IRON_ORE = register("mirestone_iron_ore",
+            Block::new,
+            Properties.of()
+                    .mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(6.0F, 9.0F)
+                    .sound(ERBlockSounds.MIRESTONE_IRON_ORE)
     );
 
     // Remnant
@@ -135,11 +149,21 @@ public class ERBlocks {
 
     public static final Block PURPUR = register("purpur",
             Block::new,
-            BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)
+            Properties.of()
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(ERBlockSounds.PURPUR)
     );
     public static final Block AMETRUR = register("ametrur",
             Block::new,
-            BlockBehaviour.Properties.ofFullCopy(Blocks.PURPUR_BLOCK)
+            Properties.of()
+                    .mapColor(MapColor.COLOR_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)
+                    .sound(ERBlockSounds.PURPUR)
     );
     public static final BlockFamily FAMILY_AMETRUR = BlockFamilies.familyBuilder(CUT_AMETRUR)
             .slab(CUT_AMETRUR_SLAB)

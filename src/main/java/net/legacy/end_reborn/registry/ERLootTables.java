@@ -5,6 +5,7 @@ import net.legacy.end_reborn.ERConstants;
 import net.legacy.end_reborn.config.ERConfig;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -18,6 +19,9 @@ import org.jetbrains.annotations.NotNull;
 public class ERLootTables {
 
 	public static final ResourceKey<LootTable> END_REMAINS = register("chests/end_remains");
+
+	public static final ResourceKey<LootTable> END_CITY_CHEST = registerEnderscape("end_city/chest");
+	public static final ResourceKey<LootTable> END_CITY_VAULT = registerEnderscape("end_city/vault");
 
 	public static void init() {
 		LootTableEvents.MODIFY.register((id, tableBuilder, source, registries) -> {
@@ -43,6 +47,27 @@ public class ERLootTables {
 					tableBuilder.withPool(pool);
 				}
 
+				if (ERConfig.get.enderscape_integration) {
+					if (ERLootTables.END_CITY_VAULT.equals(id)) {
+						pool = LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+								.add(EmptyLootItem.emptyItem().setWeight(8))
+								.add(LootItem.lootTableItem(ERItems.CRYSTALLINE_SHARD).setWeight(1).apply(SetItemCountFunction.setCount(UniformGenerator.between(2, 5))));
+						tableBuilder.withPool(pool);
+					}
+					if (ERLootTables.END_CITY_VAULT.equals(id)) {
+						pool = LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+								.add(EmptyLootItem.emptyItem().setWeight(23))
+								.add(LootItem.lootTableItem(ERItems.REMNANT_SCRAP).setWeight(1));
+						tableBuilder.withPool(pool);
+					}
+					if (ERLootTables.END_CITY_VAULT.equals(id)) {
+						pool = LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
+								.add(EmptyLootItem.emptyItem().setWeight(2))
+								.add(LootItem.lootTableItem(ERItems.FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE).setWeight(1));
+						tableBuilder.withPool(pool);
+					}
+				}
+
 				if (BuiltInLootTables.ANCIENT_CITY.equals(id)) {
 					pool = LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
 							.add(EmptyLootItem.emptyItem().setWeight(5))
@@ -56,6 +81,10 @@ public class ERLootTables {
 
 	private static @NotNull ResourceKey<LootTable> register(String path) {
 		return ResourceKey.create(Registries.LOOT_TABLE, ERConstants.id(path));
+	}
+
+	private static @NotNull ResourceKey<LootTable> registerEnderscape(String path) {
+		return ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath("enderscape", path));
 	}
 
 }

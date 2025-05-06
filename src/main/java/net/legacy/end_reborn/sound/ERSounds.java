@@ -21,6 +21,24 @@ public class ERSounds {
 	public static final SoundEvent RAW_CRYSTALLINE_HIT = register("block.raw_crystalline_block.hit");
 	public static final SoundEvent RAW_CRYSTALLINE_FALL = register("block.raw_crystalline_block.fall");
 
+	public static final SoundEvent PURPUR_BREAK = register("block.purpur.break");
+	public static final SoundEvent PURPUR_STEP = register("block.purpur.step");
+	public static final SoundEvent PURPUR_PLACE = register("block.purpur.place");
+	public static final SoundEvent PURPUR_HIT = register("block.purpur.hit");
+	public static final SoundEvent PURPUR_FALL = register("block.purpur.fall");
+
+	public static final SoundEvent END_IRON_ORE_BREAK = register("block.end_iron_ore.break");
+	public static final SoundEvent END_IRON_ORE_STEP = register("block.end_iron_ore.step");
+	public static final SoundEvent END_IRON_ORE_PLACE = register("block.end_iron_ore.place");
+	public static final SoundEvent END_IRON_ORE_HIT = register("block.end_iron_ore.hit");
+	public static final SoundEvent END_IRON_ORE_FALL = register("block.end_iron_ore.fall");
+
+	public static final SoundEvent MIRESTONE_IRON_ORE_BREAK = register("block.mirestone_iron_ore.break");
+	public static final SoundEvent MIRESTONE_IRON_ORE_STEP = register("block.mirestone_iron_ore.step");
+	public static final SoundEvent MIRESTONE_IRON_ORE_PLACE = register("block.mirestone_iron_ore.place");
+	public static final SoundEvent MIRESTONE_IRON_ORE_HIT = register("block.mirestone_iron_ore.hit");
+	public static final SoundEvent MIRESTONE_IRON_ORE_FALL = register("block.mirestone_iron_ore.fall");
+
 	@NotNull
 	private static SoundEvent register(@NotNull String string) {
 		ResourceLocation resourceLocation = ERConstants.id(string);

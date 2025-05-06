@@ -33,9 +33,9 @@ public class ERFeatures {
         BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.UNDERGROUND_ORES, TIMELOST_FRAGMENTS);
         BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.UNDERGROUND_ORES, TIMELOST_FRAGMENTS_SPREAD);
         BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.UNDERGROUND_DECORATION, END_IRON_ORE);
-        BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.UNDERGROUND_ORES, PURPUR);
-        BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.UNDERGROUND_DECORATION, AMETRUR);
-        BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_END_ORES), GenerationStep.Decoration.VEGETAL_DECORATION, RAW_CRYSTALLINE_BLOCK);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_PURPUR_CLUSTERS), GenerationStep.Decoration.UNDERGROUND_ORES, PURPUR);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_PURPUR_CLUSTERS), GenerationStep.Decoration.UNDERGROUND_DECORATION, AMETRUR);
+        BiomeModifications.addFeature(BiomeSelectors.tag(ERBiomeTags.HAS_PURPUR_CLUSTERS), GenerationStep.Decoration.VEGETAL_DECORATION, RAW_CRYSTALLINE_BLOCK);
 
     }
 

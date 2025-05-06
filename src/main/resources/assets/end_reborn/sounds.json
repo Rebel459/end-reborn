@@ -216,5 +216,150 @@
       "end_reborn:block/raw_crystalline_block/step4"
     ],
     "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "block.purpur.break": {
+    "sounds": [
+      {
+        "name": "block.stone.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.purpur.fall": {
+    "sounds": [
+      {
+        "name": "block.stone.fall",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.purpur.hit": {
+    "sounds": [
+      {
+        "name": "block.stone.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.purpur.place": {
+    "sounds": [
+      {
+        "name": "block.stone.place",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.purpur.step": {
+    "sounds": [
+      {
+        "name": "block.stone.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.step"
+  },
+  "block.end_iron_ore.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.end_iron_ore.fall": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.fall",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.end_iron_ore.hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.end_iron_ore.place": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.place",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.end_iron_ore.step": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.step"
+  },
+  "block.mirestone_iron_ore.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.mirestone_iron_ore.fall": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.fall",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.mirestone_iron_ore.hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.mirestone_iron_ore.place": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.place",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.mirestone_iron_ore.step": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "minecraft:block.stone.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.step"
   }
 }

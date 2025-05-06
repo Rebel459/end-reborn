@@ -50,15 +50,16 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.REMNANT_BLOCK)
 				.add(ERBlocks.TIMELOST_FRAGMENTS)
 				.add(ERBlocks.FEATHERZEAL_BLOCK)
-				.add(ERBlocks.END_IRON_ORE);
+				.add(ERBlocks.END_IRON_ORE)
+				.add(ERBlocks.MIRESTONE_IRON_ORE);
 
 		this.getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-				.add(ERBlocks.END_IRON_ORE)
 				.add(ERBlocks.RAW_CRYSTALLINE_BLOCK)
 				.add(ERBlocks.CRYSTALLINE_BLOCK)
 				.add(ERBlocks.CRYSTALLINE_LAMP)
 				.add(ERBlocks.CRYSTALLINE_LANTERN)
-				.add(ERBlocks.END_IRON_ORE);
+				.add(ERBlocks.END_IRON_ORE)
+				.add(ERBlocks.MIRESTONE_IRON_ORE);
 
 		this.getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
 				.add(ERBlocks.FORGOTTEN_REMAINS)

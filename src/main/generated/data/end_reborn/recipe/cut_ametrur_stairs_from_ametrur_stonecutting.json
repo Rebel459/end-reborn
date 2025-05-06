@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "end_reborn:ametrur",
+  "result": {
+    "count": 1,
+    "id": "end_reborn:cut_ametrur_stairs"
+  }
+}

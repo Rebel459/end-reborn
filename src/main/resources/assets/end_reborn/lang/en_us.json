@@ -6,6 +6,7 @@
 
   "pack.end_reborn.end_reborn_asset_overrides": "End Reborn Asset Overrides",
   "pack.end_reborn.end_reborn_trailier_tales_integration": "End Reborn Trailier Tales Integration",
+  "pack.end_reborn.end_reborn_enderscape_integration": "End Reborn Enderscape Integration",
 
   "entity.end_reborn.chorus_raft": "Chorus Raft",
   "entity.end_reborn.chorus_chest_raft": "Chorus Raft with Chest",
@@ -88,5 +89,6 @@
 
   "text.autoconfig.end_reborn.title": "End Reborn",
   "text.autoconfig.end_reborn.option.loot_table_injects": "Loot Table Injects",
-  "text.autoconfig.end_reborn.option.trailier_tales_integration": "Trailier Tales Integration"
+  "text.autoconfig.end_reborn.option.trailier_tales_integration": "Trailier Tales Integration",
+  "text.autoconfig.end_reborn.option.enderscape_integration": "Enderscape Integration"
 }

@@ -10,6 +10,7 @@ public class ERBiomeTags {
     public static final TagKey<Biome> HAS_FORGOTTEN_REMAINS = bind("has_forgotten_remains");
     public static final TagKey<Biome> HAS_BONUS_DEBRIS = bind("has_bonus_debris");
     public static final TagKey<Biome> HAS_END_ORES = bind("has_end_ores");
+    public static final TagKey<Biome> HAS_PURPUR_CLUSTERS = bind("has_purpur_clusters");
 
     @NotNull
     private static TagKey<Biome> bind(@NotNull String path) {

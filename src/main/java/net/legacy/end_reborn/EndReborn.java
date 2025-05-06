@@ -28,6 +28,8 @@ import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
  */
 public class EndReborn implements ModInitializer {
 
+	public static boolean isEnderscapeLoaded = false;
+
 	@Override
 	public void onInitialize() {
 		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("end_reborn");
@@ -53,6 +55,14 @@ public class EndReborn implements ModInitializer {
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_trailier_tales_integration"), modContainer.get(),
 					Component.translatable("pack.end_reborn.end_reborn_trailier_tales_integration"),
+					ResourcePackActivationType.ALWAYS_ENABLED
+			);
+		}
+		if (FabricLoader.getInstance().isModLoaded("enderscape") && ERConfig.get.enderscape_integration) {
+			isEnderscapeLoaded = true;
+			ResourceManagerHelper.registerBuiltinResourcePack(
+					ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_enderscape_integration"), modContainer.get(),
+					Component.translatable("pack.end_reborn.end_reborn_enderscape_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}

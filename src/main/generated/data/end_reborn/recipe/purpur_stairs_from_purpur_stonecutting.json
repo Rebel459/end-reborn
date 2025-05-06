@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "end_reborn:purpur",
+  "result": {
+    "count": 1,
+    "id": "minecraft:purpur_stairs"
+  }
+}

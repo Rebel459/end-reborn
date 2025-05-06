@@ -1,0 +1,152 @@
+{
+  "block.purpur.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.purpur.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.purpur.fall": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.purpur.fall",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.purpur.hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.purpur.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.purpur.place": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.purpur.place",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.purpur.step": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.purpur.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.step"
+  },
+  "block.end_iron_ore.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.shadoline_ore.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.end_iron_ore.fall": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.shadoline_ore.fall",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.end_iron_ore.hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.shadoline_ore.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.end_iron_ore.place": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.shadoline_ore.place",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.end_iron_ore.step": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.shadoline_ore.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.step"
+  },
+  "block.mirestone_iron_ore.break": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.mirestone_shadoline_ore.break",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.mirestone_iron_ore.fall": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.mirestone_shadoline_ore.fall",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.fall"
+  },
+  "block.mirestone_iron_ore.hit": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.mirestone_shadoline_ore.hit",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.mirestone_iron_ore.place": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.mirestone_shadoline_ore.place",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.mirestone_iron_ore.step": {
+    "replace": true,
+    "sounds": [
+      {
+        "name": "enderscape:block.mirestone_shadoline_ore.step",
+        "type": "event"
+      }
+    ],
+    "subtitle": "subtitles.block.generic.step"
+  }
+}

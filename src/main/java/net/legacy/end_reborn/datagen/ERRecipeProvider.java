@@ -173,23 +173,23 @@ public final class ERRecipeProvider extends FabricRecipeProvider {
                         .unlockedBy("has_ametrur", this.has(ERBlocks.AMETRUR))
                         .save(exporter);
 
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.AMETRUR, ERBlocks.CUT_AMETRUR);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.AMETRUR, ERBlocks.CUT_AMETRUR_STAIRS);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.AMETRUR, ERBlocks.CUT_AMETRUR_SLAB, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.AMETRUR, ERBlocks.CUT_AMETRUR_PILLAR);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR, ERBlocks.AMETRUR);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR_STAIRS, ERBlocks.AMETRUR);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR_SLAB, ERBlocks.AMETRUR, 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR_PILLAR, ERBlocks.AMETRUR);
 
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR, ERBlocks.CUT_AMETRUR_STAIRS);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR, ERBlocks.CUT_AMETRUR_SLAB, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR, ERBlocks.CUT_AMETRUR_PILLAR);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR_STAIRS, ERBlocks.CUT_AMETRUR);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR_SLAB, ERBlocks.CUT_AMETRUR, 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.CUT_AMETRUR_PILLAR, ERBlocks.CUT_AMETRUR);
 
                 // PURPUR
 
                 // Purpur Block Override
 
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.PURPUR, Blocks.PURPUR_BLOCK);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.PURPUR, Blocks.PURPUR_STAIRS);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.PURPUR, Blocks.PURPUR_SLAB, 2);
-                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, ERBlocks.PURPUR, Blocks.PURPUR_PILLAR);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.PURPUR_BLOCK, ERBlocks.PURPUR);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.PURPUR_STAIRS, ERBlocks.PURPUR);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.PURPUR_SLAB, ERBlocks.PURPUR, 2);
+                this.stonecutterResultFromBase(RecipeCategory.BUILDING_BLOCKS, Blocks.PURPUR_PILLAR, ERBlocks.PURPUR);
 
                 // Shulker Box Override
 

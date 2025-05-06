@@ -32,4 +32,7 @@ public class ERConfig implements ConfigData {
   @ConfigEntry.Category("default")
   public boolean trailier_tales_integration = true;
 
+  @ConfigEntry.Category("default")
+  public boolean enderscape_integration = true;
+
 }

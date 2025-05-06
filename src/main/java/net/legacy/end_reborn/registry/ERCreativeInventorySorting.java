@@ -1,6 +1,8 @@
 package net.legacy.end_reborn.registry;
 
 import net.frozenblock.lib.item.api.FrozenCreativeTabs;
+import net.legacy.end_reborn.EndReborn;
+import net.legacy.end_reborn.config.ERConfig;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
@@ -59,7 +61,8 @@ public class ERCreativeInventorySorting {
 		addAfterInNaturalBlocks(ERBlocks.PURPUR, ERBlocks.AMETRUR);
 
 		addAfterInNaturalBlocks(Blocks.ANCIENT_DEBRIS, ERBlocks.END_IRON_ORE);
-		addAfterInNaturalBlocks(ERBlocks.END_IRON_ORE, ERBlocks.TIMELOST_FRAGMENTS);
+		addAfterInNaturalBlocks(ERBlocks.END_IRON_ORE, ERBlocks.MIRESTONE_IRON_ORE);
+		addBeforeInNaturalBlocks(Blocks.RAW_IRON_BLOCK, ERBlocks.TIMELOST_FRAGMENTS);
 
 		addAfterInFunctionalBlocks(Blocks.SOUL_LANTERN, ERBlocks.CRYSTALLINE_LANTERN);
 
@@ -105,6 +108,9 @@ public class ERCreativeInventorySorting {
 
 	private static void addAfterInNaturalBlocks(ItemLike comparedItem, ItemLike item) {
 		FrozenCreativeTabs.addAfter(comparedItem, item, CreativeModeTabs.NATURAL_BLOCKS);
+	}
+	private static void addBeforeInNaturalBlocks(ItemLike comparedItem, ItemLike item) {
+		FrozenCreativeTabs.addBefore(comparedItem, item, CreativeModeTabs.NATURAL_BLOCKS);
 	}
 
 	private static void addBeforeInBuildingBlocks(ItemLike comparedItem, ItemLike item) {

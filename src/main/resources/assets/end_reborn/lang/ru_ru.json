@@ -6,6 +6,7 @@
 
   "pack.end_reborn.end_reborn_asset_overrides": "Ресурсы End Reborn",
   "pack.end_reborn.end_reborn_trailier_tales_integration": "Интеграция End Reborn в Trailier Tales",
+  "pack.end_reborn.end_reborn_enderscape_integration": "Интеграция End Reborn в Enderscape",
 
   "entity.end_reborn.chorus_raft": "Хорусовый плот",
   "entity.end_reborn.chorus_chest_raft": "Грузовой хорусовый плот",
@@ -88,5 +89,6 @@
 
   "text.autoconfig.end_reborn.title": "End Reborn",
   "text.autoconfig.end_reborn.option.loot_table_injects": "Ввод в таблицу добычи",
-  "text.autoconfig.end_reborn.option.trailier_tales_integration": "Интеграция в Trailier Tales"
+  "text.autoconfig.end_reborn.option.trailier_tales_integration": "Интеграция в Trailier Tales",
+  "text.autoconfig.end_reborn.option.enderscape_integration": "Интеграция в Enderscape"
 }
