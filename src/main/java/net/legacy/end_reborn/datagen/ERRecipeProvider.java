@@ -3,8 +3,6 @@ package net.legacy.end_reborn.datagen;
 import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.frozenblock.lib.shadow.org.jetbrains.annotations.Contract;
-import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
 import net.legacy.end_reborn.registry.ERBlocks;
 import net.legacy.end_reborn.registry.ERItems;
 import net.minecraft.core.HolderLookup;
@@ -14,6 +12,8 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Blocks;
+import org.jetbrains.annotations.Contract;
+import org.jetbrains.annotations.NotNull;
 
 public final class ERRecipeProvider extends FabricRecipeProvider {
 

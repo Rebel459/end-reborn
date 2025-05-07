@@ -1,6 +1,5 @@
 package net.legacy.end_reborn.registry;
 
-import net.frozenblock.lib.shadow.org.jetbrains.annotations.NotNull;
 import net.legacy.end_reborn.ERConstants;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
@@ -13,7 +12,7 @@ import net.minecraft.world.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.component.DamageResistant;
-import net.minecraft.world.level.block.Blocks;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Function;
 

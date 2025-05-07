@@ -1,0 +1,15 @@
+{
+    "name":"end_reborn:end_remains_adaptation",
+    "fallback":"minecraft:empty",
+    "elements":[
+      {
+        "weight":1,
+        "element":{
+          "element_type":"minecraft:single_pool_element",
+          "projection":"rigid",
+          "location":"end_reborn:end_remains_adaptation",
+          "processors":"minecraft:empty"
+        }
+      }
+    ]
+ }

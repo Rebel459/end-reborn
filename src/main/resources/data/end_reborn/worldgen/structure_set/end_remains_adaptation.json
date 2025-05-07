@@ -1,0 +1,14 @@
+{
+    "structures":[
+      {
+        "structure":"end_reborn:end_remains_adaptation",
+        "weight":1
+      }
+    ],
+    "placement":{
+       "type":"minecraft:random_spread",
+       "salt":4958204,
+       "spacing":58,
+       "separation":22
+    }
+ }
