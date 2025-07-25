@@ -4,5 +4,7 @@
     "color": "#4DAD78",
     "translate": "trim_material.end_reborn.featherzeal_ingot"
   },
-  "ingredient": "end_reborn:featherzeal_ingot"
+  "override_armor_assets": {
+    "end_reborn:featherzeal": "featherzeal_ingot_darker"
+  }
 }

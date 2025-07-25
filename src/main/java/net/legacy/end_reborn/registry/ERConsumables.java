@@ -1,4 +1,4 @@
-package net.legacy.end_reborn.food;
+package net.legacy.end_reborn.registry;
 
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.ItemUseAnimation;

@@ -1,32 +1,24 @@
 package net.legacy.end_reborn.registry;
 
 import net.legacy.end_reborn.ERConstants;
-import net.legacy.end_reborn.tag.ERItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.DamageTypeTags;
-import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.entity.EquipmentSlotGroup;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.component.DamageResistant;
-import net.minecraft.world.item.equipment.ArmorMaterial;
-import net.minecraft.world.item.equipment.ArmorMaterials;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.Equippable;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Function;
 
-import static net.minecraft.world.item.Items.CHAINMAIL_HELMET;
 import static net.minecraft.world.item.Items.registerBlock;
 
 public final class ERItems {
@@ -36,6 +28,7 @@ public final class ERItems {
             Item::new,
             new Properties()
                     .stacksTo(64)
+                    .trimMaterial(ERTrimMaterials.REMNANT)
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item REMNANT_SCRAP = register("remnant_scrap",
@@ -54,6 +47,7 @@ public final class ERItems {
             Item::new,
             new Properties()
                     .stacksTo(64)
+                    .trimMaterial(ERTrimMaterials.FEATHERZEAL)
     );
     public static final Item FEATHERZEAL_SCRAP = register("featherzeal_scrap",
             Item::new,

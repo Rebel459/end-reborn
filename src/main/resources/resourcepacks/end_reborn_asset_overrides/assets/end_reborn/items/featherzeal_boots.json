@@ -110,9 +110,30 @@
       {
         "model": {
           "type": "minecraft:model",
+          "model": "end_reborn:item/featherzeal_boots_sapphire_trim"
+        },
+        "when": "legacies_and_legends:sapphire"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
           "model": "end_reborn:item/featherzeal_boots_rose_ingot_trim"
         },
         "when": "progression_reborn:rose_ingot"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "end_reborn:item/featherzeal_boots_nebulite_trim"
+        },
+        "when": "enderscape:nebulite"
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "end_reborn:item/featherzeal_boots_shadoline_trim"
+        },
+        "when": "enderscape:shadoline"
       }
     ],
     "fallback": {

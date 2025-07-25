@@ -18,7 +18,7 @@ import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.component.Tool;
 import net.minecraft.world.level.block.Blocks;
 
-public record ERToolMaterial(
+public record ERToolMaterial (
         TagKey<Block> incorrectBlocksForDrops, int durability, float speed, float attackDamageBonus, int enchantmentValue, TagKey<Item> repairItems
 ) {
 
@@ -41,7 +41,8 @@ public record ERToolMaterial(
                                         Tool.Rule.minesAndDrops(holderGetter.getOrThrow(mineableBlocks), this.speed)
                                 ),
                                 1.0F,
-                                1
+                                1,
+                                true
                         )
                 )
                 .attributes(this.createToolAttributes(attackDamage, attackSpeed));
@@ -73,7 +74,8 @@ public record ERToolMaterial(
                                         Tool.Rule.overrideSpeed(holderGetter.getOrThrow(BlockTags.SWORD_EFFICIENT), 1.5F)
                                 ),
                                 1.0F,
-                                2
+                                2,
+                                false
                         )
                 )
                 .attributes(this.createSwordAttributes(attackDamage, attackSpeed));

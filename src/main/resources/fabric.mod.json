@@ -3,7 +3,7 @@
 	"id": "end_reborn",
 	"version": "${version}",
 	"name": "End Reborn",
-	"description": "A lightweight, vanilla-style expansion on Minecraft's lategame and End dimension content.",
+	"description": "A lightweight, vanilla-style expansion of Minecraft's lategame and End dimension content.",
 	"authors": [
 		"Rebel459"
 	],
@@ -33,7 +33,7 @@
 		"end_reborn.mixins.json"
 	],
 	"depends": {
-		"minecraft": "1.21.4",
+		"minecraft": "1.21.5",
 		"fabric-api": "*",
 		"frozenlib": "*",
 		"cloth-config": "*"

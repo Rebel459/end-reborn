@@ -1,11 +1,7 @@
 package net.legacy.end_reborn.registry;
 
 import net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents;
-import net.legacy.end_reborn.ERConstants;
-import net.legacy.end_reborn.food.ERConsumables;
-import net.legacy.end_reborn.food.ERFoods;
 import net.minecraft.core.component.DataComponents;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;

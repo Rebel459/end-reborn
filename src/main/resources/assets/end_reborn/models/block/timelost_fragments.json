@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "end_reborn:block/timelost_fragments_top",
+    "side": "end_reborn:block/timelost_fragments_side"
+  }
+}

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cut_ametrur_from_ametrur_stonecutting"
+        "recipe": "end_reborn:cut_ametrur_from_ametrur_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cut_ametrur_from_ametrur_stonecutting"
+      "end_reborn:cut_ametrur_from_ametrur_stonecutting"
     ]
   }
 }

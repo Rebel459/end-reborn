@@ -3,6 +3,5 @@
   "description": {
     "color": "#555555",
     "translate": "trim_material.end_reborn.remnant_ingot_darker"
-  },
-  "ingredient": "end_reborn:remnant_ingot"
+  }
 }
