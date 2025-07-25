@@ -88,6 +88,10 @@
   "item.end_reborn.featherzeal_boots": "Featherzeal Boots",
   "item.end_reborn.featherzeal_horse_armor": "Featherzeal Horse Armor",
 
+  "trim_material.end_reborn.remnant_ingot": "Remnant Material",
+  "trim_material.end_reborn.featherzeal_ingot": "Featherzeal Material",
+  "trim_material.end_reborn.crystalline_shard": "Crystalline Material",
+
   "text.autoconfig.end_reborn.title": "End Reborn",
   "text.autoconfig.end_reborn.option.loot_table_injects": "Loot Table Injects",
   "text.autoconfig.end_reborn.option.trailier_tales_integration": "Trailier Tales Integration",
