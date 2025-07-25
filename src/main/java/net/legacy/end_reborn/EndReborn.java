@@ -1,27 +1,17 @@
 package net.legacy.end_reborn;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.resource.ResourceManagerHelper;
 import net.fabricmc.fabric.api.resource.ResourcePackActivationType;
 import net.fabricmc.loader.api.FabricLoader;
 import net.fabricmc.loader.api.ModContainer;
 import net.legacy.end_reborn.config.ERConfig;
 import net.legacy.end_reborn.registry.*;
-import net.legacy.end_reborn.tag.ERBiomeTags;
 import net.legacy.end_reborn.worldgen.ERFeatures;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.levelgen.GenerationStep;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 
-import java.io.IOException;
 import java.util.Optional;
-
-import static net.legacy.end_reborn.ERConstants.MOD_ID;
-import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
 
 /**
  * by Rebel459
