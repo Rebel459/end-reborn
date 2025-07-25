@@ -60,46 +60,6 @@ public final class EREquipmentItems {
             .stacksTo(1)
     ));
 
-    // Armor
-    public static final ArmorItem REMNANT_HELMET = register("remnant_helmet", settings -> new ArmorItem(ERArmorMaterials.REMNANT, ArmorType.HELMET, settings
-            .stacksTo(1)
-            .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
-    ));
-    public static final ArmorItem REMNANT_CHESTPLATE = register("remnant_chestplate", settings -> new ArmorItem(ERArmorMaterials.REMNANT, ArmorType.CHESTPLATE, settings
-            .stacksTo(1)
-            .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
-    ));
-    public static final ArmorItem REMNANT_LEGGINGS = register("remnant_leggings", settings -> new ArmorItem(ERArmorMaterials.REMNANT, ArmorType.LEGGINGS, settings
-            .stacksTo(1)
-            .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
-    ));
-    public static final ArmorItem REMNANT_BOOTS = register("remnant_boots", settings -> new ArmorItem(ERArmorMaterials.REMNANT, ArmorType.BOOTS, settings
-            .stacksTo(1)
-            .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
-    ));
-
-    public static final ArmorItem FEATHERZEAL_HELMET = register("featherzeal_helmet", settings -> new ArmorItem(ERArmorMaterials.FEATHERZEAL, ArmorType.HELMET, settings
-            .stacksTo(1)
-    ));
-    public static final ArmorItem FEATHERZEAL_CHESTPLATE = register("featherzeal_chestplate", settings -> new ArmorItem(ERArmorMaterials.FEATHERZEAL, ArmorType.CHESTPLATE, settings
-            .stacksTo(1)
-    ));
-    public static final ArmorItem FEATHERZEAL_LEGGINGS = register("featherzeal_leggings", settings -> new ArmorItem(ERArmorMaterials.FEATHERZEAL, ArmorType.LEGGINGS, settings
-            .stacksTo(1)
-    ));
-    public static final ArmorItem FEATHERZEAL_BOOTS = register("featherzeal_boots", settings -> new ArmorItem(ERArmorMaterials.FEATHERZEAL, ArmorType.BOOTS, settings
-            .stacksTo(1)
-    ));
-
-    public static final AnimalArmorItem REMNANT_HORSE_ARMOR = register("remnant_horse_armor", settings -> new AnimalArmorItem(ERArmorMaterials.REMNANT, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
-            .stacksTo(1)
-            .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
-    ));
-
-    public static final AnimalArmorItem FEATHERZEAL_HORSE_ARMOR = register("featherzeal_horse_armor", settings -> new AnimalArmorItem(ERArmorMaterials.FEATHERZEAL, AnimalArmorItem.BodyType.EQUESTRIAN, SoundEvents.HORSE_ARMOR, false, settings
-            .stacksTo(1)
-    ));
-
     public static void init() {
     }
 

@@ -29,11 +29,11 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(EREquipmentItems.FEATHERZEAL_PICKAXE)
 				.add(EREquipmentItems.FEATHERZEAL_SHOVEL)
 				.add(EREquipmentItems.FEATHERZEAL_HOE)
-				.add(EREquipmentItems.FEATHERZEAL_HELMET)
-				.add(EREquipmentItems.FEATHERZEAL_CHESTPLATE)
-				.add(EREquipmentItems.FEATHERZEAL_LEGGINGS)
-				.add(EREquipmentItems.FEATHERZEAL_BOOTS)
-				.add(EREquipmentItems.FEATHERZEAL_HORSE_ARMOR)
+				.add(ERItems.FEATHERZEAL_HELMET)
+				.add(ERItems.FEATHERZEAL_CHESTPLATE)
+				.add(ERItems.FEATHERZEAL_LEGGINGS)
+				.add(ERItems.FEATHERZEAL_BOOTS)
+				.add(ERItems.FEATHERZEAL_HORSE_ARMOR)
 				.add(ERBlocks.TIMELOST_FRAGMENTS.asItem())
 				.add(ERBlocks.FEATHERZEAL_BLOCK.asItem());
 
@@ -52,31 +52,31 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(ERItems.FEATHERZEAL_INGOT);
 
 		this.getOrCreateTagBuilder(ItemTags.TRIMMABLE_ARMOR)
-				.add(EREquipmentItems.REMNANT_HELMET)
-				.add(EREquipmentItems.REMNANT_CHESTPLATE)
-				.add(EREquipmentItems.REMNANT_LEGGINGS)
-				.add(EREquipmentItems.REMNANT_BOOTS)
-				.add(EREquipmentItems.FEATHERZEAL_HELMET)
-				.add(EREquipmentItems.FEATHERZEAL_CHESTPLATE)
-				.add(EREquipmentItems.FEATHERZEAL_LEGGINGS)
-				.add(EREquipmentItems.FEATHERZEAL_BOOTS);
+				.add(ERItems.REMNANT_HELMET)
+				.add(ERItems.REMNANT_CHESTPLATE)
+				.add(ERItems.REMNANT_LEGGINGS)
+				.add(ERItems.REMNANT_BOOTS)
+				.add(ERItems.FEATHERZEAL_HELMET)
+				.add(ERItems.FEATHERZEAL_CHESTPLATE)
+				.add(ERItems.FEATHERZEAL_LEGGINGS)
+				.add(ERItems.FEATHERZEAL_BOOTS);
 
 		this.getOrCreateTagBuilder(ItemTags.TRIM_MATERIALS)
 				.add(ERItems.REMNANT_INGOT)
 				.add(ERItems.FEATHERZEAL_INGOT)
 				.add(ERItems.CRYSTALLINE_SHARD);
 		this.getOrCreateTagBuilder(ItemTags.HEAD_ARMOR)
-				.add(EREquipmentItems.REMNANT_HELMET)
-				.add(EREquipmentItems.FEATHERZEAL_HELMET);
+				.add(ERItems.REMNANT_HELMET)
+				.add(ERItems.FEATHERZEAL_HELMET);
 		this.getOrCreateTagBuilder(ItemTags.CHEST_ARMOR)
-				.add(EREquipmentItems.REMNANT_CHESTPLATE)
-				.add(EREquipmentItems.FEATHERZEAL_CHESTPLATE);
+				.add(ERItems.REMNANT_CHESTPLATE)
+				.add(ERItems.FEATHERZEAL_CHESTPLATE);
 		this.getOrCreateTagBuilder(ItemTags.LEG_ARMOR)
-				.add(EREquipmentItems.REMNANT_LEGGINGS)
-				.add(EREquipmentItems.FEATHERZEAL_LEGGINGS);
+				.add(ERItems.REMNANT_LEGGINGS)
+				.add(ERItems.FEATHERZEAL_LEGGINGS);
 		this.getOrCreateTagBuilder(ItemTags.FOOT_ARMOR)
-				.add(EREquipmentItems.REMNANT_BOOTS)
-				.add(EREquipmentItems.FEATHERZEAL_BOOTS);
+				.add(ERItems.REMNANT_BOOTS)
+				.add(ERItems.FEATHERZEAL_BOOTS);
 
 		this.getOrCreateTagBuilder(ItemTags.SWORDS)
 				.add(EREquipmentItems.REMNANT_SWORD)

@@ -89,21 +89,21 @@ public class ERCreativeInventorySorting {
 		addBeforeInCombat(Items.NETHERITE_SWORD, EREquipmentItems.REMNANT_SWORD);
 		addBeforeInCombat(Items.NETHERITE_AXE, EREquipmentItems.REMNANT_AXE);
 
-		addBeforeInCombat(Items.NETHERITE_HELMET, EREquipmentItems.REMNANT_HELMET);
-		addAfterInCombat(EREquipmentItems.REMNANT_HELMET, EREquipmentItems.REMNANT_CHESTPLATE);
-		addAfterInCombat(EREquipmentItems.REMNANT_CHESTPLATE, EREquipmentItems.REMNANT_LEGGINGS);
-		addAfterInCombat(EREquipmentItems.REMNANT_LEGGINGS, EREquipmentItems.REMNANT_BOOTS);
+		addBeforeInCombat(Items.NETHERITE_HELMET, ERItems.REMNANT_HELMET);
+		addAfterInCombat(ERItems.REMNANT_HELMET, ERItems.REMNANT_CHESTPLATE);
+		addAfterInCombat(ERItems.REMNANT_CHESTPLATE, ERItems.REMNANT_LEGGINGS);
+		addAfterInCombat(ERItems.REMNANT_LEGGINGS, ERItems.REMNANT_BOOTS);
 
 		addAfterInCombat(Items.NETHERITE_SWORD, EREquipmentItems.FEATHERZEAL_SWORD);
 		addAfterInCombat(Items.NETHERITE_AXE, EREquipmentItems.FEATHERZEAL_AXE);
 
-		addAfterInCombat(Items.NETHERITE_BOOTS, EREquipmentItems.FEATHERZEAL_HELMET);
-		addAfterInCombat(EREquipmentItems.FEATHERZEAL_HELMET, EREquipmentItems.FEATHERZEAL_CHESTPLATE);
-		addAfterInCombat(EREquipmentItems.FEATHERZEAL_CHESTPLATE, EREquipmentItems.FEATHERZEAL_LEGGINGS);
-		addAfterInCombat(EREquipmentItems.FEATHERZEAL_LEGGINGS, EREquipmentItems.FEATHERZEAL_BOOTS);
+		addAfterInCombat(Items.NETHERITE_BOOTS, ERItems.FEATHERZEAL_HELMET);
+		addAfterInCombat(ERItems.FEATHERZEAL_HELMET, ERItems.FEATHERZEAL_CHESTPLATE);
+		addAfterInCombat(ERItems.FEATHERZEAL_CHESTPLATE, ERItems.FEATHERZEAL_LEGGINGS);
+		addAfterInCombat(ERItems.FEATHERZEAL_LEGGINGS, ERItems.FEATHERZEAL_BOOTS);
 
-		addAfterInCombat(Items.DIAMOND_HORSE_ARMOR, EREquipmentItems.REMNANT_HORSE_ARMOR);
-		addBeforeInCombat(Items.WOLF_ARMOR, EREquipmentItems.FEATHERZEAL_HORSE_ARMOR);
+		addAfterInCombat(Items.DIAMOND_HORSE_ARMOR, ERItems.REMNANT_HORSE_ARMOR);
+		addBeforeInCombat(Items.WOLF_ARMOR, ERItems.FEATHERZEAL_HORSE_ARMOR);
 	}
 
 	private static void addAfterInNaturalBlocks(ItemLike comparedItem, ItemLike item) {

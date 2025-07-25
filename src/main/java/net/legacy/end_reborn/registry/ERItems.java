@@ -1,21 +1,32 @@
 package net.legacy.end_reborn.registry;
 
 import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.tag.ERItemTags;
 import net.minecraft.ChatFormatting;
 import net.minecraft.Util;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.*;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.component.DamageResistant;
+import net.minecraft.world.item.equipment.ArmorMaterial;
+import net.minecraft.world.item.equipment.ArmorMaterials;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.item.equipment.Equippable;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Function;
 
+import static net.minecraft.world.item.Items.CHAINMAIL_HELMET;
 import static net.minecraft.world.item.Items.registerBlock;
 
 public final class ERItems {
@@ -90,7 +101,7 @@ public final class ERItems {
                     .stacksTo(16)
     );
 
-    // Blocks
+    // Block Items
     public static final Item REMNANT_BLOCK = registerBlock(ERBlocks.REMNANT_BLOCK,
             (block, properties) -> new BlockItem(ERBlocks.REMNANT_BLOCK, properties),
             new Item.Properties()
@@ -99,6 +110,117 @@ public final class ERItems {
     public static final Item FORGOTTEN_REMAINS = registerBlock(ERBlocks.FORGOTTEN_REMAINS,
             (block, properties) -> new BlockItem(ERBlocks.FORGOTTEN_REMAINS, properties),
             new Item.Properties()
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+
+    // Armor
+    public static final Item REMNANT_HELMET = register("remnant_helmet",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .durability(ArmorType.HELMET.getDurability(ERArmorMaterials.REMNANT.durability()))
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.HELMET.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
+                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
+                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .attributes(ERArmorMaterials.createRemnantHelmetAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item REMNANT_CHESTPLATE = register("remnant_chestplate",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .durability(ArmorType.CHESTPLATE.getDurability(ERArmorMaterials.REMNANT.durability()))
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.CHESTPLATE.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
+                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
+                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .attributes(ERArmorMaterials.createRemnantChestplateAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item REMNANT_LEGGINGS = register("remnant_leggings",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .durability(ArmorType.LEGGINGS.getDurability(ERArmorMaterials.REMNANT.durability()))
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.LEGGINGS.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
+                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
+                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .attributes(ERArmorMaterials.createRemnantLeggingsAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item REMNANT_BOOTS = register("remnant_boots",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .durability(ArmorType.BOOTS.getDurability(ERArmorMaterials.REMNANT.durability()))
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.BOOTS.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
+                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
+                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .attributes(ERArmorMaterials.createRemnantBootsAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item REMNANT_HORSE_ARMOR = register("remnant_horse_armor",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.BODY.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
+                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
+                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .attributes(ERArmorMaterials.createRemnantHorseArmorAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+
+    public static final Item FEATHERZEAL_HELMET = register("featherzeal_helmet",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .durability(ArmorType.HELMET.getDurability(ERArmorMaterials.FEATHERZEAL.durability()))
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.HELMET.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
+                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
+                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .attributes(ERArmorMaterials.createFeatherzealHelmetAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item FEATHERZEAL_CHESTPLATE = register("featherzeal_chestplate",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .durability(ArmorType.CHESTPLATE.getDurability(ERArmorMaterials.FEATHERZEAL.durability()))
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.CHESTPLATE.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
+                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
+                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .attributes(ERArmorMaterials.createFeatherzealChestplateAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item FEATHERZEAL_LEGGINGS = register("featherzeal_leggings",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .durability(ArmorType.LEGGINGS.getDurability(ERArmorMaterials.FEATHERZEAL.durability()))
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.LEGGINGS.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
+                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
+                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .attributes(ERArmorMaterials.createFeatherzealLeggingsAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item FEATHERZEAL_BOOTS = register("featherzeal_boots",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .durability(ArmorType.BOOTS.getDurability(ERArmorMaterials.FEATHERZEAL.durability()))
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.BOOTS.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
+                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
+                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .attributes(ERArmorMaterials.createFeatherzealBootsAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item FEATHERZEAL_HORSE_ARMOR = register("featherzeal_horse_armor",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.BODY.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
+                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
+                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .attributes(ERArmorMaterials.createFeatherzealHorseArmorAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
 

@@ -113,15 +113,15 @@ public final class ERModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
-		generator.generateTrimmableItem(EREquipmentItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
-		generator.generateTrimmableItem(EREquipmentItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
-		generator.generateTrimmableItem(EREquipmentItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
-		generator.generateTrimmableItem(EREquipmentItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
+		generator.generateTrimmableItem(ERItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
+		generator.generateTrimmableItem(ERItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
+		generator.generateTrimmableItem(ERItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
+		generator.generateTrimmableItem(ERItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
 
-		generator.generateTrimmableItem(EREquipmentItems.FEATHERZEAL_HELMET, EREquipmentAssets.FEATHERZEAL, "helmet", false);
-		generator.generateTrimmableItem(EREquipmentItems.FEATHERZEAL_CHESTPLATE, EREquipmentAssets.FEATHERZEAL, "chestplate", false);
-		generator.generateTrimmableItem(EREquipmentItems.FEATHERZEAL_LEGGINGS, EREquipmentAssets.FEATHERZEAL, "leggings", false);
-		generator.generateTrimmableItem(EREquipmentItems.FEATHERZEAL_BOOTS, EREquipmentAssets.FEATHERZEAL, "boots", false);
+		generator.generateTrimmableItem(ERItems.FEATHERZEAL_HELMET, EREquipmentAssets.FEATHERZEAL, "helmet", false);
+		generator.generateTrimmableItem(ERItems.FEATHERZEAL_CHESTPLATE, EREquipmentAssets.FEATHERZEAL, "chestplate", false);
+		generator.generateTrimmableItem(ERItems.FEATHERZEAL_LEGGINGS, EREquipmentAssets.FEATHERZEAL, "leggings", false);
+		generator.generateTrimmableItem(ERItems.FEATHERZEAL_BOOTS, EREquipmentAssets.FEATHERZEAL, "boots", false);
 
 		generator.generateFlatItem(ERItems.CHORUS_RAFT, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.CHORUS_CHEST_RAFT, ModelTemplates.FLAT_ITEM);
@@ -149,9 +149,9 @@ public final class ERModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
 		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-		generator.generateFlatItem(EREquipmentItems.REMNANT_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
 
-		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
 
 		this.registerArmorTrims(generator, Items.TURTLE_HELMET, EquipmentAssets.TURTLE_SCUTE, "helmet", false);
 		this.registerArmorTrims(generator, Items.LEATHER_HELMET, EquipmentAssets.LEATHER, "helmet", true);
@@ -179,25 +179,25 @@ public final class ERModelProvider extends FabricModelProvider {
 		this.registerArmorTrims(generator, Items.NETHERITE_LEGGINGS, EquipmentAssets.NETHERITE, "leggings", false);
 		this.registerArmorTrims(generator, Items.NETHERITE_BOOTS, EquipmentAssets.NETHERITE, "boots", false);
 
-		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
-		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
-		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
-		this.registerArmorTrimsRemnantDarker(generator, EREquipmentItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
+		this.registerArmorTrimsRemnantDarker(generator, ERItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
+		this.registerArmorTrimsRemnantDarker(generator, ERItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
+		this.registerArmorTrimsRemnantDarker(generator, ERItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
+		this.registerArmorTrimsRemnantDarker(generator, ERItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
 
-		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
-		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
-		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
-		this.registerArmorTrimsNotRemnant(generator, EREquipmentItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
+		this.registerArmorTrimsNotRemnant(generator, ERItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
+		this.registerArmorTrimsNotRemnant(generator, ERItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
+		this.registerArmorTrimsNotRemnant(generator, ERItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
+		this.registerArmorTrimsNotRemnant(generator, ERItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
 
-		this.registerArmorTrimsFeatherzealDarker(generator, EREquipmentItems.FEATHERZEAL_HELMET, EREquipmentAssets.FEATHERZEAL, "helmet", false);
-		this.registerArmorTrimsFeatherzealDarker(generator, EREquipmentItems.FEATHERZEAL_CHESTPLATE, EREquipmentAssets.FEATHERZEAL, "chestplate", false);
-		this.registerArmorTrimsFeatherzealDarker(generator, EREquipmentItems.FEATHERZEAL_LEGGINGS, EREquipmentAssets.FEATHERZEAL, "leggings", false);
-		this.registerArmorTrimsFeatherzealDarker(generator, EREquipmentItems.FEATHERZEAL_BOOTS, EREquipmentAssets.FEATHERZEAL, "boots", false);
+		this.registerArmorTrimsFeatherzealDarker(generator, ERItems.FEATHERZEAL_HELMET, EREquipmentAssets.FEATHERZEAL, "helmet", false);
+		this.registerArmorTrimsFeatherzealDarker(generator, ERItems.FEATHERZEAL_CHESTPLATE, EREquipmentAssets.FEATHERZEAL, "chestplate", false);
+		this.registerArmorTrimsFeatherzealDarker(generator, ERItems.FEATHERZEAL_LEGGINGS, EREquipmentAssets.FEATHERZEAL, "leggings", false);
+		this.registerArmorTrimsFeatherzealDarker(generator, ERItems.FEATHERZEAL_BOOTS, EREquipmentAssets.FEATHERZEAL, "boots", false);
 
-		this.registerArmorTrimsNotFeatherzeal(generator, EREquipmentItems.FEATHERZEAL_HELMET, EREquipmentAssets.FEATHERZEAL, "helmet", false);
-		this.registerArmorTrimsNotFeatherzeal(generator, EREquipmentItems.FEATHERZEAL_CHESTPLATE, EREquipmentAssets.FEATHERZEAL, "chestplate", false);
-		this.registerArmorTrimsNotFeatherzeal(generator, EREquipmentItems.FEATHERZEAL_LEGGINGS, EREquipmentAssets.FEATHERZEAL, "leggings", false);
-		this.registerArmorTrimsNotFeatherzeal(generator, EREquipmentItems.FEATHERZEAL_BOOTS, EREquipmentAssets.FEATHERZEAL, "boots", false);
+		this.registerArmorTrimsNotFeatherzeal(generator, ERItems.FEATHERZEAL_HELMET, EREquipmentAssets.FEATHERZEAL, "helmet", false);
+		this.registerArmorTrimsNotFeatherzeal(generator, ERItems.FEATHERZEAL_CHESTPLATE, EREquipmentAssets.FEATHERZEAL, "chestplate", false);
+		this.registerArmorTrimsNotFeatherzeal(generator, ERItems.FEATHERZEAL_LEGGINGS, EREquipmentAssets.FEATHERZEAL, "leggings", false);
+		this.registerArmorTrimsNotFeatherzeal(generator, ERItems.FEATHERZEAL_BOOTS, EREquipmentAssets.FEATHERZEAL, "boots", false);
 
 	}
 
