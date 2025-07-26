@@ -3,11 +3,9 @@ package net.legacy.end_reborn.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.legacy.end_reborn.registry.ERBlocks;
-import net.legacy.end_reborn.registry.EREquipmentItems;
 import net.legacy.end_reborn.registry.ERItems;
 import net.legacy.end_reborn.tag.ERItemTags;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Blocks;
 import org.jetbrains.annotations.NotNull;
@@ -24,11 +22,11 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 		this.getOrCreateTagBuilder(ERItemTags.VOID_IMMUNE)
 				.add(ERItems.FEATHERZEAL_INGOT)
 				.add(ERItems.FEATHERZEAL_SCRAP)
-				.add(EREquipmentItems.FEATHERZEAL_SWORD)
-				.add(EREquipmentItems.FEATHERZEAL_AXE)
-				.add(EREquipmentItems.FEATHERZEAL_PICKAXE)
-				.add(EREquipmentItems.FEATHERZEAL_SHOVEL)
-				.add(EREquipmentItems.FEATHERZEAL_HOE)
+				.add(ERItems.FEATHERZEAL_SWORD)
+				.add(ERItems.FEATHERZEAL_AXE)
+				.add(ERItems.FEATHERZEAL_PICKAXE)
+				.add(ERItems.FEATHERZEAL_SHOVEL)
+				.add(ERItems.FEATHERZEAL_HOE)
 				.add(ERItems.FEATHERZEAL_HELMET)
 				.add(ERItems.FEATHERZEAL_CHESTPLATE)
 				.add(ERItems.FEATHERZEAL_LEGGINGS)
@@ -79,20 +77,20 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
 				.add(ERItems.FEATHERZEAL_BOOTS);
 
 		this.getOrCreateTagBuilder(ItemTags.SWORDS)
-				.add(EREquipmentItems.REMNANT_SWORD)
-				.add(EREquipmentItems.FEATHERZEAL_SWORD);
+				.add(ERItems.REMNANT_SWORD)
+				.add(ERItems.FEATHERZEAL_SWORD);
 		this.getOrCreateTagBuilder(ItemTags.AXES)
-				.add(EREquipmentItems.REMNANT_AXE)
-				.add(EREquipmentItems.FEATHERZEAL_AXE);
+				.add(ERItems.REMNANT_AXE)
+				.add(ERItems.FEATHERZEAL_AXE);
 		this.getOrCreateTagBuilder(ItemTags.PICKAXES)
-				.add(EREquipmentItems.REMNANT_PICKAXE)
-				.add(EREquipmentItems.FEATHERZEAL_PICKAXE);
+				.add(ERItems.REMNANT_PICKAXE)
+				.add(ERItems.FEATHERZEAL_PICKAXE);
 		this.getOrCreateTagBuilder(ItemTags.SHOVELS)
-				.add(EREquipmentItems.REMNANT_SHOVEL)
-				.add(EREquipmentItems.FEATHERZEAL_SHOVEL);
+				.add(ERItems.REMNANT_SHOVEL)
+				.add(ERItems.FEATHERZEAL_SHOVEL);
 		this.getOrCreateTagBuilder(ItemTags.HOES)
-				.add(EREquipmentItems.REMNANT_HOE)
-				.add(EREquipmentItems.FEATHERZEAL_HOE);
+				.add(ERItems.REMNANT_HOE)
+				.add(ERItems.FEATHERZEAL_HOE);
 
 		this.getOrCreateTagBuilder(ERItemTags.CHORUS_BLOCKS)
 				.add(ERBlocks.CHORUS_BLOCK.asItem())

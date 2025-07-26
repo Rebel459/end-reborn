@@ -25,7 +25,6 @@ public class EndReborn implements ModInitializer {
 		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("end_reborn");
 
 		ERItems.init();
-		EREquipmentItems.init();
 		ERItemComponents.init();
 		ERBlocks.init();
 		ERBlocks.registerBlockProperties();

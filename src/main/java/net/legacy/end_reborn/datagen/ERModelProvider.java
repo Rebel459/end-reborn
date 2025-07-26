@@ -102,17 +102,17 @@ public final class ERModelProvider extends FabricModelProvider {
 		generator.generateFlatItem(ERItems.FEATHERZEAL_SCRAP, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE, ModelTemplates.FLAT_ITEM);
 
-		generator.generateFlatItem(EREquipmentItems.REMNANT_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(EREquipmentItems.REMNANT_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(EREquipmentItems.REMNANT_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(EREquipmentItems.REMNANT_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(EREquipmentItems.REMNANT_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
-		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
-		generator.generateFlatItem(EREquipmentItems.FEATHERZEAL_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
 
 		generator.generateFlatItem(ERItems.REMNANT_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
 

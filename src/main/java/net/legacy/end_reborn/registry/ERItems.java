@@ -8,13 +8,11 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.component.DamageResistant;
 import net.minecraft.world.item.equipment.ArmorType;
-import net.minecraft.world.item.equipment.Equippable;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.function.Function;
@@ -71,19 +69,17 @@ public final class ERItems {
                     .stacksTo(64)
     );
 
-    // Boats
+    // Entity Items
     public static final BoatItem CHORUS_RAFT = register("chorus_raft",
             properties -> new BoatItem(EREntityTypes.CHORUS_RAFT, properties),
             new Item.Properties()
-                    .stacksTo(1)
     );
     public static final BoatItem CHORUS_CHEST_RAFT = register("chorus_chest_raft",
             properties -> new BoatItem(EREntityTypes.CHORUS_CHEST_RAFT, properties),
             new Item.Properties()
-                    .stacksTo(1)
     );
 
-    // Signs
+    // Block Items
     public static final Item CHORUS_SIGN = registerBlock(ERBlocks.CHORUS_SIGN,
             (block, properties) -> new SignItem(block, ERBlocks.CHORUS_WALL_SIGN, properties),
             new Item.Properties()
@@ -95,7 +91,6 @@ public final class ERItems {
                     .stacksTo(16)
     );
 
-    // Block Items
     public static final Item REMNANT_BLOCK = registerBlock(ERBlocks.REMNANT_BLOCK,
             (block, properties) -> new BlockItem(ERBlocks.REMNANT_BLOCK, properties),
             new Item.Properties()
@@ -107,58 +102,101 @@ public final class ERItems {
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
 
+    // Tools
+    public static final Item REMNANT_SWORD = register("remnant_sword",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .sword(ERToolMaterial.REMNANT, 3f, -2.4f)
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item REMNANT_PICKAXE = register("remnant_pickaxe",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .pickaxe(ERToolMaterial.REMNANT, 1f, -2.8f)
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final AxeItem REMNANT_AXE = register("remnant_axe",
+            (properties) -> new AxeItem(ERToolMaterial.REMNANT, 5f, -3.0f, properties), (
+                    new Properties()
+                            .stacksTo(1)
+                            .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+            ));
+    public static final ShovelItem REMNANT_SHOVEL = register("remnant_shovel",
+            (properties) -> new ShovelItem(ERToolMaterial.REMNANT, 1.5f, -3f, properties), (
+                    new Properties()
+                            .stacksTo(1)
+                            .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+            ));
+    public static final HoeItem REMNANT_HOE = register("remnant_hoe",
+            (properties) -> new HoeItem(ERToolMaterial.REMNANT, -2f, -1f, properties), (
+                    new Properties()
+                            .stacksTo(1)
+                            .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+            ));
+
+    public static final Item FEATHERZEAL_SWORD = register("featherzeal_sword",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .sword(ERToolMaterial.FEATHERZEAL, 3f, -2.4f)
+    );
+    public static final Item FEATHERZEAL_PICKAXE = register("featherzeal_pickaxe",
+            Item::new,
+            new Properties()
+                    .stacksTo(1)
+                    .pickaxe(ERToolMaterial.FEATHERZEAL, 1f, -2.8f)
+    );
+    public static final AxeItem FEATHERZEAL_AXE = register("featherzeal_axe",
+            (properties) -> new AxeItem(ERToolMaterial.FEATHERZEAL, 5f, -3.0f, properties), (
+                    new Properties()
+                            .stacksTo(1)
+            ));
+    public static final ShovelItem FEATHERZEAL_SHOVEL = register("featherzeal_shovel",
+            (properties) -> new ShovelItem(ERToolMaterial.FEATHERZEAL, 1.5f, -3f, properties), (
+                    new Properties()
+                            .stacksTo(1)
+            ));
+    public static final HoeItem FEATHERZEAL_HOE = register("featherzeal_hoe",
+            (properties) -> new HoeItem(ERToolMaterial.FEATHERZEAL, -2f, -1f, properties), (
+                    new Properties()
+                            .stacksTo(1)
+            ));
+
     // Armor
     public static final Item REMNANT_HELMET = register("remnant_helmet",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .durability(ArmorType.HELMET.getDurability(ERArmorMaterials.REMNANT.durability()))
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.HELMET.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
-                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
-                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .humanoidArmor(ERArmorMaterials.REMNANT, ArmorType.HELMET)
                     .attributes(ERArmorMaterials.createRemnantHelmetAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item REMNANT_CHESTPLATE = register("remnant_chestplate",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .durability(ArmorType.CHESTPLATE.getDurability(ERArmorMaterials.REMNANT.durability()))
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.CHESTPLATE.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
-                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
-                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .humanoidArmor(ERArmorMaterials.REMNANT, ArmorType.CHESTPLATE)
                     .attributes(ERArmorMaterials.createRemnantChestplateAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item REMNANT_LEGGINGS = register("remnant_leggings",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .durability(ArmorType.LEGGINGS.getDurability(ERArmorMaterials.REMNANT.durability()))
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.LEGGINGS.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
-                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
-                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .humanoidArmor(ERArmorMaterials.REMNANT, ArmorType.LEGGINGS)
                     .attributes(ERArmorMaterials.createRemnantLeggingsAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item REMNANT_BOOTS = register("remnant_boots",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .durability(ArmorType.BOOTS.getDurability(ERArmorMaterials.REMNANT.durability()))
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.BOOTS.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
-                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
-                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .humanoidArmor(ERArmorMaterials.REMNANT, ArmorType.BOOTS)
                     .attributes(ERArmorMaterials.createRemnantBootsAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item REMNANT_HORSE_ARMOR = register("remnant_horse_armor",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.BODY.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.REMNANT).build())
-                    .repairable(ERArmorMaterials.REMNANT.repairIngredient())
-                    .enchantable(ERArmorMaterials.REMNANT.enchantmentValue())
+                    .horseArmor(ERArmorMaterials.REMNANT)
                     .attributes(ERArmorMaterials.createRemnantHorseArmorAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
@@ -166,54 +204,35 @@ public final class ERItems {
     public static final Item FEATHERZEAL_HELMET = register("featherzeal_helmet",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .durability(ArmorType.HELMET.getDurability(ERArmorMaterials.FEATHERZEAL.durability()))
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.HELMET.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
-                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
-                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .humanoidArmor(ERArmorMaterials.FEATHERZEAL, ArmorType.HELMET)
                     .attributes(ERArmorMaterials.createFeatherzealHelmetAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item FEATHERZEAL_CHESTPLATE = register("featherzeal_chestplate",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .durability(ArmorType.CHESTPLATE.getDurability(ERArmorMaterials.FEATHERZEAL.durability()))
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.CHESTPLATE.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
-                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
-                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .humanoidArmor(ERArmorMaterials.FEATHERZEAL, ArmorType.CHESTPLATE)
                     .attributes(ERArmorMaterials.createFeatherzealChestplateAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item FEATHERZEAL_LEGGINGS = register("featherzeal_leggings",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .durability(ArmorType.LEGGINGS.getDurability(ERArmorMaterials.FEATHERZEAL.durability()))
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.LEGGINGS.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
-                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
-                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .humanoidArmor(ERArmorMaterials.FEATHERZEAL, ArmorType.LEGGINGS)
                     .attributes(ERArmorMaterials.createFeatherzealLeggingsAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item FEATHERZEAL_BOOTS = register("featherzeal_boots",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .durability(ArmorType.BOOTS.getDurability(ERArmorMaterials.FEATHERZEAL.durability()))
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.BOOTS.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
-                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
-                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .humanoidArmor(ERArmorMaterials.FEATHERZEAL, ArmorType.BOOTS)
                     .attributes(ERArmorMaterials.createFeatherzealBootsAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
     public static final Item FEATHERZEAL_HORSE_ARMOR = register("featherzeal_horse_armor",
             Item::new,
             new Properties()
-                    .stacksTo(1)
-                    .component(DataComponents.EQUIPPABLE, Equippable.builder(ArmorType.BODY.getSlot()).setEquipSound(SoundEvents.ARMOR_EQUIP_NETHERITE).setAsset(EREquipmentAssets.FEATHERZEAL).build())
-                    .repairable(ERArmorMaterials.FEATHERZEAL.repairIngredient())
-                    .enchantable(ERArmorMaterials.FEATHERZEAL.enchantmentValue())
+                    .horseArmor(ERArmorMaterials.FEATHERZEAL)
                     .attributes(ERArmorMaterials.createFeatherzealHorseArmorAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );

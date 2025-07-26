@@ -73,29 +73,29 @@ public class ERCreativeInventorySorting {
 		addAfterInToolsAndUtilities(Items.BAMBOO_CHEST_RAFT, ERItems.CHORUS_RAFT);
 		addAfterInToolsAndUtilities(ERItems.CHORUS_RAFT, ERItems.CHORUS_CHEST_RAFT);
 
-		addBeforeInToolsAndUtilities(Items.NETHERITE_SHOVEL, EREquipmentItems.REMNANT_SHOVEL);
-		addAfterInToolsAndUtilities(EREquipmentItems.REMNANT_SHOVEL, EREquipmentItems.REMNANT_PICKAXE);
-		addAfterInToolsAndUtilities(EREquipmentItems.REMNANT_PICKAXE, EREquipmentItems.REMNANT_AXE);
-		addAfterInToolsAndUtilities(EREquipmentItems.REMNANT_AXE, EREquipmentItems.REMNANT_HOE);
+		addBeforeInToolsAndUtilities(Items.NETHERITE_SHOVEL, ERItems.REMNANT_SHOVEL);
+		addAfterInToolsAndUtilities(ERItems.REMNANT_SHOVEL, ERItems.REMNANT_PICKAXE);
+		addAfterInToolsAndUtilities(ERItems.REMNANT_PICKAXE, ERItems.REMNANT_AXE);
+		addAfterInToolsAndUtilities(ERItems.REMNANT_AXE, ERItems.REMNANT_HOE);
 
-		addAfterInToolsAndUtilities(Items.NETHERITE_HOE, EREquipmentItems.FEATHERZEAL_SHOVEL);
-		addAfterInToolsAndUtilities(EREquipmentItems.FEATHERZEAL_SHOVEL, EREquipmentItems.FEATHERZEAL_PICKAXE);
-		addAfterInToolsAndUtilities(EREquipmentItems.FEATHERZEAL_PICKAXE, EREquipmentItems.FEATHERZEAL_AXE);
-		addAfterInToolsAndUtilities(EREquipmentItems.FEATHERZEAL_AXE, EREquipmentItems.FEATHERZEAL_HOE);
+		addAfterInToolsAndUtilities(Items.NETHERITE_HOE, ERItems.FEATHERZEAL_SHOVEL);
+		addAfterInToolsAndUtilities(ERItems.FEATHERZEAL_SHOVEL, ERItems.FEATHERZEAL_PICKAXE);
+		addAfterInToolsAndUtilities(ERItems.FEATHERZEAL_PICKAXE, ERItems.FEATHERZEAL_AXE);
+		addAfterInToolsAndUtilities(ERItems.FEATHERZEAL_AXE, ERItems.FEATHERZEAL_HOE);
 
 		addAfterInFunctionalBlocks(Items.WARPED_HANGING_SIGN, ERItems.CHORUS_SIGN);
 		addAfterInFunctionalBlocks(ERItems.CHORUS_SIGN, ERItems.CHORUS_HANGING_SIGN);
 
-		addBeforeInCombat(Items.NETHERITE_SWORD, EREquipmentItems.REMNANT_SWORD);
-		addBeforeInCombat(Items.NETHERITE_AXE, EREquipmentItems.REMNANT_AXE);
+		addBeforeInCombat(Items.NETHERITE_SWORD, ERItems.REMNANT_SWORD);
+		addBeforeInCombat(Items.NETHERITE_AXE, ERItems.REMNANT_AXE);
 
 		addBeforeInCombat(Items.NETHERITE_HELMET, ERItems.REMNANT_HELMET);
 		addAfterInCombat(ERItems.REMNANT_HELMET, ERItems.REMNANT_CHESTPLATE);
 		addAfterInCombat(ERItems.REMNANT_CHESTPLATE, ERItems.REMNANT_LEGGINGS);
 		addAfterInCombat(ERItems.REMNANT_LEGGINGS, ERItems.REMNANT_BOOTS);
 
-		addAfterInCombat(Items.NETHERITE_SWORD, EREquipmentItems.FEATHERZEAL_SWORD);
-		addAfterInCombat(Items.NETHERITE_AXE, EREquipmentItems.FEATHERZEAL_AXE);
+		addAfterInCombat(Items.NETHERITE_SWORD, ERItems.FEATHERZEAL_SWORD);
+		addAfterInCombat(Items.NETHERITE_AXE, ERItems.FEATHERZEAL_AXE);
 
 		addAfterInCombat(Items.NETHERITE_BOOTS, ERItems.FEATHERZEAL_HELMET);
 		addAfterInCombat(ERItems.FEATHERZEAL_HELMET, ERItems.FEATHERZEAL_CHESTPLATE);
