@@ -2,6 +2,7 @@
   "replace": false,
   "values": [
     "minecraft:deep_dark",
+    "minecraft:dripstone_caves",
     {
       "id": "wilderwild:magmatic_caves",
       "required": false
