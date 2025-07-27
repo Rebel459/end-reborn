@@ -1,10 +1,6 @@
 {
   "pack": {
-    "pack_format": 61,
-    "supported_formats": [
-      46,
-      61
-    ],
+    "pack_format": 71,
     "description": "End Reborn integration with Enderscape"
   }
 }

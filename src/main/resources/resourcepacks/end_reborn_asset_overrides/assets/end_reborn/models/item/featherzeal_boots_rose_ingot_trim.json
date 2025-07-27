@@ -1,7 +1,7 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "end_reborn:item/rose_boots",
+    "layer0": "end_reborn:item/featherzeal_boots",
     "layer1": "minecraft:trims/items/boots_trim_rose_ingot"
   }
 }
