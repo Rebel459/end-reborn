@@ -45,7 +45,7 @@ public class ERItemComponents {
 
     public static ItemAttributeModifiers createNetheriteHelmetAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_HELMET_ID, 3, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_HELMET_ID, ERArmorMaterials.helmetDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ERArmorMaterials.ARMOR_TOUGHNESS_HELMET_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(ERArmorMaterials.KNOCKBACK_RESISTANCE_HELMET_ID, ArmorMaterials.NETHERITE.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.BURNING_TIME, new AttributeModifier(ERArmorMaterials.BURNING_TIME_HELMET_ID, -0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.HEAD)
@@ -53,7 +53,7 @@ public class ERItemComponents {
     }
     public static ItemAttributeModifiers createNetheriteChestplateAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_CHESTPLATE_ID, 8, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
+                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_CHESTPLATE_ID, ERArmorMaterials.chestplateDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ERArmorMaterials.ARMOR_TOUGHNESS_CHESTPLATE_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(ERArmorMaterials.KNOCKBACK_RESISTANCE_CHESTPLATE_ID, ArmorMaterials.NETHERITE.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.BURNING_TIME, new AttributeModifier(ERArmorMaterials.BURNING_TIME_CHESTPLATE_ID, -0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.CHEST)
