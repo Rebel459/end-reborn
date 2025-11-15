@@ -23,11 +23,10 @@ public record ERToolMaterial (
 ) {
 
     public static final net.minecraft.world.item.ToolMaterial REMNANT = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2501, 9.0F, 4.0F, 15, ERItemTags.REMNANT_TOOL_MATERIALS);
-    public static final net.minecraft.world.item.ToolMaterial FEATHERZEAL = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2031, 10.0F, 4.0F, 15, ERItemTags.FEATHERZEAL_TOOL_MATERIALS);
+    public static final net.minecraft.world.item.ToolMaterial FEATHERZEAL = new net.minecraft.world.item.ToolMaterial(BlockTags.INCORRECT_FOR_NETHERITE_TOOL, 2031, 12.0F, 4.0F, 15, ERItemTags.FEATHERZEAL_TOOL_MATERIALS);
 
     private Item.Properties applyCommonProperties(Item.Properties properties) {
         return properties.durability(this.durability).repairable(this.repairItems).enchantable(this.enchantmentValue);
-
     }
 
     public Item.Properties applyToolProperties(Item.Properties properties, TagKey<Block> mineableBlocks, float attackDamage, float attackSpeed) {
