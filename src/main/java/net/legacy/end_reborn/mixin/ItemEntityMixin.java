@@ -24,7 +24,7 @@ public abstract class ItemEntityMixin extends Entity {
 
     @Inject(at = @At("TAIL"), method = "tick()V")
     private void dropItem(CallbackInfo info) {
-        if ((getItem().is(ERItemTags.VOID_IMMUNE))) {
+        if ((this.getItem().is(ERItemTags.VOID_IMMUNE))) {
             if (!this.isNoGravity() && !this.level().isClientSide() && !this.getItem().isEmpty()) {
                 this.setNoGravity(true);
             }
