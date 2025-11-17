@@ -4,6 +4,10 @@
     "#minecraft:has_structure/end_city",
     "minecraft:end_barrens",
     "minecraft:end_midlands",
-    "minecraft:end_highlands"
+    "minecraft:end_highlands",
+    {
+      "id": "#enderscape:enderscape_biomes",
+      "required": false
+    }
   ]
 }

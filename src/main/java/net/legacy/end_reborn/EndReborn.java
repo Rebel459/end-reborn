@@ -42,7 +42,7 @@ public class EndReborn implements ModInitializer {
 		if (FabricLoader.getInstance().isModLoaded("progression_reborn")) {
 			isProgressionRebornLoaded = true;
 		}
-			if (FabricLoader.getInstance().isModLoaded("trailiertales") && ERConfig.get.trailier_tales_integration) {
+        if (FabricLoader.getInstance().isModLoaded("trailiertales") && ERConfig.get.trailier_tales_integration) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_trailier_tales_integration"), modContainer.get(),
 					Component.translatable("pack.end_reborn.end_reborn_trailier_tales_integration"),
