@@ -47,7 +47,7 @@ public interface ERArmorMaterials {
 
     public static ItemAttributeModifiers createRemnantHelmetAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_HELMET_ID, 3, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_HELMET_ID, helmetDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_HELMET_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_HELMET_ID, ERArmorMaterials.REMNANT.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, new AttributeModifier(EXPLOSION_KNOCKBACK_RESISTANCE_HELMET_ID, 0.25, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
@@ -55,7 +55,7 @@ public interface ERArmorMaterials {
     }
     public static ItemAttributeModifiers createRemnantChestplateAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_CHESTPLATE_ID, 8, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
+                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_CHESTPLATE_ID, chestplateDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_CHESTPLATE_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_CHESTPLATE_ID, ERArmorMaterials.REMNANT.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, new AttributeModifier(EXPLOSION_KNOCKBACK_RESISTANCE_CHESTPLATE_ID, 0.25, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
@@ -88,7 +88,7 @@ public interface ERArmorMaterials {
 
     public static ItemAttributeModifiers createFeatherzealHelmetAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_HELMET_ID, 3, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_HELMET_ID, helmetDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_HELMET_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_HELMET_ID, ERArmorMaterials.FEATHERZEAL.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.SAFE_FALL_DISTANCE, new AttributeModifier(SAFE_FALL_DISTANCE_HELMET_ID, 0.30, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), EquipmentSlotGroup.HEAD)
@@ -96,7 +96,7 @@ public interface ERArmorMaterials {
     }
     public static ItemAttributeModifiers createFeatherzealChestplateAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_CHESTPLATE_ID, 8, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
+                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_CHESTPLATE_ID, chestplateDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_CHESTPLATE_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_CHESTPLATE_ID, ERArmorMaterials.FEATHERZEAL.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.SAFE_FALL_DISTANCE, new AttributeModifier(SAFE_FALL_DISTANCE_CHESTPLATE_ID, 0.30, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), EquipmentSlotGroup.CHEST)
