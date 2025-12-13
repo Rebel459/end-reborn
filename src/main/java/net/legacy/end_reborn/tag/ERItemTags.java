@@ -1,6 +1,6 @@
 package net.legacy.end_reborn.tag;
 
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -16,7 +16,7 @@ public class ERItemTags {
 
     @NotNull
     private static TagKey<Item> bind(@NotNull String path) {
-        return TagKey.create(Registries.ITEM, ERConstants.id(path));
+        return TagKey.create(Registries.ITEM, EndReborn.id(path));
     }
 
 }

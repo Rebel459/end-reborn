@@ -7,7 +7,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
 import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import net.legacy.end_reborn.sound.ERBlockSounds;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Registry;
@@ -15,8 +15,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.BlockFamilies;
 import net.minecraft.data.BlockFamily;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -30,8 +30,8 @@ import net.minecraft.world.level.material.PushReaction;
 import org.jetbrains.annotations.NotNull;
 
 public class ERBlocks {
-    public static final BlockSetType CHORUS_SET = BlockSetTypeBuilder.copyOf(BlockSetType.BAMBOO).register(ERConstants.id("chorus"));
-    public static final WoodType CHORUS_WOOD_TYPE = WoodTypeBuilder.copyOf(WoodType.BAMBOO).register(ERConstants.id("chorus"), CHORUS_SET);
+    public static final BlockSetType CHORUS_SET = BlockSetTypeBuilder.copyOf(BlockSetType.BAMBOO).register(EndReborn.id("chorus"));
+    public static final WoodType CHORUS_WOOD_TYPE = WoodTypeBuilder.copyOf(WoodType.BAMBOO).register(EndReborn.id("chorus"), CHORUS_SET);
 
     public static final Block END_IRON_ORE = register("end_iron_ore",
             Block::new,
@@ -205,6 +205,15 @@ public class ERBlocks {
                     SoundType.BAMBOO_WOOD
             )
     );
+    public static final ShelfBlock CHORUS_SHELF = register("chorus_shelf",
+            ShelfBlock::new,
+            BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sound(SoundType.SHELF)
+                    .ignitedByLava().strength(2.0F, 3.0F)
+    );
+
     public static final SignBlock CHORUS_SIGN = registerWithoutItem("chorus_sign",
             properties -> new StandingSignBlock(CHORUS_WOOD_TYPE, properties),
             Properties.ofFullCopy(Blocks.OAK_SIGN)
@@ -236,7 +245,7 @@ public class ERBlocks {
                     .mapColor(CHORUS_PLANKS.defaultMapColor())
                     .forceSolidOn()
                     .instrument(NoteBlockInstrument.BASS)
-                    .noCollission()
+                    .noCollision()
                     .strength(0.5F)
                     .ignitedByLava()
                     .pushReaction(PushReaction.DESTROY)
@@ -392,7 +401,7 @@ public class ERBlocks {
     }
 
     private static <T extends Block> @NotNull T registerWithoutItem(String path, Function<Properties, T> block, Properties properties) {
-        ResourceLocation id = ERConstants.id(path);
+        Identifier id = EndReborn.id(path);
         return doRegister(id, makeBlock(block, properties, id));
     }
 
@@ -402,14 +411,14 @@ public class ERBlocks {
         return registered;
     }
 
-    private static <T extends Block> @NotNull T doRegister(ResourceLocation id, T block) {
+    private static <T extends Block> @NotNull T doRegister(Identifier id, T block) {
         if (BuiltInRegistries.BLOCK.getOptional(id).isEmpty()) {
             return Registry.register(BuiltInRegistries.BLOCK, id, block);
         }
         throw new IllegalArgumentException("Block with id " + id + " is already in the block registry.");
     }
 
-    private static <T extends Block> T makeBlock(@NotNull Function<Properties, T> function, @NotNull Properties properties, ResourceLocation id) {
+    private static <T extends Block> T makeBlock(@NotNull Function<Properties, T> function, @NotNull Properties properties, Identifier id) {
         return function.apply(properties.setId(ResourceKey.create(Registries.BLOCK, id)));
     }
 
@@ -433,6 +442,6 @@ public class ERBlocks {
     }
 
     public static BlockBehaviour.Properties buttonProperties() {
-        return BlockBehaviour.Properties.of().noCollission().strength(0.5F).pushReaction(PushReaction.DESTROY);
+        return BlockBehaviour.Properties.of().noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY);
     }
 }

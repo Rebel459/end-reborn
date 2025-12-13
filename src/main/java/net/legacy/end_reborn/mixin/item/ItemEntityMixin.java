@@ -1,4 +1,4 @@
-package net.legacy.end_reborn.mixin;
+package net.legacy.end_reborn.mixin.item;
 
 import net.legacy.end_reborn.tag.ERItemTags;
 import net.minecraft.world.entity.Entity;

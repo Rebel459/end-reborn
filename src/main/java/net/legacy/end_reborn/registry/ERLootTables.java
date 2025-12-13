@@ -1,11 +1,11 @@
 package net.legacy.end_reborn.registry;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import net.legacy.end_reborn.config.ERConfig;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.BuiltInLootTables;
 import net.minecraft.world.level.storage.loot.LootPool;
 import net.minecraft.world.level.storage.loot.LootTable;
@@ -95,11 +95,11 @@ public class ERLootTables {
 	}
 
 	private static @NotNull ResourceKey<LootTable> register(String path) {
-		return ResourceKey.create(Registries.LOOT_TABLE, ERConstants.id(path));
+		return ResourceKey.create(Registries.LOOT_TABLE, EndReborn.id(path));
 	}
 
 	private static @NotNull ResourceKey<LootTable> registerEnderscape(String path) {
-		return ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.fromNamespaceAndPath("enderscape", path));
+		return ResourceKey.create(Registries.LOOT_TABLE, Identifier.fromNamespaceAndPath("enderscape", path));
 	}
 
 }

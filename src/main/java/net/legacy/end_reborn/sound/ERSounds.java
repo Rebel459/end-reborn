@@ -1,10 +1,10 @@
 package net.legacy.end_reborn.sound;
 
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 import org.jetbrains.annotations.NotNull;
 
@@ -41,19 +41,19 @@ public class ERSounds {
 
 	@NotNull
 	private static SoundEvent register(@NotNull String string) {
-		ResourceLocation resourceLocation = ERConstants.id(string);
-		return Registry.register(BuiltInRegistries.SOUND_EVENT, resourceLocation, SoundEvent.createVariableRangeEvent(resourceLocation));
+		Identifier identifier = EndReborn.id(string);
+		return Registry.register(BuiltInRegistries.SOUND_EVENT, identifier, SoundEvent.createVariableRangeEvent(identifier));
 	}
 
 	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(String id) {
-		return registerForHolder(ERConstants.id(id));
+		return registerForHolder(EndReborn.id(id));
 	}
 
-	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(ResourceLocation id) {
+	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(Identifier id) {
 		return registerForHolder(id, id);
 	}
 
-	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(ResourceLocation id, ResourceLocation soundId) {
+	private static Holder.@NotNull Reference<SoundEvent> registerForHolder(Identifier id, Identifier soundId) {
 		return Registry.registerForHolder(BuiltInRegistries.SOUND_EVENT, id, SoundEvent.createVariableRangeEvent(soundId));
 	}
 

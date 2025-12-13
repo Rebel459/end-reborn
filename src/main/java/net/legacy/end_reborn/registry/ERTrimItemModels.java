@@ -3,8 +3,8 @@ package net.legacy.end_reborn.registry;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import net.legacy.end_reborn.ERConstants;
-import net.minecraft.resources.ResourceLocation;
+import net.legacy.end_reborn.EndReborn;
+import net.minecraft.resources.Identifier;
 import net.ramixin.mixson.inline.EventContext;
 import net.ramixin.mixson.inline.Mixson;
 import net.ramixin.mixson.inline.MixsonEvent;
@@ -13,7 +13,7 @@ import java.util.List;
 
 public final class ERTrimItemModels {
     private static final List<String> ARMORS = List.of("helmet", "chestplate", "leggings", "boots");
-    private static final List<String> ARMOR_MATERIALS = List.of("leather", "chainmail", "iron", "golden", "diamond", "netherite");
+    private static final List<String> ARMOR_MATERIALS = List.of("leather", "copper", "chainmail", "iron", "golden", "diamond", "netherite");
 
     @SuppressWarnings("UnnecessaryReturnStatement")
     private ERTrimItemModels() {
@@ -33,14 +33,14 @@ public final class ERTrimItemModels {
          * Add trim materials to vanilla atlases.
          */
         registerAddTrimsToAtlas("armor_trims");
-        registerAddTrimsToAtlas("blocks");
+        registerAddTrimsToAtlas("items");
     }
 
     private static void registerAddTrimsToArmor(String armor, String armorMaterial) {
         Mixson.registerEvent(
                 Mixson.DEFAULT_PRIORITY,
                 "minecraft:items/" + armorMaterial + "_" + armor,
-                ERConstants.MOD_ID + ":add_trims_to_" + armorMaterial + "_" + armor,
+                EndReborn.MOD_ID + ":add_trims_to_" + armorMaterial + "_" + armor,
                 new MixsonEvent<>() {
                     @Override
                     public void runEvent(EventContext<JsonElement> context) {
@@ -74,7 +74,7 @@ public final class ERTrimItemModels {
         Mixson.registerEvent(
                 Mixson.DEFAULT_PRIORITY,
                 "minecraft:atlases/" + name,
-                ERConstants.MOD_ID + ":add_trims_to_" + name + "_atlas",
+                EndReborn.MOD_ID + ":add_trims_to_" + name + "_atlas",
                 new MixsonEvent<>() {
                     @Override
                     public void runEvent(EventContext<JsonElement> context) {
@@ -106,15 +106,15 @@ public final class ERTrimItemModels {
         );
     }
 
-    private static ResourceLocation trimMaterialId(String trim) {
-        return ERConstants.id(trim);
+    private static Identifier trimMaterialId(String trim) {
+        return EndReborn.id(trim);
     }
 
-    private static ResourceLocation itemModelId(String armor, String armorMaterial, String trim) {
-        return ERConstants.id("item/" + armorMaterial + "_" + armor + "_" + trim + "_trim");
+    private static Identifier itemModelId(String armor, String armorMaterial, String trim) {
+        return EndReborn.id("item/" + armorMaterial + "_" + armor + "_" + trim + "_trim");
     }
 
-    private static ResourceLocation paletteId(String trim) {
-        return ERConstants.id("trims/color_palettes/" + trim);
+    private static Identifier paletteId(String trim) {
+        return EndReborn.id("trims/color_palettes/" + trim);
     }
 }

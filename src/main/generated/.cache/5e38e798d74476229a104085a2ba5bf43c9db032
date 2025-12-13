@@ -1,10 +1,10 @@
-// 1.21.5	-999999999-01-01T00:00:00	End Reborn/Tags for minecraft:item
+// 1.21.11	-999999999-01-01T00:00:00	End Reborn/Tags for minecraft:item
 8ca0c7182feb67fcc639aead2b4eeb88972a20be data/end_reborn/tags/item/chorus_blocks.json
 d8356fa645c6068c5adc3b2dce65a01d7b4c50dd data/end_reborn/tags/item/featherzeal_tool_materials.json
 b4eb71e5dcccaca164568c57dd384945f9370716 data/end_reborn/tags/item/remnium_tool_materials.json
 d8356fa645c6068c5adc3b2dce65a01d7b4c50dd data/end_reborn/tags/item/repairs_featherzeal_armor.json
 b4eb71e5dcccaca164568c57dd384945f9370716 data/end_reborn/tags/item/repairs_remnium_armor.json
-7350b33783a900cd0cafc79a584bcf26f8269e55 data/end_reborn/tags/item/void_immune.json
+7ebdfdbd4740a3b58369b1db3f0776a386cfd1cf data/end_reborn/tags/item/void_immune.json
 a9739cb56ed12e11a0fdaa82de56a120af30668b data/minecraft/tags/item/axes.json
 086c4d0d9210cdffd047060d57876fdbd900126e data/minecraft/tags/item/beacon_payment_items.json
 f5320c8f42140fdfbd04e03afd9f3f1011e77c2c data/minecraft/tags/item/chest_armor.json
@@ -19,6 +19,7 @@ e8912dd24bec4c531d292443eefa9adf28051d8b data/minecraft/tags/item/head_armor.jso
 149ea79e6cc7e87d89ff3f753832624a6706556b data/minecraft/tags/item/planks.json
 cb6aadd80a421bca87bab1b32bd1cc3f2a1818cd data/minecraft/tags/item/shovels.json
 342642804d7bca62cb90e7fbc91676fcea715d02 data/minecraft/tags/item/slabs.json
+644d21e25978060635cb29b0809ea201c1428d8e data/minecraft/tags/item/spears.json
 7e973f2978b246a61d938b1389e10302cb20c1eb data/minecraft/tags/item/stairs.json
 9994f212884e8264af96eaba34aa7e89696d8994 data/minecraft/tags/item/stone_crafting_materials.json
 9994f212884e8264af96eaba34aa7e89696d8994 data/minecraft/tags/item/stone_tool_materials.json

@@ -32,7 +32,16 @@ public class ERDataComponents {
                 builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteBootsAttributes());
             });
         });
-        // Netherite Horse Armor handled in Progression Reborn
+        DefaultItemComponentEvents.MODIFY.register(context -> {
+            context.modify(Items.NETHERITE_HORSE_ARMOR, builder -> {
+                builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteAnimalArmorAttributes());
+            });
+        });
+        DefaultItemComponentEvents.MODIFY.register(context -> {
+            context.modify(Items.NETHERITE_NAUTILUS_ARMOR, builder -> {
+                builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteAnimalArmorAttributes());
+            });
+        });
 
         DefaultItemComponentEvents.MODIFY.register(context -> {
             context.modify(Items.POPPED_CHORUS_FRUIT, builder -> {
@@ -74,5 +83,12 @@ public class ERDataComponents {
                 .add(Attributes.BURNING_TIME, new AttributeModifier(ERArmorMaterials.BURNING_TIME_BOOTS_ID, -0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.FEET)
                 .build();
     }
-
+    public static ItemAttributeModifiers createNetheriteAnimalArmorAttributes() {
+        return ItemAttributeModifiers.builder()
+                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_HELMET_ID, ERArmorMaterials.animalArmorDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ERArmorMaterials.ARMOR_TOUGHNESS_HELMET_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(ERArmorMaterials.KNOCKBACK_RESISTANCE_HELMET_ID, ArmorMaterials.NETHERITE.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                .add(Attributes.BURNING_TIME, new AttributeModifier(ERArmorMaterials.BURNING_TIME_HELMET_ID, -0.80, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.HEAD)
+                .build();
+    }
 }

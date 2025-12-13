@@ -1,4 +1,4 @@
-package net.legacy.end_reborn.mixin;
+package net.legacy.end_reborn.mixin.item;
 
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;

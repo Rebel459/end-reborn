@@ -15,9 +15,10 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 
 	@Override
 	protected void addTags(@NotNull HolderLookup.Provider arg) {
-		this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_AXE)
+		this.valueLookupBuilder(BlockTags.MINEABLE_WITH_AXE)
 				.add(ERBlocks.CHORUS_BLOCK)
-				.add(ERBlocks.STRIPPED_CHORUS_BLOCK)
+                .add(ERBlocks.STRIPPED_CHORUS_BLOCK)
+                .add(ERBlocks.CHORUS_SHELF)
 				.add(ERBlocks.CHORUS_DOOR)
 				.add(ERBlocks.CHORUS_TRAPDOOR)
 				.add(ERBlocks.CHORUS_PLANKS)
@@ -35,7 +36,7 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.CHORUS_MOSAIC_SLAB)
 				.add(ERBlocks.CHORUS_SLAB);
 		
-		this.getOrCreateTagBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+		this.valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
 				.add(ERBlocks.PURPUR)
 				.add(ERBlocks.AMETRUR)
 				.add(ERBlocks.CUT_AMETRUR)
@@ -53,7 +54,7 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.END_IRON_ORE)
 				.add(ERBlocks.MIRESTONE_IRON_ORE);
 
-		this.getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
+		this.valueLookupBuilder(BlockTags.NEEDS_STONE_TOOL)
 				.add(ERBlocks.RAW_CRYSTALLINE_BLOCK)
 				.add(ERBlocks.CRYSTALLINE_BLOCK)
 				.add(ERBlocks.CRYSTALLINE_LAMP)
@@ -61,38 +62,41 @@ public final class ERBlockTagProvider extends FabricTagProvider.BlockTagProvider
 				.add(ERBlocks.END_IRON_ORE)
 				.add(ERBlocks.MIRESTONE_IRON_ORE);
 
-		this.getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
+		this.valueLookupBuilder(BlockTags.NEEDS_DIAMOND_TOOL)
 				.add(ERBlocks.FORGOTTEN_REMAINS)
 				.add(ERBlocks.REMNANT_BLOCK)
 				.add(ERBlocks.TIMELOST_FRAGMENTS)
 				.add(ERBlocks.FEATHERZEAL_BLOCK);
 
-		this.getOrCreateTagBuilder(BlockTags.PLANKS)
+		this.valueLookupBuilder(BlockTags.PLANKS)
 				.add(ERBlocks.CHORUS_PLANKS);
 
-		this.getOrCreateTagBuilder(BlockTags.STAIRS)
+		this.valueLookupBuilder(BlockTags.STAIRS)
 				.add(ERBlocks.CUT_AMETRUR_STAIRS)
 				.add(ERBlocks.CHORUS_STAIRS)
 				.add(ERBlocks.CHORUS_MOSAIC_STAIRS);
 
-		this.getOrCreateTagBuilder(BlockTags.SLABS)
+		this.valueLookupBuilder(BlockTags.SLABS)
 				.add(ERBlocks.CUT_AMETRUR_SLAB)
 				.add(ERBlocks.CHORUS_STAIRS)
 				.add(ERBlocks.CHORUS_MOSAIC_STAIRS);
 
-		this.getOrCreateTagBuilder(BlockTags.DOORS)
+		this.valueLookupBuilder(BlockTags.DOORS)
 				.add(ERBlocks.CHORUS_DOOR);
 
-		this.getOrCreateTagBuilder(BlockTags.TRAPDOORS)
+		this.valueLookupBuilder(BlockTags.TRAPDOORS)
 				.add(ERBlocks.CHORUS_TRAPDOOR);
 
-		this.getOrCreateTagBuilder(BlockTags.FENCES)
+		this.valueLookupBuilder(BlockTags.FENCES)
 				.add(ERBlocks.CHORUS_FENCE);
 
-		this.getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-				.add(ERBlocks.CHORUS_FENCE_GATE);
+        this.valueLookupBuilder(BlockTags.FENCE_GATES)
+                .add(ERBlocks.CHORUS_FENCE_GATE);
 
-		this.getOrCreateTagBuilder(BlockTags.BEACON_BASE_BLOCKS)
+        this.valueLookupBuilder(BlockTags.WOODEN_SHELVES)
+                .add(ERBlocks.CHORUS_SHELF);
+
+		this.valueLookupBuilder(BlockTags.BEACON_BASE_BLOCKS)
 				.add(ERBlocks.REMNANT_BLOCK)
 				.add(ERBlocks.FEATHERZEAL_BLOCK);
 

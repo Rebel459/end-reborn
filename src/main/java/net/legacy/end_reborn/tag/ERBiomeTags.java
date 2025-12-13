@@ -1,6 +1,6 @@
 package net.legacy.end_reborn.tag;
 
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.biome.Biome;
@@ -14,7 +14,7 @@ public class ERBiomeTags {
 
     @NotNull
     private static TagKey<Biome> bind(@NotNull String path) {
-        return TagKey.create(Registries.BIOME, ERConstants.id(path));
+        return TagKey.create(Registries.BIOME, EndReborn.id(path));
     }
 
 }

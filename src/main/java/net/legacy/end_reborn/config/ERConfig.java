@@ -5,18 +5,18 @@ import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.file.Path;
 
-@Config(name = ERConstants.MOD_ID)
+@Config(name = EndReborn.MOD_ID)
 public class ERConfig implements ConfigData {
 
   @Contract(pure = true)
   public static @NotNull Path configPath(boolean json5) {
-    return Path.of("./config/" + ERConstants.MOD_ID + "." + (json5 ? "json5" : "json"));
+    return Path.of("./config/" + EndReborn.MOD_ID + "." + (json5 ? "json5" : "json"));
   }
 
   public static ERConfig get;

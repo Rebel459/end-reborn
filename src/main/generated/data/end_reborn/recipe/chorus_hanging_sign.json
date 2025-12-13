@@ -4,7 +4,7 @@
   "group": "hanging_sign",
   "key": {
     "#": "end_reborn:stripped_chorus_block",
-    "X": "minecraft:chain"
+    "X": "minecraft:iron_chain"
   },
   "pattern": [
     "X X",

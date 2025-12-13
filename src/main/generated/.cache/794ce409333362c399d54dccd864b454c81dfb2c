@@ -1,4 +1,4 @@
-// 1.21.5	-999999999-01-01T00:00:00	End Reborn/End Reborn Recipes
+// 1.21.11	-999999999-01-01T00:00:00	End Reborn/End Reborn Recipes
 433ef0f19b6bb6193bc16a91ed694d6593828062 data/end_reborn/advancement/recipes/building_blocks/chorus_block.json
 382ceda979071b4f569ff9dcd2737946b24bc4bb data/end_reborn/advancement/recipes/building_blocks/chorus_mosaic.json
 5cf8b4da952f69cd43a9180f54d8d4b2698b39c4 data/end_reborn/advancement/recipes/building_blocks/chorus_mosaic_slab.json
@@ -26,6 +26,7 @@ ee4fcbf878936a7fdae3ba6c1183b7e10d9d86e2 data/end_reborn/advancement/recipes/bui
 b9f528741972f407afb01a4c030db68ba1bd8620 data/end_reborn/advancement/recipes/building_blocks/raw_crystalline_block.json
 f1ad08ba8292d20eff0e4cfbb383740026e34d20 data/end_reborn/advancement/recipes/decorations/chorus_fence.json
 257a863f5b084d5b227802de7f09b426b7286850 data/end_reborn/advancement/recipes/decorations/chorus_hanging_sign.json
+c0b9715edb76bd5b86ce0ad3c3088fab257ff8ba data/end_reborn/advancement/recipes/decorations/chorus_shelf.json
 f51defe7c9169326407e0e90bcae02028518e983 data/end_reborn/advancement/recipes/decorations/chorus_sign.json
 77e794b48fe25eb5bd72145406f852e7dd743826 data/end_reborn/advancement/recipes/misc/crystalline_lantern.json
 be7490d765719daeaa4a4d215a7c12890c887322 data/end_reborn/advancement/recipes/misc/featherzeal_block.json
@@ -48,13 +49,14 @@ a222a43b38bba5289e1c06ac9aa5d32ca6d3228b data/end_reborn/recipe/chorus_chest_raf
 b18d5c125829d087e7e6a54dda0f8cc07135dd45 data/end_reborn/recipe/chorus_door.json
 a9dea114a7ce7a88bf7a9c5c85553567acf0f1cd data/end_reborn/recipe/chorus_fence.json
 bde86c1cff886be2a4f415a9743df45dff6fcd92 data/end_reborn/recipe/chorus_fence_gate.json
-41eb1afeb71de718ba330ed45168125cc58625df data/end_reborn/recipe/chorus_hanging_sign.json
+05e5cd4559c7267731bf9739540d9feba415afbb data/end_reborn/recipe/chorus_hanging_sign.json
 03599351eb5d0c27a391c2b3ee1ce45e0f06702d data/end_reborn/recipe/chorus_mosaic.json
 d6d91c60d06168bda480bbc378ca9dda9b346632 data/end_reborn/recipe/chorus_mosaic_slab.json
 fea293961597b7d2b274614e9dbc17a947de2715 data/end_reborn/recipe/chorus_mosaic_stairs.json
 07a7dbd7af9e2aae741a3ffacf84babd96f7ce9b data/end_reborn/recipe/chorus_planks.json
 996897ae705cea65c6a5d194f211bb6d3add02ac data/end_reborn/recipe/chorus_pressure_plate.json
 8e2e134c8a66a1841b9452b4da85b502fe52d72c data/end_reborn/recipe/chorus_raft.json
+9ed2a121467091d866c28b293312dc82848b2417 data/end_reborn/recipe/chorus_shelf.json
 5609fdb0745d80a9ec3a31e0c3e8afbd84c4fa7d data/end_reborn/recipe/chorus_sign.json
 5b35bdf240060271113ce689629008cd3605d6e8 data/end_reborn/recipe/chorus_slab.json
 8c4eaba8cd1fc0749336502ed348b329b1dec8a4 data/end_reborn/recipe/chorus_stairs.json

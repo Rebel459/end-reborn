@@ -9,7 +9,7 @@ import net.legacy.end_reborn.config.ERConfig;
 import net.legacy.end_reborn.registry.*;
 import net.legacy.end_reborn.worldgen.ERFeatures;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.Optional;
 
@@ -17,6 +17,11 @@ import java.util.Optional;
  * by Rebel459
  */
 public class EndReborn implements ModInitializer {
+
+    public static final String MOD_ID = "end_reborn";
+    public static Identifier id(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
+    }
 
 	public static boolean isProgressionRebornLoaded = false;
 
@@ -35,7 +40,7 @@ public class EndReborn implements ModInitializer {
 		ERConfig.initClient();
 
 		ResourceManagerHelper.registerBuiltinResourcePack(
-				ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_asset_overrides"), modContainer.get(),
+				EndReborn.id("end_reborn_asset_overrides"), modContainer.get(),
 				Component.translatable("pack.end_reborn.end_reborn_asset_overrides"),
 				ResourcePackActivationType.ALWAYS_ENABLED
 		);
@@ -44,14 +49,14 @@ public class EndReborn implements ModInitializer {
 		}
         if (FabricLoader.getInstance().isModLoaded("trailiertales") && ERConfig.get.trailier_tales_integration) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
-					ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_trailier_tales_integration"), modContainer.get(),
+					EndReborn.id("end_reborn_trailier_tales_integration"), modContainer.get(),
 					Component.translatable("pack.end_reborn.end_reborn_trailier_tales_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);
 		}
 		if (FabricLoader.getInstance().isModLoaded("enderscape") && ERConfig.get.enderscape_integration) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
-					ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_enderscape_integration"), modContainer.get(),
+					EndReborn.id("end_reborn_enderscape_integration"), modContainer.get(),
 					Component.translatable("pack.end_reborn.end_reborn_enderscape_integration"),
 					ResourcePackActivationType.ALWAYS_ENABLED
 			);

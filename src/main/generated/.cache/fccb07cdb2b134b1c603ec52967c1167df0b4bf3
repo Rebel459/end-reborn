@@ -1,4 +1,4 @@
-// 1.21.5	-999999999-01-01T00:00:00	End Reborn/Block Loot Tables
+// 1.21.11	-999999999-01-01T00:00:00	End Reborn/Block Loot Tables
 d4059f8f25587bab9f64b68020db453347dbae82 data/end_reborn/loot_table/blocks/ametrur.json
 8f092eeb4aa9868cff09bd4562c1ec3bf9324c96 data/end_reborn/loot_table/blocks/chorus_block.json
 e45125961f2fc6329a6ed7d5f8c010d687497c6c data/end_reborn/loot_table/blocks/chorus_button.json
@@ -11,6 +11,7 @@ eed365ada22e3180bddefc2316435a11762d2427 data/end_reborn/loot_table/blocks/choru
 233002d1fff6337fb5494b2d0fc2d770608b25f3 data/end_reborn/loot_table/blocks/chorus_mosaic_stairs.json
 d4a8e3884722458c0be3dc0cde2a0dd0c56591d4 data/end_reborn/loot_table/blocks/chorus_planks.json
 40c629da5499f8b22cbd8184c0a6ba25192306bb data/end_reborn/loot_table/blocks/chorus_pressure_plate.json
+a46a41270a14179572c0ff84a1b21105cff77c97 data/end_reborn/loot_table/blocks/chorus_shelf.json
 3d31be1444ccbe3b6a42f47c5ab1fcff8643eecf data/end_reborn/loot_table/blocks/chorus_sign.json
 2418522c3c82cd5f4ae2d3f28c6c055c1c44668d data/end_reborn/loot_table/blocks/chorus_slab.json
 161223c75545eaa6236c4450345897ea3636b349 data/end_reborn/loot_table/blocks/chorus_stairs.json

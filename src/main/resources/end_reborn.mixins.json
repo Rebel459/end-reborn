@@ -3,10 +3,13 @@
   "package": "net.legacy.end_reborn.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ItemEntityMixin",
-    "ToolMaterialMixin"
+    "item.ItemEntityMixin",
+    "item.ToolMaterialMixin"
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "client": [
+    "client.BlockModelWrapperMixin"
+  ]
 }

@@ -1,10 +1,9 @@
 package net.legacy.end_reborn.datagen;
 
-import java.util.concurrent.CompletableFuture;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.legacy.end_reborn.registry.ERBlocks;
-import net.minecraft.advancements.critereon.StatePropertiesPredicate;
+import net.minecraft.advancements.criterion.StatePropertiesPredicate;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.world.level.block.Block;
@@ -16,6 +15,8 @@ import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import org.jetbrains.annotations.NotNull;
+
+import java.util.concurrent.CompletableFuture;
 
 public final class ERBlockLootProvider extends FabricBlockLootTableProvider {
 
@@ -39,7 +40,8 @@ public final class ERBlockLootProvider extends FabricBlockLootTableProvider {
 		this.dropSelf(ERBlocks.CRYSTALLINE_LANTERN);
 		this.dropSelf(ERBlocks.CRYSTALLINE_LAMP);
 		this.dropSelf(ERBlocks.CHORUS_BLOCK);
-		this.dropSelf(ERBlocks.STRIPPED_CHORUS_BLOCK);
+        this.dropSelf(ERBlocks.STRIPPED_CHORUS_BLOCK);
+        this.dropSelf(ERBlocks.CHORUS_SHELF);
 		this.dropSelf(ERBlocks.CHORUS_DOOR);
 		this.dropSelf(ERBlocks.CHORUS_TRAPDOOR);
 		this.dropSelf(ERBlocks.CHORUS_PLANKS);

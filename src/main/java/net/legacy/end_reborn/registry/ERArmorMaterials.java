@@ -1,10 +1,8 @@
 package net.legacy.end_reborn.registry;
 
-import net.legacy.end_reborn.ERConstants;
 import net.legacy.end_reborn.EndReborn;
 import net.legacy.end_reborn.tag.ERItemTags;
-import net.minecraft.Util;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -12,40 +10,29 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorMaterials;
-import net.minecraft.world.item.equipment.ArmorType;
-
-import java.util.EnumMap;
 
 public interface ERArmorMaterials {
 
-    public static int chestplateDefense() {
-        if (EndReborn.isProgressionRebornLoaded) return 7;
-        else return 8;
-    }
-    public static int helmetDefense() {
+    static int helmetDefense() {
         if (EndReborn.isProgressionRebornLoaded) return 4;
         else return 3;
     }
+    static int chestplateDefense() {
+        if (EndReborn.isProgressionRebornLoaded) return 7;
+        else return 8;
+    }
+    static int animalArmorDefense() {
+        if (EndReborn.isProgressionRebornLoaded) return 20;
+        else return 19;
+    }
 
-    ArmorMaterial REMNANT = new net.minecraft.world.item.equipment.ArmorMaterial(37, Util.make(new EnumMap(ArmorType.class), enumMap -> {
-        enumMap.put(ArmorType.BOOTS, 3);
-        enumMap.put(ArmorType.LEGGINGS, 6);
-        enumMap.put(ArmorType.CHESTPLATE, chestplateDefense());
-        enumMap.put(ArmorType.HELMET, helmetDefense());
-        enumMap.put(ArmorType.BODY, 12);
-    }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ERItemTags.REPAIRS_REMNANT_ARMOR, EREquipmentAssets.REMNANT);
+    ArmorMaterial REMNANT = new ArmorMaterial(37, ArmorMaterials.makeDefense(3, 6, chestplateDefense(), helmetDefense(), animalArmorDefense()), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ERItemTags.REPAIRS_REMNANT_ARMOR, EREquipmentAssets.REMNANT);
 
-    ArmorMaterial FEATHERZEAL = new net.minecraft.world.item.equipment.ArmorMaterial(37, Util.make(new EnumMap(ArmorType.class), enumMap -> {
-        enumMap.put(ArmorType.BOOTS, 3);
-        enumMap.put(ArmorType.LEGGINGS, 6);
-        enumMap.put(ArmorType.CHESTPLATE, chestplateDefense());
-        enumMap.put(ArmorType.HELMET, helmetDefense());
-        enumMap.put(ArmorType.BODY, 12);
-    }), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ERItemTags.REPAIRS_FEATHERZEAL_ARMOR, EREquipmentAssets.FEATHERZEAL);
+    ArmorMaterial FEATHERZEAL = new ArmorMaterial(37, ArmorMaterials.makeDefense(3, 6, chestplateDefense(), helmetDefense(), animalArmorDefense()), 15, SoundEvents.ARMOR_EQUIP_NETHERITE, 3.0F, 0.1F, ERItemTags.REPAIRS_FEATHERZEAL_ARMOR, EREquipmentAssets.FEATHERZEAL);
 
     // Armor Attributes
 
-    public static ItemAttributeModifiers createRemnantHelmetAttributes() {
+    static ItemAttributeModifiers createRemnantHelmetAttributes() {
         return ItemAttributeModifiers.builder()
                 .add(Attributes.ARMOR, new AttributeModifier(ARMOR_HELMET_ID, helmetDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_HELMET_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
@@ -53,7 +40,7 @@ public interface ERArmorMaterials {
                 .add(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, new AttributeModifier(EXPLOSION_KNOCKBACK_RESISTANCE_HELMET_ID, 0.25, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .build();
     }
-    public static ItemAttributeModifiers createRemnantChestplateAttributes() {
+    static ItemAttributeModifiers createRemnantChestplateAttributes() {
         return ItemAttributeModifiers.builder()
                 .add(Attributes.ARMOR, new AttributeModifier(ARMOR_CHESTPLATE_ID, chestplateDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_CHESTPLATE_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
@@ -61,7 +48,7 @@ public interface ERArmorMaterials {
                 .add(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, new AttributeModifier(EXPLOSION_KNOCKBACK_RESISTANCE_CHESTPLATE_ID, 0.25, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .build();
     }
-    public static ItemAttributeModifiers createRemnantLeggingsAttributes() {
+    static ItemAttributeModifiers createRemnantLeggingsAttributes() {
         return ItemAttributeModifiers.builder()
                 .add(Attributes.ARMOR, new AttributeModifier(ARMOR_LEGGINGS_ID, 6, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.LEGS)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_LEGGINGS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.LEGS)
@@ -69,7 +56,7 @@ public interface ERArmorMaterials {
                 .add(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, new AttributeModifier(EXPLOSION_KNOCKBACK_RESISTANCE_LEGGINGS_ID, 0.25, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.LEGS)
                 .build();
     }
-    public static ItemAttributeModifiers createRemnantBootsAttributes() {
+    static ItemAttributeModifiers createRemnantBootsAttributes() {
         return ItemAttributeModifiers.builder()
                 .add(Attributes.ARMOR, new AttributeModifier(ARMOR_BOOTS_ID, 3, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_BOOTS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
@@ -77,16 +64,16 @@ public interface ERArmorMaterials {
                 .add(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, new AttributeModifier(EXPLOSION_KNOCKBACK_RESISTANCE_BOOTS_ID, 0.25, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
                 .build();
     }
-    public static ItemAttributeModifiers createRemnantHorseArmorAttributes() {
+    static ItemAttributeModifiers createRemnantAnimalArmorAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, 12, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
+                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, animalArmorDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_ID, ERArmorMaterials.REMNANT.knockbackResistance() * 2F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .add(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE, new AttributeModifier(EXPLOSION_KNOCKBACK_RESISTANCE_ID, 1.00, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .build();
     }
 
-    public static ItemAttributeModifiers createFeatherzealHelmetAttributes() {
+    static ItemAttributeModifiers createFeatherzealHelmetAttributes() {
         return ItemAttributeModifiers.builder()
                 .add(Attributes.ARMOR, new AttributeModifier(ARMOR_HELMET_ID, helmetDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_HELMET_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
@@ -94,7 +81,7 @@ public interface ERArmorMaterials {
                 .add(Attributes.SAFE_FALL_DISTANCE, new AttributeModifier(SAFE_FALL_DISTANCE_HELMET_ID, 0.30, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), EquipmentSlotGroup.HEAD)
                 .build();
     }
-    public static ItemAttributeModifiers createFeatherzealChestplateAttributes() {
+    static ItemAttributeModifiers createFeatherzealChestplateAttributes() {
         return ItemAttributeModifiers.builder()
                 .add(Attributes.ARMOR, new AttributeModifier(ARMOR_CHESTPLATE_ID, chestplateDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_CHESTPLATE_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
@@ -102,7 +89,7 @@ public interface ERArmorMaterials {
                 .add(Attributes.SAFE_FALL_DISTANCE, new AttributeModifier(SAFE_FALL_DISTANCE_CHESTPLATE_ID, 0.30, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), EquipmentSlotGroup.CHEST)
                 .build();
     }
-    public static ItemAttributeModifiers createFeatherzealLeggingsAttributes() {
+    static ItemAttributeModifiers createFeatherzealLeggingsAttributes() {
         return ItemAttributeModifiers.builder()
                 .add(Attributes.ARMOR, new AttributeModifier(ARMOR_LEGGINGS_ID, 6, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.LEGS)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_LEGGINGS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.LEGS)
@@ -110,7 +97,7 @@ public interface ERArmorMaterials {
                 .add(Attributes.SAFE_FALL_DISTANCE, new AttributeModifier(SAFE_FALL_DISTANCE_LEGGINGS_ID, 0.30, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), EquipmentSlotGroup.LEGS)
                 .build();
     }
-    public static ItemAttributeModifiers createFeatherzealBootsAttributes() {
+    static ItemAttributeModifiers createFeatherzealBootsAttributes() {
         return ItemAttributeModifiers.builder()
                 .add(Attributes.ARMOR, new AttributeModifier(ARMOR_BOOTS_ID, 3, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_BOOTS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.FEET)
@@ -118,9 +105,9 @@ public interface ERArmorMaterials {
                 .add(Attributes.SAFE_FALL_DISTANCE, new AttributeModifier(SAFE_FALL_DISTANCE_BOOTS_ID, 0.30, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), EquipmentSlotGroup.FEET)
                 .build();
     }
-    public static ItemAttributeModifiers createFeatherzealHorseArmorAttributes() {
+    static ItemAttributeModifiers createFeatherzealAnimalArmorAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, 12, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
+                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, animalArmorDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_ID, ERArmorMaterials.FEATHERZEAL.knockbackResistance() * 2F, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.BODY)
                 .add(Attributes.SAFE_FALL_DISTANCE, new AttributeModifier(SAFE_FALL_DISTANCE_ID, 1.20, AttributeModifier.Operation.ADD_MULTIPLIED_TOTAL), EquipmentSlotGroup.BODY)
@@ -128,44 +115,44 @@ public interface ERArmorMaterials {
     }
 
 
-    public static final ResourceLocation ARMOR_ID = ERConstants.id("armor");
-    public static final ResourceLocation ARMOR_TOUGHNESS_ID = ERConstants.id("armor_toughness");
-    public static final ResourceLocation KNOCKBACK_RESISTANCE_ID = ERConstants.id("knockback_resistance");
+    Identifier ARMOR_ID = EndReborn.id("armor");
+    Identifier ARMOR_TOUGHNESS_ID = EndReborn.id("armor_toughness");
+    Identifier KNOCKBACK_RESISTANCE_ID = EndReborn.id("knockback_resistance");
 
-    public static final ResourceLocation ARMOR_HELMET_ID = ERConstants.id("armor_head");
-    public static final ResourceLocation ARMOR_TOUGHNESS_HELMET_ID = ERConstants.id("armor_toughness_head");
-    public static final ResourceLocation KNOCKBACK_RESISTANCE_HELMET_ID = ERConstants.id("knockback_resistance_head");
+    Identifier ARMOR_HELMET_ID = EndReborn.id("armor_head");
+    Identifier ARMOR_TOUGHNESS_HELMET_ID = EndReborn.id("armor_toughness_head");
+    Identifier KNOCKBACK_RESISTANCE_HELMET_ID = EndReborn.id("knockback_resistance_head");
 
-    public static final ResourceLocation ARMOR_CHESTPLATE_ID = ERConstants.id("armor_chestplate");
-    public static final ResourceLocation ARMOR_TOUGHNESS_CHESTPLATE_ID = ERConstants.id("armor_toughness_chestplate");
-    public static final ResourceLocation KNOCKBACK_RESISTANCE_CHESTPLATE_ID = ERConstants.id("knockback_resistance_chestplate");
+    Identifier ARMOR_CHESTPLATE_ID = EndReborn.id("armor_chestplate");
+    Identifier ARMOR_TOUGHNESS_CHESTPLATE_ID = EndReborn.id("armor_toughness_chestplate");
+    Identifier KNOCKBACK_RESISTANCE_CHESTPLATE_ID = EndReborn.id("knockback_resistance_chestplate");
 
-    public static final ResourceLocation ARMOR_LEGGINGS_ID = ERConstants.id("armor_leggings");
-    public static final ResourceLocation ARMOR_TOUGHNESS_LEGGINGS_ID = ERConstants.id("armor_toughness_leggings");
-    public static final ResourceLocation KNOCKBACK_RESISTANCE_LEGGINGS_ID = ERConstants.id("knockback_resistance_leggings");
+    Identifier ARMOR_LEGGINGS_ID = EndReborn.id("armor_leggings");
+    Identifier ARMOR_TOUGHNESS_LEGGINGS_ID = EndReborn.id("armor_toughness_leggings");
+    Identifier KNOCKBACK_RESISTANCE_LEGGINGS_ID = EndReborn.id("knockback_resistance_leggings");
 
-    public static final ResourceLocation ARMOR_BOOTS_ID = ERConstants.id("armor_boots");
-    public static final ResourceLocation ARMOR_TOUGHNESS_BOOTS_ID = ERConstants.id("armor_toughness_boots");
-    public static final ResourceLocation KNOCKBACK_RESISTANCE_BOOTS_ID = ERConstants.id("knockback_resistance_boots");
+    Identifier ARMOR_BOOTS_ID = EndReborn.id("armor_boots");
+    Identifier ARMOR_TOUGHNESS_BOOTS_ID = EndReborn.id("armor_toughness_boots");
+    Identifier KNOCKBACK_RESISTANCE_BOOTS_ID = EndReborn.id("knockback_resistance_boots");
 
-    public static final ResourceLocation BURNING_TIME_ID = ERConstants.id("burning_time");
-    public static final ResourceLocation EXPLOSION_KNOCKBACK_RESISTANCE_ID = ERConstants.id("explosion_knockback_resistance");
-    public static final ResourceLocation SAFE_FALL_DISTANCE_ID = ERConstants.id("safe_fall_distance");
+    Identifier BURNING_TIME_ID = EndReborn.id("burning_time");
+    Identifier EXPLOSION_KNOCKBACK_RESISTANCE_ID = EndReborn.id("explosion_knockback_resistance");
+    Identifier SAFE_FALL_DISTANCE_ID = EndReborn.id("safe_fall_distance");
 
-    public static final ResourceLocation BURNING_TIME_HELMET_ID = ERConstants.id("burning_time_helmet");
-    public static final ResourceLocation EXPLOSION_KNOCKBACK_RESISTANCE_HELMET_ID = ERConstants.id("explosion_knockback_resistance_helmet");
-    public static final ResourceLocation SAFE_FALL_DISTANCE_HELMET_ID = ERConstants.id("safe_fall_distance_helmet");
+    Identifier BURNING_TIME_HELMET_ID = EndReborn.id("burning_time_helmet");
+    Identifier EXPLOSION_KNOCKBACK_RESISTANCE_HELMET_ID = EndReborn.id("explosion_knockback_resistance_helmet");
+    Identifier SAFE_FALL_DISTANCE_HELMET_ID = EndReborn.id("safe_fall_distance_helmet");
 
-    public static final ResourceLocation BURNING_TIME_CHESTPLATE_ID = ERConstants.id("burning_time_chestplate");
-    public static final ResourceLocation EXPLOSION_KNOCKBACK_RESISTANCE_CHESTPLATE_ID = ERConstants.id("explosion_knockback_resistance_chestplate");
-    public static final ResourceLocation SAFE_FALL_DISTANCE_CHESTPLATE_ID = ERConstants.id("safe_fall_distance_chestplate");
+    Identifier BURNING_TIME_CHESTPLATE_ID = EndReborn.id("burning_time_chestplate");
+    Identifier EXPLOSION_KNOCKBACK_RESISTANCE_CHESTPLATE_ID = EndReborn.id("explosion_knockback_resistance_chestplate");
+    Identifier SAFE_FALL_DISTANCE_CHESTPLATE_ID = EndReborn.id("safe_fall_distance_chestplate");
 
-    public static final ResourceLocation BURNING_TIME_LEGGINGS_ID = ERConstants.id("burning_time_leggings");
-    public static final ResourceLocation EXPLOSION_KNOCKBACK_RESISTANCE_LEGGINGS_ID = ERConstants.id("explosion_knockback_resistance_leggings");
-    public static final ResourceLocation SAFE_FALL_DISTANCE_LEGGINGS_ID = ERConstants.id("safe_fall_distance_leggings");
+    Identifier BURNING_TIME_LEGGINGS_ID = EndReborn.id("burning_time_leggings");
+    Identifier EXPLOSION_KNOCKBACK_RESISTANCE_LEGGINGS_ID = EndReborn.id("explosion_knockback_resistance_leggings");
+    Identifier SAFE_FALL_DISTANCE_LEGGINGS_ID = EndReborn.id("safe_fall_distance_leggings");
 
-    public static final ResourceLocation BURNING_TIME_BOOTS_ID = ERConstants.id("burning_time_boots");
-    public static final ResourceLocation EXPLOSION_KNOCKBACK_RESISTANCE_BOOTS_ID = ERConstants.id("explosion_knockback_resistance_boots");
-    public static final ResourceLocation SAFE_FALL_DISTANCE_BOOTS_ID = ERConstants.id("safe_fall_distance_boots");
+    Identifier BURNING_TIME_BOOTS_ID = EndReborn.id("burning_time_boots");
+    Identifier EXPLOSION_KNOCKBACK_RESISTANCE_BOOTS_ID = EndReborn.id("explosion_knockback_resistance_boots");
+    Identifier SAFE_FALL_DISTANCE_BOOTS_ID = EndReborn.id("safe_fall_distance_boots");
 
 }

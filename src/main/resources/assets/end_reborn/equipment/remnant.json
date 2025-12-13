@@ -5,6 +5,11 @@
         "texture": "end_reborn:remnant"
       }
     ],
+    "nautilus_body": [
+      {
+        "texture": "end_reborn:remnant"
+      }
+    ],
     "humanoid": [
       {
         "texture": "end_reborn:remnant"

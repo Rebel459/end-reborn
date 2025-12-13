@@ -1,22 +1,15 @@
 package net.legacy.end_reborn.registry;
 
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import net.legacy.end_reborn.datagen.ERModelProvider;
-import net.minecraft.Util;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
-import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
 import net.minecraft.world.item.equipment.trim.TrimMaterials;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class ERTrimMaterials {
     public static final List<String> TRIM_MATERIALS = List.of("remnant_ingot", "remnant_ingot_darker", "featherzeal_ingot", "featherzeal_ingot_darker", "crystalline_shard");
@@ -36,7 +29,7 @@ public class ERTrimMaterials {
     }
 
     private static ResourceKey<TrimMaterial> register(String name) {
-        return ResourceKey.create(Registries.TRIM_MATERIAL, ERConstants.id(name));
+        return ResourceKey.create(Registries.TRIM_MATERIAL, EndReborn.id(name));
 
     }
 

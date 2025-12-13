@@ -23,10 +23,13 @@
       "end_reborn:featherzeal_pickaxe_smithing",
       "end_reborn:featherzeal_shovel_smithing",
       "end_reborn:featherzeal_hoe_smithing",
+      "end_reborn:featherzeal_spear_smithing",
       "end_reborn:featherzeal_helmet_smithing",
       "end_reborn:featherzeal_chestplate_smithing",
       "end_reborn:featherzeal_leggings_smithing",
-      "end_reborn:featherzeal_boots_smithing"
+      "end_reborn:featherzeal_boots_smithing",
+      "end_reborn:featherzeal_horse_armor_smithing",
+      "end_reborn:featherzeal_nautilus_armor_smithing"
     ]
   }
 }

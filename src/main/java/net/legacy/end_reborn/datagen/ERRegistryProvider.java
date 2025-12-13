@@ -2,7 +2,7 @@ package net.legacy.end_reborn.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import net.legacy.end_reborn.registry.ERTrimMaterials;
 import net.minecraft.core.*;
 import net.minecraft.core.registries.Registries;
@@ -22,7 +22,7 @@ public class ERRegistryProvider extends FabricDynamicRegistryProvider {
 
     @Override
     public void configure(HolderLookup.Provider registries, Entries entries) {
-        addAll(entries, registries.lookupOrThrow(Registries.TRIM_MATERIAL), ERConstants.MOD_ID);
+        addAll(entries, registries.lookupOrThrow(Registries.TRIM_MATERIAL), EndReborn.MOD_ID);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class ERRegistryProvider extends FabricDynamicRegistryProvider {
     @SuppressWarnings("UnusedReturnValue")
     public <T> List<Holder<T>> addAll(Entries entries, HolderLookup.RegistryLookup<T> registry, String modId) {
         return registry.listElementIds()
-                .filter(registryKey -> registryKey.location().getNamespace().equals(ERConstants.MOD_ID))
+                .filter(registryKey -> registryKey.identifier().getNamespace().equals(EndReborn.MOD_ID))
                 .map(key -> entries.add(registry, key))
                 .toList();
     }

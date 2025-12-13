@@ -1,6 +1,6 @@
 package net.legacy.end_reborn.registry;
 
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -8,8 +8,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.vehicle.ChestRaft;
-import net.minecraft.world.entity.vehicle.Raft;
+import net.minecraft.world.entity.vehicle.boat.ChestRaft;
+import net.minecraft.world.entity.vehicle.boat.Raft;
 import org.jetbrains.annotations.NotNull;
 
 public final class EREntityTypes {
@@ -38,7 +38,7 @@ public final class EREntityTypes {
 	}
 
 	private static <T extends Entity> @NotNull EntityType<T> register(String string, EntityType.@NotNull Builder<T> builder) {
-		ResourceKey<EntityType<?>> resourceKey = ResourceKey.create(Registries.ENTITY_TYPE, ERConstants.id(string));
+		ResourceKey<EntityType<?>> resourceKey = ResourceKey.create(Registries.ENTITY_TYPE, EndReborn.id(string));
 		return Registry.register(BuiltInRegistries.ENTITY_TYPE, resourceKey, builder.build(resourceKey));
 	}
 }

@@ -5,6 +5,11 @@
         "texture": "end_reborn:featherzeal"
       }
     ],
+    "nautilus_body": [
+      {
+        "texture": "end_reborn:featherzeal"
+      }
+    ],
     "humanoid": [
       {
         "texture": "end_reborn:featherzeal"

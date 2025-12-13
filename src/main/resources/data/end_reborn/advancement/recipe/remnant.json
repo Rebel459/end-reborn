@@ -23,10 +23,13 @@
       "end_reborn:remnant_pickaxe_smithing",
       "end_reborn:remnant_shovel_smithing",
       "end_reborn:remnant_hoe_smithing",
+      "end_reborn:remnant_spear_smithing",
       "end_reborn:remnant_helmet_smithing",
       "end_reborn:remnant_chestplate_smithing",
       "end_reborn:remnant_leggings_smithing",
-      "end_reborn:remnant_boots_smithing"
+      "end_reborn:remnant_boots_smithing",
+      "end_reborn:remnant_horse_armor_smithing",
+      "end_reborn:remnant_nautilus_armor_smithing"
     ]
   }
 }

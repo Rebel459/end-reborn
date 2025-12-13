@@ -1,14 +1,13 @@
 package net.legacy.end_reborn.registry;
 
-import net.legacy.end_reborn.ERConstants;
+import net.legacy.end_reborn.EndReborn;
 import net.minecraft.ChatFormatting;
-import net.minecraft.Util;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.util.Util;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.component.DamageResistant;
@@ -119,17 +118,26 @@ public final class ERItems {
             (properties) -> new AxeItem(ERToolMaterial.REMNANT, 5f, -3.0f, properties), (
                     new Properties()
                             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
-            ));
+            )
+    );
     public static final ShovelItem REMNANT_SHOVEL = register("remnant_shovel",
             (properties) -> new ShovelItem(ERToolMaterial.REMNANT, 1.5f, -3f, properties), (
                     new Properties()
                             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
-            ));
+            )
+    );
     public static final HoeItem REMNANT_HOE = register("remnant_hoe",
             (properties) -> new HoeItem(ERToolMaterial.REMNANT, -2f, -1f, properties), (
                     new Properties()
                             .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
-            ));
+            )
+    );
+    public static final Item REMNANT_SPEAR = register("remnant_spear",
+            Item::new,
+            new Properties()
+                    .spear(ERToolMaterial.REMNANT, 1.15F, 1.2F, 0.4F, 2.5F, 7.0F, 5.5F, 5.1F, 8.75F, 4.6F)
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
 
     public static final Item FEATHERZEAL_SWORD = register("featherzeal_sword",
             Item::new,
@@ -144,15 +152,24 @@ public final class ERItems {
     public static final AxeItem FEATHERZEAL_AXE = register("featherzeal_axe",
             (properties) -> new AxeItem(ERToolMaterial.FEATHERZEAL, 5f, -3.0f, properties), (
                     new Properties()
-            ));
+            )
+    );
     public static final ShovelItem FEATHERZEAL_SHOVEL = register("featherzeal_shovel",
             (properties) -> new ShovelItem(ERToolMaterial.FEATHERZEAL, 1.5f, -3f, properties), (
                     new Properties()
-            ));
+            )
+    );
     public static final HoeItem FEATHERZEAL_HOE = register("featherzeal_hoe",
             (properties) -> new HoeItem(ERToolMaterial.FEATHERZEAL, -2f, -1f, properties), (
                     new Properties()
-            ));
+            )
+    );
+    public static final Item FEATHERZEAL_SPEAR = register("featherzeal_spear",
+            Item::new,
+            new Properties()
+                    .spear(ERToolMaterial.FEATHERZEAL, 1.15F, 1.2F, 0.4F, 2.5F, 7.0F, 5.5F, 5.1F, 8.75F, 4.6F)
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
 
     // Armor
     public static final Item REMNANT_HELMET = register("remnant_helmet",
@@ -187,7 +204,14 @@ public final class ERItems {
             Item::new,
             new Properties()
                     .horseArmor(ERArmorMaterials.REMNANT)
-                    .attributes(ERArmorMaterials.createRemnantHorseArmorAttributes())
+                    .attributes(ERArmorMaterials.createRemnantAnimalArmorAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item REMNANT_NAUTILUS_ARMOR = register("remnant_nautilus_armor",
+            Item::new,
+            new Properties()
+                    .nautilusArmor(ERArmorMaterials.REMNANT)
+                    .attributes(ERArmorMaterials.createRemnantAnimalArmorAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
 
@@ -223,7 +247,14 @@ public final class ERItems {
             Item::new,
             new Properties()
                     .horseArmor(ERArmorMaterials.FEATHERZEAL)
-                    .attributes(ERArmorMaterials.createFeatherzealHorseArmorAttributes())
+                    .attributes(ERArmorMaterials.createFeatherzealAnimalArmorAttributes())
+                    .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
+    );
+    public static final Item FEATHERZEAL_NAUTILUS_ARMOR = register("featherzeal_nautilus_armor",
+            Item::new,
+            new Properties()
+                    .nautilusArmor(ERArmorMaterials.FEATHERZEAL)
+                    .attributes(ERArmorMaterials.createFeatherzealAnimalArmorAttributes())
                     .component(DataComponents.DAMAGE_RESISTANT, new DamageResistant(DamageTypeTags.IS_EXPLOSION))
     );
 
@@ -231,15 +262,15 @@ public final class ERItems {
     }
 
     private static @NotNull <T extends Item> T register(String name, @NotNull Function<Properties, Item> function, Item.@NotNull Properties properties) {
-        return (T) Items.registerItem(ResourceKey.create(Registries.ITEM, ERConstants.id(name)), function, properties);
+        return (T) Items.registerItem(ResourceKey.create(Registries.ITEM, EndReborn.id(name)), function, properties);
     }
 
     public static SmithingTemplateItem createRemnantUpgradeTemplate(Item.Properties properties) {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnant_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnant_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnant_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.remnant_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", EndReborn.id("smithing_template.remnant_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", EndReborn.id("smithing_template.remnant_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", EndReborn.id("smithing_template.remnant_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", EndReborn.id("smithing_template.remnant_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties
@@ -248,10 +279,10 @@ public final class ERItems {
 
     public static SmithingTemplateItem createFeatherzealUpgradeTemplate(Item.Properties properties) {
         return new SmithingTemplateItem(
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.featherzeal_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.featherzeal_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.featherzeal_upgrade.base_slot_description"))),
-                Component.translatable(Util.makeDescriptionId("item", ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "smithing_template.featherzeal_upgrade.additions_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", EndReborn.id("smithing_template.featherzeal_upgrade.applies_to"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", EndReborn.id("smithing_template.featherzeal_upgrade.ingredients"))).withStyle(ChatFormatting.BLUE),
+                Component.translatable(Util.makeDescriptionId("item", EndReborn.id("smithing_template.featherzeal_upgrade.base_slot_description"))),
+                Component.translatable(Util.makeDescriptionId("item", EndReborn.id("smithing_template.featherzeal_upgrade.additions_slot_description"))),
                 SmithingTemplateItem.createNetheriteUpgradeIconList(),
                 SmithingTemplateItem.createNetheriteUpgradeMaterialList(),
                 properties
