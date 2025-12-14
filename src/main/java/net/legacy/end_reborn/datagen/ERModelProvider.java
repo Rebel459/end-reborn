@@ -128,10 +128,10 @@ public final class ERModelProvider extends FabricModelProvider {
         this.registerArmorTrims(generator, Items.LEATHER_CHESTPLATE, EquipmentAssets.LEATHER, "chestplate", true);
         this.registerArmorTrims(generator, Items.LEATHER_LEGGINGS, EquipmentAssets.LEATHER, "leggings", true);
         this.registerArmorTrims(generator, Items.LEATHER_BOOTS, EquipmentAssets.LEATHER, "boots", true);
-        this.registerArmorTrims(generator, Items.COPPER_HELMET, EquipmentAssets.COPPER, "helmet", true);
-        this.registerArmorTrims(generator, Items.COPPER_CHESTPLATE, EquipmentAssets.COPPER, "chestplate", true);
-        this.registerArmorTrims(generator, Items.COPPER_LEGGINGS, EquipmentAssets.COPPER, "leggings", true);
-        this.registerArmorTrims(generator, Items.COPPER_BOOTS, EquipmentAssets.COPPER, "boots", true);
+        this.registerArmorTrims(generator, Items.COPPER_HELMET, EquipmentAssets.COPPER, "helmet", false);
+        this.registerArmorTrims(generator, Items.COPPER_CHESTPLATE, EquipmentAssets.COPPER, "chestplate", false);
+        this.registerArmorTrims(generator, Items.COPPER_LEGGINGS, EquipmentAssets.COPPER, "leggings", false);
+        this.registerArmorTrims(generator, Items.COPPER_BOOTS, EquipmentAssets.COPPER, "boots", false);
 		this.registerArmorTrims(generator, Items.CHAINMAIL_HELMET, EquipmentAssets.CHAINMAIL, "helmet", false);
 		this.registerArmorTrims(generator, Items.CHAINMAIL_CHESTPLATE, EquipmentAssets.CHAINMAIL, "chestplate", false);
 		this.registerArmorTrims(generator, Items.CHAINMAIL_LEGGINGS, EquipmentAssets.CHAINMAIL, "leggings", false);
