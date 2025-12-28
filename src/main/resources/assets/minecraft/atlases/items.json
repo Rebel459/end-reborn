@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:directory",
+      "prefix": "item/",
+      "source": "item"
+    },
+    {
+      "type": "minecraft:paletted_permutations",
+      "palette_key": "minecraft:trims/color_palettes/trim_palette",
+      "permutations": {
+        "remnant": "end_reborn:trims/color_palettes/remnant",
+        "remnant_darker": "end_reborn:trims/color_palettes/remnant_darker",
+        "featherzeal": "end_reborn:trims/color_palettes/featherzeal",
+        "featherzeal_darker": "end_reborn:trims/color_palettes/featherzeal_darker",
+        "crystalline": "end_reborn:trims/color_palettes/crystalline"
+      },
+      "textures": []
+    }
+  ]
+}

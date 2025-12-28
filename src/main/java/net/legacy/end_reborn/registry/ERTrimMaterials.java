@@ -1,31 +1,29 @@
 package net.legacy.end_reborn.registry;
 
 import net.legacy.end_reborn.EndReborn;
-import net.legacy.end_reborn.datagen.ERModelProvider;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.network.chat.Style;
 import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.equipment.trim.MaterialAssetGroup;
 import net.minecraft.world.item.equipment.trim.TrimMaterial;
 import net.minecraft.world.item.equipment.trim.TrimMaterials;
 
-import java.util.List;
+import java.util.Map;
 
 public class ERTrimMaterials {
-    public static final List<String> TRIM_MATERIALS = List.of("remnant_ingot", "remnant_ingot_darker", "featherzeal_ingot", "featherzeal_ingot_darker", "crystalline_shard");
+    public static final MaterialAssetGroup REMNANT_GROUP = MaterialAssetGroup.create("remnant", Map.of(EREquipmentAssets.REMNANT, "remnant_darker"));
+    public static final MaterialAssetGroup FEATHERZEAL_GROUP = MaterialAssetGroup.create("featherzeal", Map.of(EREquipmentAssets.FEATHERZEAL, "featherzeal_darker"));
+    public static final MaterialAssetGroup CRYSTALLINE_GROUP = MaterialAssetGroup.create("crystalline");
 
-    public static final ResourceKey<TrimMaterial> REMNANT = register("remnant_ingot");
-    public static final ResourceKey<TrimMaterial> REMNANT_DARKER = register("remnant_ingot_darker");
-    public static final ResourceKey<TrimMaterial> FEATHERZEAL = register("featherzeal_ingot");
-    public static final ResourceKey<TrimMaterial> FEATHERZEAL_DARKER = register("featherzeal_ingot_darker");
-    public static final ResourceKey<TrimMaterial> CRYSTALLINE = register("crystalline_shard");
+    public static final ResourceKey<TrimMaterial> REMNANT = register("remnant");
+    public static final ResourceKey<TrimMaterial> FEATHERZEAL = register("featherzeal");
+    public static final ResourceKey<TrimMaterial> CRYSTALLINE = register("crystalline");
 
     public static void bootstrap(BootstrapContext<TrimMaterial> context) {
-        TrimMaterials.register(context, REMNANT, Style.EMPTY.withColor(5592405), ERModelProvider.REMNANT_INGOT);
-        TrimMaterials.register(context, REMNANT_DARKER, Style.EMPTY.withColor(5592405), ERModelProvider.REMNANT_INGOT_DARKER);
-        TrimMaterials.register(context, FEATHERZEAL, Style.EMPTY.withColor(5090680), ERModelProvider.FEATHERZEAL_INGOT);
-        TrimMaterials.register(context, FEATHERZEAL_DARKER, Style.EMPTY.withColor(5090680), ERModelProvider.FEATHERZEAL_INGOT_DARKER);
-        TrimMaterials.register(context, CRYSTALLINE, Style.EMPTY.withColor(16777215), ERModelProvider.CRYSTALLINE_SHARD);
+        TrimMaterials.register(context, REMNANT, Style.EMPTY.withColor(5592405), REMNANT_GROUP);
+        TrimMaterials.register(context, FEATHERZEAL, Style.EMPTY.withColor(5090680), FEATHERZEAL_GROUP);
+        TrimMaterials.register(context, CRYSTALLINE, Style.EMPTY.withColor(16777215), CRYSTALLINE_GROUP);
     }
 
     private static ResourceKey<TrimMaterial> register(String name) {

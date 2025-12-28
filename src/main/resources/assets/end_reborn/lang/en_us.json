@@ -4,7 +4,6 @@
   "advancements.end_reborn.featherzeal_armor.title": "Cover Me in Fragments",
   "advancements.end_reborn.featherzeal_armor.description": "Get a full set of Featherzeal armor",
 
-  "pack.end_reborn.end_reborn_asset_overrides": "End Reborn Asset Overrides",
   "pack.end_reborn.end_reborn_trailier_tales_integration": "End Reborn Trailier Tales Integration",
   "pack.end_reborn.end_reborn_enderscape_integration": "End Reborn Enderscape Integration",
 
@@ -93,9 +92,9 @@
   "item.end_reborn.featherzeal_horse_armor": "Featherzeal Horse Armor",
   "item.end_reborn.featherzeal_nautilus_armor": "Featherzeal Nautilus Armor",
 
-  "trim_material.end_reborn.remnant_ingot": "Remnant Material",
-  "trim_material.end_reborn.featherzeal_ingot": "Featherzeal Material",
-  "trim_material.end_reborn.crystalline_shard": "Crystalline Material",
+  "trim_material.end_reborn.remnant": "Remnant Material",
+  "trim_material.end_reborn.featherzeal": "Featherzeal Material",
+  "trim_material.end_reborn.crystalline": "Crystalline Material",
 
   "text.autoconfig.end_reborn.title": "End Reborn",
   "text.autoconfig.end_reborn.option.loot_table_injects": "Loot Table Injects",

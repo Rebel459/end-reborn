@@ -1,6 +1,4 @@
 // 1.21.11	-999999999-01-01T00:00:00	End Reborn/End Reborn
-53f57d4933e2729016e46b7cf93ed500471d409d data/end_reborn/trim_material/crystalline_shard.json
-deecc605a1e2eeb322b88f41546683b7c5cdf567 data/end_reborn/trim_material/featherzeal_ingot.json
-5a6c38c09411514928b612f48dff433c2c31be15 data/end_reborn/trim_material/featherzeal_ingot_darker.json
-8564c62d43af35b8fc344e6271440018dbd11790 data/end_reborn/trim_material/remnant_ingot.json
-713a8bb4261ad2a330c4e1566def4f09396b772a data/end_reborn/trim_material/remnant_ingot_darker.json
+b45b3c598298c1fe24a8052c98f5765dc82c47a9 data/end_reborn/trim_material/crystalline.json
+bd7e8f999bb9dbe8c2aadaf28a37ddb7eb843d18 data/end_reborn/trim_material/featherzeal.json
+dc11cd9dadcc02b613e6be7de8d9006256a77ad4 data/end_reborn/trim_material/remnant.json

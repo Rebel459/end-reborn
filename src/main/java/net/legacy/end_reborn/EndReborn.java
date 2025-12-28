@@ -34,16 +34,10 @@ public class EndReborn implements ModInitializer {
 		ERBlocks.init();
 		ERBlocks.registerBlockProperties();
 		ERCreativeInventorySorting.init();
-		ERTrimItemModels.init();
 		ERFeatures.init();
 		ERLootTables.init();
 		ERConfig.initClient();
 
-		ResourceManagerHelper.registerBuiltinResourcePack(
-				EndReborn.id("end_reborn_asset_overrides"), modContainer.get(),
-				Component.translatable("pack.end_reborn.end_reborn_asset_overrides"),
-				ResourcePackActivationType.ALWAYS_ENABLED
-		);
 		if (FabricLoader.getInstance().isModLoaded("progression_reborn")) {
 			isProgressionRebornLoaded = true;
 		}

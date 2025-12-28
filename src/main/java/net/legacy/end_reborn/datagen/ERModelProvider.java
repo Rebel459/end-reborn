@@ -1,42 +1,16 @@
 package net.legacy.end_reborn.datagen;
 
-import com.mojang.datafixers.util.Pair;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.function.Function;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.legacy.end_reborn.*;
-import net.legacy.end_reborn.registry.*;
-import net.minecraft.client.data.models.model.*;
+import net.legacy.end_reborn.registry.ERBlocks;
+import net.legacy.end_reborn.registry.ERItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
-import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.equipment.EquipmentAsset;
-import net.minecraft.world.item.equipment.EquipmentAssets;
-import net.minecraft.world.item.equipment.trim.MaterialAssetGroup;
-import org.jetbrains.annotations.Contract;
+import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TexturedModel;
 import org.jetbrains.annotations.NotNull;
 
 public final class ERModelProvider extends FabricModelProvider {
-	public static final MaterialAssetGroup REMNANT_INGOT = MaterialAssetGroup.create("remnant_ingot", Map.of(EREquipmentAssets.REMNANT, "remnant_ingot_darker"));
-	public static final MaterialAssetGroup REMNANT_INGOT_DARKER = MaterialAssetGroup.create("remnant_ingot_darker");
-	public static final MaterialAssetGroup FEATHERZEAL_INGOT = MaterialAssetGroup.create("featherzeal_ingot", Map.of(EREquipmentAssets.FEATHERZEAL, "featherzeal_ingot_darker"));
-	public static final MaterialAssetGroup FEATHERZEAL_INGOT_DARKER = MaterialAssetGroup.create("featherzeal_ingot_darker");
-	public static final MaterialAssetGroup CRYSTALLINE_SHARD = MaterialAssetGroup.create("crystalline_shard");
-
-	private static final List<ItemModelGenerators.TrimMaterialData> TRIM_MATERIALS = List.of(
-			new ItemModelGenerators.TrimMaterialData(REMNANT_INGOT, ERTrimMaterials.REMNANT),
-			new ItemModelGenerators.TrimMaterialData(REMNANT_INGOT_DARKER, ERTrimMaterials.REMNANT_DARKER),
-			new ItemModelGenerators.TrimMaterialData(FEATHERZEAL_INGOT, ERTrimMaterials.FEATHERZEAL),
-			new ItemModelGenerators.TrimMaterialData(FEATHERZEAL_INGOT_DARKER, ERTrimMaterials.FEATHERZEAL_DARKER),
-			new ItemModelGenerators.TrimMaterialData(CRYSTALLINE_SHARD, ERTrimMaterials.CRYSTALLINE)
-	);
 
 	public ERModelProvider(FabricDataOutput output) {
 		super(output);
@@ -79,15 +53,15 @@ public final class ERModelProvider extends FabricModelProvider {
 
 	@Override
 	public void generateItemModels(@NotNull ItemModelGenerators generator) {
-		generator.generateTrimmableItem(ERItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, Identifier.withDefaultNamespace("trims/items/helmet_trim"), false);
-		generator.generateTrimmableItem(ERItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, Identifier.withDefaultNamespace("trims/items/chestplate_trim"), false);
-		generator.generateTrimmableItem(ERItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, Identifier.withDefaultNamespace("trims/items/leggings_trim"), false);
-		generator.generateTrimmableItem(ERItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, Identifier.withDefaultNamespace("trims/items/boots_trim"), false);
+		generator.generateFlatItem(ERItems.REMNANT_HELMET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_CHESTPLATE, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_LEGGINGS, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.REMNANT_BOOTS, ModelTemplates.FLAT_ITEM);
 
-		generator.generateTrimmableItem(ERItems.FEATHERZEAL_HELMET, EREquipmentAssets.FEATHERZEAL, Identifier.withDefaultNamespace("trims/items/helmet_trim"), false);
-		generator.generateTrimmableItem(ERItems.FEATHERZEAL_CHESTPLATE, EREquipmentAssets.FEATHERZEAL, Identifier.withDefaultNamespace("trims/items/chestplate_trim"), false);
-		generator.generateTrimmableItem(ERItems.FEATHERZEAL_LEGGINGS, EREquipmentAssets.FEATHERZEAL, Identifier.withDefaultNamespace("trims/items/leggings_trim"), false);
-		generator.generateTrimmableItem(ERItems.FEATHERZEAL_BOOTS, EREquipmentAssets.FEATHERZEAL, Identifier.withDefaultNamespace("trims/items/boots_trim"), false);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_HELMET, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_CHESTPLATE, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_LEGGINGS, ModelTemplates.FLAT_ITEM);
+		generator.generateFlatItem(ERItems.FEATHERZEAL_BOOTS, ModelTemplates.FLAT_ITEM);
 
 		generator.generateFlatItem(ERItems.CHORUS_RAFT, ModelTemplates.FLAT_ITEM);
 		generator.generateFlatItem(ERItems.CHORUS_CHEST_RAFT, ModelTemplates.FLAT_ITEM);
@@ -123,75 +97,5 @@ public final class ERModelProvider extends FabricModelProvider {
         generator.generateFlatItem(ERItems.FEATHERZEAL_HORSE_ARMOR, ModelTemplates.FLAT_ITEM);
         generator.generateFlatItem(ERItems.FEATHERZEAL_NAUTILUS_ARMOR, ModelTemplates.FLAT_ITEM);
 
-		this.registerArmorTrims(generator, Items.TURTLE_HELMET, EquipmentAssets.TURTLE_SCUTE, "helmet", false);
-        this.registerArmorTrims(generator, Items.LEATHER_HELMET, EquipmentAssets.LEATHER, "helmet", true);
-        this.registerArmorTrims(generator, Items.LEATHER_CHESTPLATE, EquipmentAssets.LEATHER, "chestplate", true);
-        this.registerArmorTrims(generator, Items.LEATHER_LEGGINGS, EquipmentAssets.LEATHER, "leggings", true);
-        this.registerArmorTrims(generator, Items.LEATHER_BOOTS, EquipmentAssets.LEATHER, "boots", true);
-        this.registerArmorTrims(generator, Items.COPPER_HELMET, EquipmentAssets.COPPER, "helmet", false);
-        this.registerArmorTrims(generator, Items.COPPER_CHESTPLATE, EquipmentAssets.COPPER, "chestplate", false);
-        this.registerArmorTrims(generator, Items.COPPER_LEGGINGS, EquipmentAssets.COPPER, "leggings", false);
-        this.registerArmorTrims(generator, Items.COPPER_BOOTS, EquipmentAssets.COPPER, "boots", false);
-		this.registerArmorTrims(generator, Items.CHAINMAIL_HELMET, EquipmentAssets.CHAINMAIL, "helmet", false);
-		this.registerArmorTrims(generator, Items.CHAINMAIL_CHESTPLATE, EquipmentAssets.CHAINMAIL, "chestplate", false);
-		this.registerArmorTrims(generator, Items.CHAINMAIL_LEGGINGS, EquipmentAssets.CHAINMAIL, "leggings", false);
-		this.registerArmorTrims(generator, Items.CHAINMAIL_BOOTS, EquipmentAssets.CHAINMAIL, "boots", false);
-		this.registerArmorTrims(generator, Items.IRON_HELMET, EquipmentAssets.IRON, "helmet", false);
-		this.registerArmorTrims(generator, Items.IRON_CHESTPLATE, EquipmentAssets.IRON, "chestplate", false);
-		this.registerArmorTrims(generator, Items.IRON_LEGGINGS, EquipmentAssets.IRON, "leggings", false);
-		this.registerArmorTrims(generator, Items.IRON_BOOTS, EquipmentAssets.IRON, "boots", false);
-		this.registerArmorTrims(generator, Items.DIAMOND_HELMET, EquipmentAssets.DIAMOND, "helmet", false);
-		this.registerArmorTrims(generator, Items.DIAMOND_CHESTPLATE, EquipmentAssets.DIAMOND, "chestplate", false);
-		this.registerArmorTrims(generator, Items.DIAMOND_LEGGINGS, EquipmentAssets.DIAMOND, "leggings", false);
-		this.registerArmorTrims(generator, Items.DIAMOND_BOOTS, EquipmentAssets.DIAMOND, "boots", false);
-		this.registerArmorTrims(generator, Items.GOLDEN_HELMET, EquipmentAssets.GOLD, "helmet", false);
-		this.registerArmorTrims(generator, Items.GOLDEN_CHESTPLATE, EquipmentAssets.GOLD, "chestplate", false);
-		this.registerArmorTrims(generator, Items.GOLDEN_LEGGINGS, EquipmentAssets.GOLD, "leggings", false);
-		this.registerArmorTrims(generator, Items.GOLDEN_BOOTS, EquipmentAssets.GOLD, "boots", false);
-		this.registerArmorTrims(generator, Items.NETHERITE_HELMET, EquipmentAssets.NETHERITE, "helmet", false);
-		this.registerArmorTrims(generator, Items.NETHERITE_CHESTPLATE, EquipmentAssets.NETHERITE, "chestplate", false);
-		this.registerArmorTrims(generator, Items.NETHERITE_LEGGINGS, EquipmentAssets.NETHERITE, "leggings", false);
-		this.registerArmorTrims(generator, Items.NETHERITE_BOOTS, EquipmentAssets.NETHERITE, "boots", false);
-
-		this.registerArmorTrims(generator, ERItems.REMNANT_HELMET, EREquipmentAssets.REMNANT, "helmet", false);
-		this.registerArmorTrims(generator, ERItems.REMNANT_CHESTPLATE, EREquipmentAssets.REMNANT, "chestplate", false);
-		this.registerArmorTrims(generator, ERItems.REMNANT_LEGGINGS, EREquipmentAssets.REMNANT, "leggings", false);
-		this.registerArmorTrims(generator, ERItems.REMNANT_BOOTS, EREquipmentAssets.REMNANT, "boots", false);
-
-		this.registerArmorTrims(generator, ERItems.FEATHERZEAL_HELMET, EREquipmentAssets.FEATHERZEAL, "helmet", false);
-		this.registerArmorTrims(generator, ERItems.FEATHERZEAL_CHESTPLATE, EREquipmentAssets.FEATHERZEAL, "chestplate", false);
-		this.registerArmorTrims(generator, ERItems.FEATHERZEAL_LEGGINGS, EREquipmentAssets.FEATHERZEAL, "leggings", false);
-		this.registerArmorTrims(generator, ERItems.FEATHERZEAL_BOOTS, EREquipmentAssets.FEATHERZEAL, "boots", false);
-
-	}
-
-	@Contract("_, _ -> new")
-	private static @NotNull ModelTemplate createItem(String string, TextureSlot... textureSlots) {
-		return new ModelTemplate(Optional.of(EndReborn.id("item/" + string)), Optional.empty(), textureSlots);
-	}
-
-	private void uploadArmor2(ItemModelGenerators generator, Identifier id, Identifier layer0, Identifier layer1) {
-		ModelTemplates.TWO_LAYERED_ITEM.create(id, TextureMapping.layered(layer0, layer1), generator.modelOutput);
-	}
-
-	private void uploadArmor3(ItemModelGenerators generator, Identifier id, Identifier layer0, Identifier layer1, Identifier layer2) {
-		ModelTemplates.THREE_LAYERED_ITEM.create(id, TextureMapping.layered(layer0, layer1, layer2), generator.modelOutput);
-	}
-
-	private void registerArmorTrims(ItemModelGenerators generator, Item armor, ResourceKey<EquipmentAsset> equipmentKey, String armorType, boolean dyeable) {
-		Identifier armorModelId = TextureMapping.getItemTexture(armor);
-        Identifier armorTextures = TextureMapping.getItemTexture(armor);
-        Identifier armorOverlayTextures = TextureMapping.getItemTexture(armor, "_overlay");
-		for (ItemModelGenerators.TrimMaterialData trimMaterial : TRIM_MATERIALS) {
-            Identifier trimmedModelId = Identifier.fromNamespaceAndPath(EndReborn.MOD_ID,
-					armorModelId.getPath()).withSuffix("_" + trimMaterial.assets().base().suffix() + "_trim");
-            Identifier trimTextureId = Identifier.withDefaultNamespace(
-					"trims/items/" + armorType + "_trim_" + trimMaterial.assets().assetId(equipmentKey).suffix());
-			if (dyeable) {
-				this.uploadArmor3(generator, trimmedModelId, armorTextures, armorOverlayTextures, trimTextureId);
-			} else {
-				this.uploadArmor2(generator, trimmedModelId, armorTextures, trimTextureId);
-			}
-		}
 	}
 }
