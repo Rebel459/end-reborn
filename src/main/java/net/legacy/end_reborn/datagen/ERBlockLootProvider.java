@@ -42,8 +42,8 @@ public final class ERBlockLootProvider extends FabricBlockLootTableProvider {
 		this.dropSelf(ERBlocks.CHORUS_BLOCK);
         this.dropSelf(ERBlocks.STRIPPED_CHORUS_BLOCK);
         this.dropSelf(ERBlocks.CHORUS_SHELF);
-		this.dropSelf(ERBlocks.CHORUS_DOOR);
-		this.dropSelf(ERBlocks.CHORUS_TRAPDOOR);
+        this.add(ERBlocks.CHORUS_DOOR, this::createDoorTable);
+        this.dropSelf(ERBlocks.CHORUS_TRAPDOOR);
 		this.dropSelf(ERBlocks.CHORUS_PLANKS);
 		this.dropSelf(ERBlocks.CHORUS_SLAB);
 		this.dropSelf(ERBlocks.CHORUS_STAIRS);
