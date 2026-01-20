@@ -20,6 +20,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.entity.FuelValues;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -341,12 +342,15 @@ public class ERBlocks {
     public static void registerBlockProperties() {
         var sign = (FabricBlockEntityType) BlockEntityType.SIGN;
         var hangingSign = (FabricBlockEntityType) BlockEntityType.HANGING_SIGN;
+        var shelf = (FabricBlockEntityType) BlockEntityType.SHELF;
 
         sign.addSupportedBlock(CHORUS_SIGN);
         sign.addSupportedBlock(CHORUS_WALL_SIGN);
 
         hangingSign.addSupportedBlock(CHORUS_HANGING_SIGN);
         hangingSign.addSupportedBlock(CHORUS_WALL_HANGING_SIGN);
+
+        shelf.addSupportedBlock(CHORUS_SHELF);
 
         registerStrippable();
         registerFlammability();
@@ -375,6 +379,7 @@ public class ERBlocks {
         flammableBlockRegistry.add(CHORUS_WALL_SIGN, 5, 20);
         flammableBlockRegistry.add(CHORUS_HANGING_SIGN, 5, 20);
         flammableBlockRegistry.add(CHORUS_WALL_HANGING_SIGN, 5, 20);
+        flammableBlockRegistry.add(CHORUS_SHELF, 30, 20);
 
     }
 
@@ -393,6 +398,7 @@ public class ERBlocks {
             builder.add(CHORUS_TRAPDOOR.asItem(), 300);
             builder.add(CHORUS_FENCE_GATE.asItem(), 300);
             builder.add(CHORUS_FENCE.asItem(), 300);
+            builder.add(CHORUS_SHELF.asItem(), 300);
             builder.add(ERItems.CHORUS_SIGN, 300);
             builder.add(ERItems.CHORUS_HANGING_SIGN, 800);
             builder.add(ERItems.CHORUS_SPINE, 100);
