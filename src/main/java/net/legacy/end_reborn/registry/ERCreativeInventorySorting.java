@@ -42,6 +42,8 @@ public class ERCreativeInventorySorting {
 		addAfterInBuildingBlocks(ERBlocks.CHORUS_TRAPDOOR, ERBlocks.CHORUS_PRESSURE_PLATE);
 		addAfterInBuildingBlocks(ERBlocks.CHORUS_PRESSURE_PLATE, ERBlocks.CHORUS_BUTTON);
 
+        addAfterInBuildingBlocks(Blocks.WARPED_SHELF, ERBlocks.CHORUS_SHELF);
+
 		addBeforeInBuildingBlocks(Blocks.PURPUR_BLOCK, ERBlocks.PURPUR);
 
 		addAfterInBuildingBlocks(Blocks.PURPUR_SLAB, ERBlocks.AMETRUR);
