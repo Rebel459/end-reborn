@@ -1,6 +1,7 @@
 package net.legacy.end_reborn.registry;
 
 import net.fabricmc.fabric.api.item.v1.DefaultItemComponentEvents;
+import net.legacy.end_reborn.EndReborn;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.entity.EquipmentSlotGroup;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -12,36 +13,38 @@ import net.minecraft.world.item.equipment.ArmorMaterials;
 public class ERDataComponents {
     public static void init(){
 
-        DefaultItemComponentEvents.MODIFY.register(context -> {
-            context.modify(Items.NETHERITE_HELMET, builder -> {
-                builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteHelmetAttributes());
+        if (!EndReborn.isCombatRebornloaded) {
+            DefaultItemComponentEvents.MODIFY.register(context -> {
+                context.modify(Items.NETHERITE_HELMET, builder -> {
+                    builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteHelmetAttributes());
+                });
             });
-        });
-        DefaultItemComponentEvents.MODIFY.register(context -> {
-            context.modify(Items.NETHERITE_CHESTPLATE, builder -> {
-                builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteChestplateAttributes());
+            DefaultItemComponentEvents.MODIFY.register(context -> {
+                context.modify(Items.NETHERITE_CHESTPLATE, builder -> {
+                    builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteChestplateAttributes());
+                });
             });
-        });
-        DefaultItemComponentEvents.MODIFY.register(context -> {
-            context.modify(Items.NETHERITE_LEGGINGS, builder -> {
-                builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteLeggingsAttributes());
+            DefaultItemComponentEvents.MODIFY.register(context -> {
+                context.modify(Items.NETHERITE_LEGGINGS, builder -> {
+                    builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteLeggingsAttributes());
+                });
             });
-        });
-        DefaultItemComponentEvents.MODIFY.register(context -> {
-            context.modify(Items.NETHERITE_BOOTS, builder -> {
-                builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteBootsAttributes());
+            DefaultItemComponentEvents.MODIFY.register(context -> {
+                context.modify(Items.NETHERITE_BOOTS, builder -> {
+                    builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteBootsAttributes());
+                });
             });
-        });
-        DefaultItemComponentEvents.MODIFY.register(context -> {
-            context.modify(Items.NETHERITE_HORSE_ARMOR, builder -> {
-                builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteAnimalArmorAttributes());
+            DefaultItemComponentEvents.MODIFY.register(context -> {
+                context.modify(Items.NETHERITE_HORSE_ARMOR, builder -> {
+                    builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteAnimalArmorAttributes());
+                });
             });
-        });
-        DefaultItemComponentEvents.MODIFY.register(context -> {
-            context.modify(Items.NETHERITE_NAUTILUS_ARMOR, builder -> {
-                builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteAnimalArmorAttributes());
+            DefaultItemComponentEvents.MODIFY.register(context -> {
+                context.modify(Items.NETHERITE_NAUTILUS_ARMOR, builder -> {
+                    builder.set(DataComponents.ATTRIBUTE_MODIFIERS, createNetheriteAnimalArmorAttributes());
+                });
             });
-        });
+        }
 
         DefaultItemComponentEvents.MODIFY.register(context -> {
             context.modify(Items.POPPED_CHORUS_FRUIT, builder -> {
@@ -53,7 +56,7 @@ public class ERDataComponents {
 
     public static ItemAttributeModifiers createNetheriteHelmetAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_HELMET_ID, ERArmorMaterials.helmetDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_HELMET_ID, 3, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ERArmorMaterials.ARMOR_TOUGHNESS_HELMET_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(ERArmorMaterials.KNOCKBACK_RESISTANCE_HELMET_ID, ArmorMaterials.NETHERITE.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.BURNING_TIME, new AttributeModifier(ERArmorMaterials.BURNING_TIME_HELMET_ID, -0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.HEAD)
@@ -61,7 +64,7 @@ public class ERDataComponents {
     }
     public static ItemAttributeModifiers createNetheriteChestplateAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_CHESTPLATE_ID, ERArmorMaterials.chestplateDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
+                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_CHESTPLATE_ID, 8, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ERArmorMaterials.ARMOR_TOUGHNESS_CHESTPLATE_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(ERArmorMaterials.KNOCKBACK_RESISTANCE_CHESTPLATE_ID, ArmorMaterials.NETHERITE.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.CHEST)
                 .add(Attributes.BURNING_TIME, new AttributeModifier(ERArmorMaterials.BURNING_TIME_CHESTPLATE_ID, -0.20, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.CHEST)
@@ -85,7 +88,7 @@ public class ERDataComponents {
     }
     public static ItemAttributeModifiers createNetheriteAnimalArmorAttributes() {
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_HELMET_ID, ERArmorMaterials.animalArmorDefense(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
+                .add(Attributes.ARMOR, new AttributeModifier(ERArmorMaterials.ARMOR_HELMET_ID, 19, AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ERArmorMaterials.ARMOR_TOUGHNESS_HELMET_ID, ArmorMaterials.NETHERITE.toughness(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(ERArmorMaterials.KNOCKBACK_RESISTANCE_HELMET_ID, ArmorMaterials.NETHERITE.knockbackResistance(), AttributeModifier.Operation.ADD_VALUE), EquipmentSlotGroup.HEAD)
                 .add(Attributes.BURNING_TIME, new AttributeModifier(ERArmorMaterials.BURNING_TIME_HELMET_ID, -0.80, AttributeModifier.Operation.ADD_MULTIPLIED_BASE), EquipmentSlotGroup.HEAD)

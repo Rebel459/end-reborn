@@ -23,7 +23,7 @@ public class EndReborn implements ModInitializer {
         return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 
-	public static boolean isProgressionRebornLoaded = false;
+    public static boolean isCombatRebornloaded = FabricLoader.getInstance().isModLoaded("combat_reborn");
 
 	@Override
 	public void onInitialize() {
@@ -38,9 +38,6 @@ public class EndReborn implements ModInitializer {
 		ERLootTables.init();
 		ERConfig.initClient();
 
-		if (FabricLoader.getInstance().isModLoaded("progression_reborn")) {
-			isProgressionRebornLoaded = true;
-		}
         if (FabricLoader.getInstance().isModLoaded("trailiertales") && ERConfig.get.trailier_tales_integration) {
 			ResourceManagerHelper.registerBuiltinResourcePack(
 					EndReborn.id("end_reborn_trailier_tales_integration"), modContainer.get(),
