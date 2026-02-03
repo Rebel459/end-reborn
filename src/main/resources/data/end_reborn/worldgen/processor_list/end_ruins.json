@@ -36,7 +36,7 @@
             "input_predicate":{
               "predicate_type":"minecraft:random_block_match",
               "block":"minecraft:chest",
-              "probability":0.20
+              "probability":0.10
             },
             "output_state":{
               "Name":"minecraft:air"
