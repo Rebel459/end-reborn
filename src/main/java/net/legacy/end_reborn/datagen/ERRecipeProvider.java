@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.legacy.end_reborn.registry.ERBlocks;
 import net.legacy.end_reborn.registry.ERItems;
+import net.legacy.end_reborn.tag.ERItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -57,7 +58,7 @@ public final class ERRecipeProvider extends FabricRecipeProvider {
                         .group("remnant_upgrade_smithing_template")
                         .define('#', Ingredient.of(Items.DIAMOND))
                         .define('U', Ingredient.of(ERItems.REMNANT_UPGRADE_SMITHING_TEMPLATE))
-                        .define('X', Ingredient.of(Blocks.COBBLED_DEEPSLATE))
+                        .define('X', ERItemTags.REMNANT_UPGRADE_STONES)
                         .pattern("#U#")
                         .pattern("#X#")
                         .pattern("###")

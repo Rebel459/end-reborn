@@ -5,7 +5,7 @@
   "key": {
     "#": "minecraft:diamond",
     "U": "end_reborn:remnant_upgrade_smithing_template",
-    "X": "minecraft:cobbled_deepslate"
+    "X": "#end_reborn:remnant_upgrade_stones"
   },
   "pattern": [
     "#U#",

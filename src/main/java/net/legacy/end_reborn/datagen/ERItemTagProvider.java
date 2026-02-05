@@ -96,9 +96,13 @@ public final class ERItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ERItems.REMNANT_SPEAR)
                 .add(ERItems.FEATHERZEAL_SPEAR);
 
-		this.valueLookupBuilder(ERItemTags.CHORUS_BLOCKS)
-				.add(ERBlocks.CHORUS_BLOCK.asItem())
-				.add(ERBlocks.STRIPPED_CHORUS_BLOCK.asItem());
+        this.valueLookupBuilder(ERItemTags.CHORUS_BLOCKS)
+                .add(ERBlocks.CHORUS_BLOCK.asItem())
+                .add(ERBlocks.STRIPPED_CHORUS_BLOCK.asItem());
+
+        this.valueLookupBuilder(ERItemTags.REMNANT_UPGRADE_STONES)
+                .add(Blocks.COBBLED_DEEPSLATE.asItem())
+                .add(Blocks.TUFF.asItem());
 
 		this.valueLookupBuilder(ItemTags.STONE_CRAFTING_MATERIALS)
 				.add(Blocks.END_STONE.asItem());
