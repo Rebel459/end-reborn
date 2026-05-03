@@ -8,8 +8,6 @@ accessible method net/minecraft/world/entity/EntityType raftFactory (Ljava/util/
 accessible method net/minecraft/world/entity/EntityType chestRaftFactory (Ljava/util/function/Supplier;)Lnet/minecraft/world/entity/EntityType$EntityFactory;
 accessible field net/minecraft/client/data/models/BlockModelGenerators$BlockFamilyProvider skipGeneratingModelsFor Ljava/util/Set;
 accessible method net/minecraft/world/item/equipment/ArmorMaterials makeDefense (IIIII)Ljava/util/Map;
-accessible field net/minecraft/client/renderer/item/BlockModelWrapper ITEM_RENDER_TYPE_GETTER Ljava/util/function/Function;
-accessible field net/minecraft/client/renderer/item/BlockModelWrapper BLOCK_RENDER_TYPE_GETTER Ljava/util/function/Function;
 accessible method net/minecraft/world/level/block/FireBlock setFlammable (Lnet/minecraft/world/level/block/Block;II)V
 accessible method net/minecraft/world/entity/ai/attributes/Attribute <init> (Ljava/lang/String;D)V
 extendable method net/minecraft/world/entity/ai/attributes/Attribute <init> (Ljava/lang/String;D)V

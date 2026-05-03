@@ -21,6 +21,6 @@ public class ToolMaterialMixin {
                     )
             )
     private static ToolMaterial modifyToolMaterial(TagKey incorrectBlocksForDrops, int durability, float speed, float attackDamageBonus, int enchantmentValue, TagKey repairItems, Operation<ToolMaterial> original){
-        return original.call(incorrectBlocksForDrops, durability, speed, 4.5F, 20, repairItems);
+        return original.call(incorrectBlocksForDrops, durability, speed, 4.5F, 18, repairItems);
     }
 }
