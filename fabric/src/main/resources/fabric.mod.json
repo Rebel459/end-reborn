@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}-fabric",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_author}"
+  ],
+  "contact": {
+    "sources": "https://github.com/Rebel459/end-reborn"
+  },
+  "license": "${license}",
+  "icon": "assets/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.rebel459.end_reborn.EndRebornFabric"
+    ],
+    "client": [
+      "net.rebel459.end_reborn.EndRebornFabricClient"
+    ],
+    "fabric-datagen": [
+      "net.rebel459.end_reborn.datagen.ERDataGenerator"
+    ],
+    "modmenu": [
+      "net.rebel459.end_reborn.config.ERModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "end_reborn.mixins.json",
+    "end_reborn-fabric.mixins.json"
+  ],
+  "accessWidener": "end_reborn.classtweaker",
+  "depends": {
+    "fabricloader": ">=0.18",
+    "fabric-api": "*",
+    "minecraft": "${fabric_minecraft_version}",
+    "java": ">=25",
+    "unified": "*",
+    "cloth-config": "*",
+    "trimpatcher": "*"
+  }
+}

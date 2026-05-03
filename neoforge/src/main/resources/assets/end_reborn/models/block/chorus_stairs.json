@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "end_reborn:block/chorus_planks",
+    "side": "end_reborn:block/chorus_planks",
+    "top": "end_reborn:block/chorus_planks"
+  }
+}

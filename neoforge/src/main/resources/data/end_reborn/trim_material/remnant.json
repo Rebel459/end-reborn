@@ -1,0 +1,10 @@
+{
+  "asset_name": "remnant",
+  "description": {
+    "color": "#555555",
+    "translate": "trim_material.end_reborn.remnant"
+  },
+  "override_armor_assets": {
+    "end_reborn:remnant": "remnant_darker"
+  }
+}

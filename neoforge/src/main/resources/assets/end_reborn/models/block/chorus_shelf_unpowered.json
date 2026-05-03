@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_shelf_unpowered",
+  "textures": {
+    "all": "end_reborn:block/chorus_shelf",
+    "particle": "end_reborn:block/stripped_chorus_block"
+  }
+}

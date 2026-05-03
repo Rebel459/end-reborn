@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "net.rebel459.end_reborn.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "plugin": "net.rebel459.end_reborn.mixin.ERMixinPlugin",
+  "mixins": [],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top_right",
+  "textures": {
+    "bottom": "end_reborn:block/chorus_door_bottom",
+    "top": "end_reborn:block/chorus_door_top"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "end_reborn:block/chorus_slab"
+    },
+    "type=double": {
+      "model": "end_reborn:block/chorus_planks"
+    },
+    "type=top": {
+      "model": "end_reborn:block/chorus_slab_top"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "end_reborn:block/chorus_block_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "end_reborn:block/chorus_block"
+    },
+    "axis=z": {
+      "model": "end_reborn:block/chorus_block_horizontal",
+      "x": 90
+    }
+  }
+}

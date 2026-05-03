@@ -1,0 +1,10 @@
+{
+  "asset_name": "featherzeal",
+  "description": {
+    "color": "#4DAD78",
+    "translate": "trim_material.end_reborn.featherzeal"
+  },
+  "override_armor_assets": {
+    "end_reborn:featherzeal": "featherzeal_darker"
+  }
+}

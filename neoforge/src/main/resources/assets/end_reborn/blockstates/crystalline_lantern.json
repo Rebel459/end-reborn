@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "hanging=false": {
+      "model": "end_reborn:block/crystalline_lantern"
+    },
+    "hanging=true": {
+      "model": "end_reborn:block/crystalline_lantern_hanging"
+    }
+  }
+}

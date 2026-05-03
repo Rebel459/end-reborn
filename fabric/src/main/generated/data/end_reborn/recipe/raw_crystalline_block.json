@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "end_reborn:crystalline_shard",
+    "end_reborn:crystalline_shard",
+    "end_reborn:crystalline_shard",
+    "end_reborn:crystalline_shard",
+    "end_reborn:crystalline_shard",
+    "end_reborn:crystalline_shard",
+    "end_reborn:crystalline_shard",
+    "end_reborn:crystalline_shard",
+    "end_reborn:crystalline_shard"
+  ],
+  "result": {
+    "id": "end_reborn:raw_crystalline_block"
+  }
+}

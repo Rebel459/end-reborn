@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "net.rebel459.end_reborn.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "plugin": "net.rebel459.end_reborn.mixin.ERMixinPlugin",
+  "mixins": [
+    "entity.LivingEntityMixin",
+    "integration.farmersdelight.FeatherzealKnifeMixin",
+    "integration.farmersdelight.KnifeMixin",
+    "item.ItemEntityMixin",
+    "item.ToolMaterialMixin"
+  ],
+  "client": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

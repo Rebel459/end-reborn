@@ -1,0 +1,12 @@
+{
+  "values": [
+    {
+      "id": "end_reborn:remnant_knife",
+      "required": false
+    },
+    {
+      "id": "end_reborn:featherzeal_knife",
+      "required": false
+    }
+  ]
+}

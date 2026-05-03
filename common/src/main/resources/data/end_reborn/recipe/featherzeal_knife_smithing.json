@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": "end_reborn:featherzeal_upgrade_smithing_template",
+  "base": "farmersdelight:diamond_knife",
+  "addition": "end_reborn:featherzeal_ingot",
+  "result": {
+    "id": "end_reborn:featherzeal_knife"
+  },
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": ["farmersdelight"]
+    }
+  ],
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ]
+}

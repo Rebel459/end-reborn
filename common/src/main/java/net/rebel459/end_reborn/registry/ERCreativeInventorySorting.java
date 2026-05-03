@@ -1,0 +1,90 @@
+package net.rebel459.end_reborn.registry;
+
+import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Blocks;
+import net.rebel459.unified.platform.UnifiedHelpers;
+import net.rebel459.unified.platform.UnifiedPlatform;
+import net.rebel459.unified.util.CreativeModeTabs;
+
+public class ERCreativeInventorySorting {
+
+	public static void init() {
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.INGREDIENTS, Items.AMETHYST_SHARD, ERItems.CRYSTALLINE_SHARD);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.INGREDIENTS, Items.NETHERITE_SCRAP, ERItems.REMNANT_SCRAP, ERItems.REMNANT_INGOT, ERItems.FEATHERZEAL_SCRAP,  ERItems.FEATHERZEAL_INGOT);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.INGREDIENTS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ERItems.REMNANT_UPGRADE_SMITHING_TEMPLATE);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.INGREDIENTS, Items.NETHERITE_UPGRADE_SMITHING_TEMPLATE, ERItems.FEATHERZEAL_UPGRADE_SMITHING_TEMPLATE);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.INGREDIENTS, Items.STICK, ERItems.CHORUS_SPINE);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(
+				CreativeModeTabs.BUILDING_BLOCKS,
+				Blocks.WARPED_BUTTON,
+				ERBlocks.CHORUS_BLOCK,
+				ERBlocks.STRIPPED_CHORUS_BLOCK,
+				ERBlocks.CHORUS_PLANKS,
+				ERBlocks.CHORUS_MOSAIC,
+				ERBlocks.CHORUS_STAIRS,
+				ERBlocks.CHORUS_MOSAIC_STAIRS,
+				ERBlocks.CHORUS_SLAB,
+				ERBlocks.CHORUS_MOSAIC_SLAB,
+				ERBlocks.CHORUS_FENCE,
+				ERBlocks.CHORUS_FENCE_GATE,
+				ERBlocks.CHORUS_DOOR,
+				ERBlocks.CHORUS_TRAPDOOR,
+				ERBlocks.CHORUS_PRESSURE_PLATE,
+				ERBlocks.CHORUS_BUTTON
+		);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.FUNCTIONAL_BLOCKS, Blocks.WARPED_SHELF, ERBlocks.CHORUS_SHELF);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.PURPUR_BLOCK, ERBlocks.PURPUR);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.BUILDING_BLOCKS, Blocks.PURPUR_SLAB, ERBlocks.AMETRUR, ERBlocks.CUT_AMETRUR,  ERBlocks.CUT_AMETRUR_PILLAR, ERBlocks.CUT_AMETRUR_STAIRS, ERBlocks.CUT_AMETRUR_SLAB);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.BUILDING_BLOCKS, Blocks.AMETHYST_BLOCK, ERBlocks.RAW_CRYSTALLINE_BLOCK, ERBlocks.CRYSTALLINE_BLOCK,  ERBlocks.CRYSTALLINE_LAMP);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.BUILDING_BLOCKS, Blocks.NETHERITE_BLOCK, ERBlocks.REMNANT_BLOCK);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.BUILDING_BLOCKS, Blocks.NETHERITE_BLOCK, ERBlocks.FEATHERZEAL_BLOCK);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.NATURAL_BLOCKS, Blocks.AMETHYST_CLUSTER, ERBlocks.RAW_CRYSTALLINE_BLOCK);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.NATURAL_BLOCKS, Blocks.DEEPSLATE_DIAMOND_ORE, ERBlocks.FORGOTTEN_REMAINS);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.NATURAL_BLOCKS, Blocks.END_STONE, ERBlocks.PURPUR, ERBlocks.AMETRUR);
+
+		if (UnifiedPlatform.isModLoaded("enderscape")) UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.NATURAL_BLOCKS, Blocks.ANCIENT_DEBRIS, ERBlocks.END_IRON_ORE, ERBlocks.MIRESTONE_IRON_ORE);
+		else UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.NATURAL_BLOCKS, Blocks.ANCIENT_DEBRIS, ERBlocks.END_IRON_ORE);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.NATURAL_BLOCKS, Blocks.RAW_IRON_BLOCK, ERBlocks.TIMELOST_FRAGMENTS);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.FUNCTIONAL_BLOCKS, Blocks.SOUL_LANTERN, ERBlocks.CRYSTALLINE_LANTERN);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.FUNCTIONAL_BLOCKS, Blocks.PEARLESCENT_FROGLIGHT, ERBlocks.RAW_CRYSTALLINE_BLOCK, ERBlocks.CRYSTALLINE_BLOCK, ERBlocks.CRYSTALLINE_LAMP);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.TOOLS_AND_UTILITIES, Items.BAMBOO_CHEST_RAFT, ERItems.CHORUS_RAFT, ERItems.CHORUS_CHEST_RAFT);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.TOOLS_AND_UTILITIES, Items.NETHERITE_SHOVEL, ERItems.REMNANT_SHOVEL, ERItems.REMNANT_PICKAXE, ERItems.REMNANT_AXE, ERItems.REMNANT_HOE);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.TOOLS_AND_UTILITIES, Items.NETHERITE_HOE, ERItems.FEATHERZEAL_SHOVEL, ERItems.FEATHERZEAL_PICKAXE, ERItems.FEATHERZEAL_AXE, ERItems.FEATHERZEAL_HOE);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.FUNCTIONAL_BLOCKS, Items.WARPED_HANGING_SIGN, ERItems.CHORUS_SIGN, ERItems.CHORUS_HANGING_SIGN);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.REMNANT_SWORD);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.REMNANT_AXE);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.REMNANT_SPEAR);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_HELMET, ERItems.REMNANT_HELMET, ERItems.REMNANT_CHESTPLATE, ERItems.REMNANT_LEGGINGS, ERItems.REMNANT_BOOTS);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.FEATHERZEAL_SWORD);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.FEATHERZEAL_AXE);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.FEATHERZEAL_SPEAR);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_BOOTS, ERItems.FEATHERZEAL_HELMET, ERItems.FEATHERZEAL_CHESTPLATE, ERItems.FEATHERZEAL_LEGGINGS, ERItems.FEATHERZEAL_BOOTS);
+
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_HORSE_ARMOR, ERItems.REMNANT_HORSE_ARMOR);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_NAUTILUS_ARMOR, ERItems.REMNANT_NAUTILUS_ARMOR);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_HORSE_ARMOR, ERItems.FEATHERZEAL_HORSE_ARMOR);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_NAUTILUS_ARMOR, ERItems.FEATHERZEAL_NAUTILUS_ARMOR);
+	}
+}

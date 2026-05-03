@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "end_reborn:purpur",
+  "result": {
+    "id": "minecraft:purpur_pillar"
+  }
+}
