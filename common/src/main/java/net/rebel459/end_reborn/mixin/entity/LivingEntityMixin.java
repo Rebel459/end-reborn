@@ -7,8 +7,10 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.rebel459.end_reborn.registry.ERAttributes;
+import org.jspecify.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,6 +24,9 @@ public abstract class LivingEntityMixin {
     @Shadow
     public abstract double getAttributeValue(Holder<Attribute> attribute);
 
+    @Shadow
+    public abstract @Nullable AttributeInstance getAttribute(Holder<Attribute> attribute);
+
     @ModifyVariable(
             method = "addEffect(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)Z",
             at = @At(value = "HEAD"),
@@ -30,7 +35,9 @@ public abstract class LivingEntityMixin {
     )
     private MobEffectInstance magicResistance(MobEffectInstance instance) {
         if (instance.getEffect().value().getCategory() == MobEffectCategory.HARMFUL) {
-            int duration = (int) Math.round((instance.getDuration() * (1 - 0.125 * Math.min(this.getAttributeValue(ERAttributes.MAGIC_RESISTANCE), 8))));
+            double magicResistance = 0;
+            if (this.getAttribute(ERAttributes.MAGIC_RESISTANCE) != null) magicResistance = this.getAttributeValue(ERAttributes.MAGIC_RESISTANCE);
+            int duration = (int) Math.round((instance.getDuration() * (1 - 0.125 * Math.min(magicResistance, 8))));
             return new MobEffectInstance(instance.getEffect(), duration, instance.getAmplifier(), instance.isAmbient(), instance.isVisible(), instance.showIcon());
         }
         else return instance;
@@ -38,12 +45,16 @@ public abstract class LivingEntityMixin {
 
     @WrapOperation(method = "igniteForTicks", at = @At(value = "INVOKE", target = "Lnet/minecraft/util/Mth;ceil(D)I"))
     private int burningResistance(double v, Operation<Integer> original) {
-        return original.call(v * (1 - 0.25 * Math.min(this.getAttributeValue(ERAttributes.BURNING_RESISTANCE), 4)));
+        double burningResistance = 0;
+        if (this.getAttribute(ERAttributes.BURNING_RESISTANCE) != null) burningResistance = this.getAttributeValue(ERAttributes.BURNING_RESISTANCE);
+        return original.call(v * (1 - 0.25 * Math.min(burningResistance, 4)));
     }
 
     @WrapOperation(method = "calculateFallPower", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;getAttributeValue(Lnet/minecraft/core/Holder;)D"))
     private double fallResistance(LivingEntity entity, Holder<Attribute> attribute, Operation<Double> original) {
-        return original.call(entity, attribute) + this.getAttributeValue(ERAttributes.FALL_RESISTANCE) * 3D;
+        double fallResistance = 0;
+        if (this.getAttribute(ERAttributes.FALL_RESISTANCE) != null) fallResistance = this.getAttributeValue(ERAttributes.FALL_RESISTANCE);
+        return original.call(entity, attribute) + fallResistance * 3D;
     }
 
     @Inject(method = "createLivingAttributes", at = @At(value = "TAIL"), cancellable = true)
