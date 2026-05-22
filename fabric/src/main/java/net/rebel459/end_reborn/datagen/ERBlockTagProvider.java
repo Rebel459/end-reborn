@@ -88,7 +88,7 @@ public final class ERBlockTagProvider extends FabricTagsProvider.BlockTagsProvid
 		this.valueLookupBuilder(BlockTags.TRAPDOORS)
 				.add(ERBlocks.CHORUS_TRAPDOOR.get());
 
-		this.valueLookupBuilder(BlockTags.FENCES)
+		this.valueLookupBuilder(BlockTags.WOODEN_FENCES)
 				.add(ERBlocks.CHORUS_FENCE.get());
 
         this.valueLookupBuilder(BlockTags.FENCE_GATES)

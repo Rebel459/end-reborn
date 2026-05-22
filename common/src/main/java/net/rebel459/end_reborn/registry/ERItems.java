@@ -11,8 +11,7 @@ import net.minecraft.world.item.Item.Properties;
 import net.minecraft.world.item.component.DamageResistant;
 import net.minecraft.world.item.equipment.ArmorType;
 import net.rebel459.unified.platform.UnifiedRegistries;
-import net.rebel459.unified.util.SuppliedItem;
-import org.spongepowered.asm.mixin.Unique;
+import net.rebel459.unified.util.registry.SuppliedItem;
 
 public final class ERItems {
     

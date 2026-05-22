@@ -6,6 +6,7 @@ public class EndRebornFabricClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        EndReborn.init();
+        EndRebornClient.initRegistries();
+        EndRebornClient.init();
     }
 }

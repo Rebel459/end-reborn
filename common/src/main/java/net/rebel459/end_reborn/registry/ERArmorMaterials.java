@@ -55,9 +55,9 @@ public interface ERArmorMaterials {
 
     private static Identifier getId(ERAttributes.Type specialAttribute) {
         return switch(specialAttribute) {
-            case MAGIC_RESISTANCE -> MAGIC_RESISTANCE_ID;
-            case BURNING_RESISTANCE -> BURNING_RESISTANCE_ID;
-            case FALL_RESISTANCE -> FALL_RESISTANCE_ID;
+            case MAGIC_RESISTANCE -> EndReborn.id("magic_resistance");
+            case BURNING_RESISTANCE -> EndReborn.id("burning_resistance");
+            case FALL_RESISTANCE -> EndReborn.id("fall_resistance");
         };
     }
 
@@ -65,18 +65,10 @@ public interface ERArmorMaterials {
         int multiplier = 1;
         if (type == ArmorType.BODY && Objects.equals(idModifier, "")) multiplier = 4;
         return ItemAttributeModifiers.builder()
-                .add(Attributes.ARMOR, new AttributeModifier(ARMOR_ID, ArmorMaterials.NETHERITE.defense().get(type), AttributeModifier.Operation.ADD_VALUE), slot)
-                .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(ARMOR_TOUGHNESS_ID, ArmorMaterials.NETHERITE.toughness() * multiplier, AttributeModifier.Operation.ADD_VALUE), slot)
-                .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(KNOCKBACK_RESISTANCE_ID, ArmorMaterials.NETHERITE.knockbackResistance() * multiplier, AttributeModifier.Operation.ADD_VALUE), slot)
+                .add(Attributes.ARMOR, new AttributeModifier(EndReborn.id("armor" + idModifier), ArmorMaterials.NETHERITE.defense().get(type), AttributeModifier.Operation.ADD_VALUE), slot)
+                .add(Attributes.ARMOR_TOUGHNESS, new AttributeModifier(EndReborn.id("armor_toughness" + idModifier), ArmorMaterials.NETHERITE.toughness() * multiplier, AttributeModifier.Operation.ADD_VALUE), slot)
+                .add(Attributes.KNOCKBACK_RESISTANCE, new AttributeModifier(EndReborn.id("knockback_resistance" + idModifier), ArmorMaterials.NETHERITE.knockbackResistance() * multiplier, AttributeModifier.Operation.ADD_VALUE), slot)
                 .add(specialAttribute, new AttributeModifier(specialId.withPath(specialId.getPath() + idModifier), multiplier, AttributeModifier.Operation.ADD_VALUE), slot)
                 .build();
     }
-
-    Identifier ARMOR_ID = EndReborn.id("armor");
-    Identifier ARMOR_TOUGHNESS_ID = EndReborn.id("armor_toughness");
-    Identifier KNOCKBACK_RESISTANCE_ID = EndReborn.id("knockback_resistance");
-
-    Identifier MAGIC_RESISTANCE_ID = EndReborn.id("magic_resistance");
-    Identifier BURNING_RESISTANCE_ID = EndReborn.id("burning_resistance");
-    Identifier FALL_RESISTANCE_ID = EndReborn.id("fall_resistance");
 }

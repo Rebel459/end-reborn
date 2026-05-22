@@ -8,7 +8,7 @@ import net.rebel459.unified.platform.UnifiedRegistries;
 
 public class ERAttributes {
 
-    public static UnifiedRegistries.DeferredRegistry ATTRIBUTES = UnifiedRegistries.DeferredRegistry.create(EndReborn.MOD_ID, BuiltInRegistries.ATTRIBUTE);
+    public static UnifiedRegistries.DeferredRegistry<Attribute> ATTRIBUTES = UnifiedRegistries.DeferredRegistry.create(EndReborn.MOD_ID, BuiltInRegistries.ATTRIBUTE);
 
     public static final Holder<Attribute> MAGIC_RESISTANCE = ATTRIBUTES.registerForHolder("magic_resistance", () -> new Attribute("attribute." + EndReborn.MOD_ID + ".magic_resistance", 0F).setSyncable(true));
     public static final Holder<Attribute> BURNING_RESISTANCE = ATTRIBUTES.registerForHolder("burning_resistance", () -> new Attribute("attribute." + EndReborn.MOD_ID + ".burning_resistance", 0F).setSyncable(true));

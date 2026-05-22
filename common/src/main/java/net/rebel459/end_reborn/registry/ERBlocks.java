@@ -1,14 +1,6 @@
 package net.rebel459.end_reborn.registry;
 
 import net.minecraft.core.Direction;
-import net.minecraft.core.Registry;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.data.BlockFamilies;
-import net.minecraft.data.BlockFamily;
-import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
@@ -23,10 +15,8 @@ import net.rebel459.end_reborn.util.fabric.BlockSetTypeBuilder;
 import net.rebel459.end_reborn.util.fabric.WoodTypeBuilder;
 import net.rebel459.unified.platform.UnifiedHelpers;
 import net.rebel459.unified.platform.UnifiedRegistries;
-import net.rebel459.unified.util.SuppliedBlock;
-import org.jetbrains.annotations.NotNull;
+import net.rebel459.unified.util.registry.SuppliedBlock;
 
-import java.util.function.Function;
 import java.util.function.Supplier;
 
 public class ERBlocks {

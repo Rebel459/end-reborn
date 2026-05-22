@@ -260,7 +260,7 @@
         "type": "event"
       }
     ],
-    "subtitle": "subtitles.block.generic.step"
+    "subtitle": "subtitles.block.generic.footsteps"
   },
   "block.end_iron_ore.break": {
     "replace": true,
@@ -310,7 +310,7 @@
         "type": "event"
       }
     ],
-    "subtitle": "subtitles.block.generic.step"
+    "subtitle": "subtitles.block.generic.footsteps"
   },
   "block.mirestone_iron_ore.break": {
     "replace": true,
@@ -360,6 +360,6 @@
         "type": "event"
       }
     ],
-    "subtitle": "subtitles.block.generic.step"
+    "subtitle": "subtitles.block.generic.footsteps"
   }
 }
