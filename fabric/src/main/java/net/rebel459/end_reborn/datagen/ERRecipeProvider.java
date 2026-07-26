@@ -14,6 +14,7 @@ import net.rebel459.end_reborn.registry.ERItems;
 import net.rebel459.end_reborn.tag.ERItemTags;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -25,7 +26,7 @@ public final class ERRecipeProvider extends FabricRecipeProvider {
 
     @Contract("_, _ -> new")
     @Override
-    protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput exporter) {
+    protected @NotNull RecipeProvider createRecipeProvider(HolderLookup.@NonNull Provider provider, @NonNull RecipeOutput exporter) {
         return new RecipeProvider(provider, exporter) {
             @Override
             public void buildRecipes() {

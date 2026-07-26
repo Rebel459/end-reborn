@@ -1,6 +1,5 @@
 package net.rebel459.end_reborn.registry;
 
-import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ToolMaterial;

@@ -4,7 +4,6 @@ import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.ConfigData;
 import me.shedaniel.autoconfig.annotation.Config;
 import me.shedaniel.autoconfig.annotation.ConfigEntry;
-import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.rebel459.end_reborn.EndReborn;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
@@ -31,5 +30,4 @@ public class ERConfig implements ConfigData {
 
   @ConfigEntry.Category("default")
   public boolean enderscape_integration = true;
-
 }

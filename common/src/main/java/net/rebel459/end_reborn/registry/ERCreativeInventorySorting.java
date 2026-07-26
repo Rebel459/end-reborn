@@ -71,14 +71,14 @@ public class ERCreativeInventorySorting {
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.FUNCTIONAL_BLOCKS, Items.WARPED_HANGING_SIGN, ERItems.CHORUS_SIGN, ERItems.CHORUS_HANGING_SIGN);
 
 		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.REMNANT_SWORD);
-		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.REMNANT_AXE);
-		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.REMNANT_SPEAR);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_AXE, ERItems.REMNANT_AXE);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_SPEAR, ERItems.REMNANT_SPEAR);
 
 		UnifiedHelpers.CREATIVE_ENTRIES.insertBefore(CreativeModeTabs.COMBAT, Items.NETHERITE_HELMET, ERItems.REMNANT_HELMET, ERItems.REMNANT_CHESTPLATE, ERItems.REMNANT_LEGGINGS, ERItems.REMNANT_BOOTS);
 
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.FEATHERZEAL_SWORD);
-		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.FEATHERZEAL_AXE);
-		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_SWORD, ERItems.FEATHERZEAL_SPEAR);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_AXE, ERItems.FEATHERZEAL_AXE);
+		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_SPEAR, ERItems.FEATHERZEAL_SPEAR);
 
 		UnifiedHelpers.CREATIVE_ENTRIES.insertAfter(CreativeModeTabs.COMBAT, Items.NETHERITE_BOOTS, ERItems.FEATHERZEAL_HELMET, ERItems.FEATHERZEAL_CHESTPLATE, ERItems.FEATHERZEAL_LEGGINGS, ERItems.FEATHERZEAL_BOOTS);
 

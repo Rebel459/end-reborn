@@ -2,18 +2,9 @@ package net.rebel459.end_reborn.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderGetter;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.world.item.Item;
-import net.rebel459.end_reborn.EndReborn;
-import net.rebel459.end_reborn.registry.ERItems;
 import org.jetbrains.annotations.NotNull;
-
-import java.util.Optional;
+import org.jspecify.annotations.NonNull;
 
 public final class ERDataGenerator implements DataGeneratorEntrypoint {
 
@@ -30,7 +21,7 @@ public final class ERDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ERRecipeProvider::new);
 	}
 
-	public void buildRegistry(RegistrySetBuilder registrySetBuilder) {
+	public void buildRegistry(@NonNull RegistrySetBuilder registrySetBuilder) {
 		ERRegistryProvider.buildRegistry(registrySetBuilder);
 	}
 }

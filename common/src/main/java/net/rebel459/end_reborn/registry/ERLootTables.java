@@ -38,7 +38,7 @@ public class ERLootTables {
 				}
 				if (BuiltInLootTables.ANCIENT_CITY.equals(id)) {
 					pool = LootPool.lootPool().setRolls(ConstantValue.exactly(1.0F))
-							.add(EmptyLootItem.emptyItem().setWeight(17))
+							.add(EmptyLootItem.emptyItem().setWeight(23))
 							.add(LootItem.lootTableItem(ERItems.REMNANT_SCRAP).setWeight(1));
 					tableBuilder.addPool(pool);
 				}

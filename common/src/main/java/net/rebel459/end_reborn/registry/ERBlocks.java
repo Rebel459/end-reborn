@@ -200,14 +200,14 @@ public class ERBlocks {
                     .instrument(NoteBlockInstrument.BASS)
                     .sound(SoundType.SHELF)
                     .ignitedByLava().strength(2.0F, 3.0F),
-            BlockEntityType.SHELF
+            () -> BlockEntityType.SHELF
     );
 
     public static final SuppliedBlock CHORUS_SIGN = BLOCKS.registerWithoutItem("chorus_sign",
             properties -> new StandingSignBlock(CHORUS_WOOD_TYPE, properties),
             () -> Properties.ofFullCopy(Blocks.OAK_SIGN)
                     .mapColor(CHORUS_PLANKS.get().defaultMapColor()),
-            BlockEntityType.SIGN
+            () -> BlockEntityType.SIGN
     );
     public static final SuppliedBlock CHORUS_WALL_SIGN = BLOCKS.registerWithoutItem("chorus_wall_sign",
             properties -> new WallSignBlock(CHORUS_WOOD_TYPE, properties),
@@ -215,13 +215,13 @@ public class ERBlocks {
                     .mapColor(CHORUS_PLANKS.get().defaultMapColor())
                     .overrideDescription(CHORUS_SIGN.get().getDescriptionId())
                     .overrideLootTable(CHORUS_SIGN.get().getLootTable()),
-            BlockEntityType.SIGN
+            () -> BlockEntityType.SIGN
     );
     public static final SuppliedBlock CHORUS_HANGING_SIGN = BLOCKS.registerWithoutItem("chorus_hanging_sign",
             properties -> new CeilingHangingSignBlock(CHORUS_WOOD_TYPE, properties),
             () -> Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN)
                     .mapColor(CHORUS_PLANKS.get().defaultMapColor()),
-            BlockEntityType.HANGING_SIGN
+            () -> BlockEntityType.HANGING_SIGN
     );
     public static final SuppliedBlock CHORUS_WALL_HANGING_SIGN = BLOCKS.registerWithoutItem("chorus_wall_hanging_sign",
             properties -> new WallHangingSignBlock(CHORUS_WOOD_TYPE, properties),
@@ -229,7 +229,7 @@ public class ERBlocks {
                     .mapColor(CHORUS_PLANKS.get().defaultMapColor())
                     .overrideDescription(CHORUS_HANGING_SIGN.get().getDescriptionId())
                     .overrideLootTable(CHORUS_HANGING_SIGN.get().getLootTable()),
-            BlockEntityType.HANGING_SIGN
+            () -> BlockEntityType.HANGING_SIGN
     );
     public static final SuppliedBlock CHORUS_PRESSURE_PLATE = BLOCKS.register(
             "chorus_pressure_plate",
@@ -306,7 +306,7 @@ public class ERBlocks {
     public static void init() {}
 
     private static void registerStrippable() {
-        UnifiedHelpers.BLOCK_CONVERSIONS.addStrippable(CHORUS_BLOCK.get(), STRIPPED_CHORUS_BLOCK.get());
+        UnifiedHelpers.BLOCK_CONVERSIONS.addStrippable(CHORUS_BLOCK, STRIPPED_CHORUS_BLOCK);
     }
 
     public static void registerBlockProperties() {

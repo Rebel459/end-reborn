@@ -8,6 +8,7 @@ import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
 import net.rebel459.end_reborn.EndReborn;
 import net.rebel459.end_reborn.registry.ERTrimMaterials;
+import org.jspecify.annotations.NonNull;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -23,12 +24,12 @@ public class ERRegistryProvider extends FabricDynamicRegistryProvider {
     }
 
     @Override
-    public void configure(HolderLookup.Provider registries, Entries entries) {
+    public void configure(HolderLookup.Provider registries, @NonNull Entries entries) {
         addAll(entries, registries.lookupOrThrow(Registries.TRIM_MATERIAL), EndReborn.MOD_ID);
     }
 
     @Override
-    public String getName() {
+    public @NonNull String getName() {
         return "End Reborn";
     }
 

@@ -1,19 +1,18 @@
 package net.rebel459.end_reborn.registry;
 
-import com.mojang.logging.LogUtils;
 import net.minecraft.core.Holder;
-import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.item.equipment.ArmorType;
-import net.rebel459.end_reborn.EndReborn;
-import net.rebel459.end_reborn.tag.ERItemTags;
 import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.minecraft.world.item.equipment.ArmorMaterial;
 import net.minecraft.world.item.equipment.ArmorMaterials;
+import net.minecraft.world.item.equipment.ArmorType;
+import net.rebel459.end_reborn.EndReborn;
+import net.rebel459.end_reborn.tag.ERItemTags;
 
 import java.util.Objects;
 

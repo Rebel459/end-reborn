@@ -68,11 +68,11 @@ public final class ERItems {
     // Entity Items
     public static final SuppliedItem CHORUS_RAFT = ITEMS.register("chorus_raft",
             properties -> new BoatItem(EREntityTypes.CHORUS_RAFT.get(), properties),
-            () -> new Properties()
+            Properties::new
     );
     public static final SuppliedItem CHORUS_CHEST_RAFT = ITEMS.register("chorus_chest_raft",
             properties -> new BoatItem(EREntityTypes.CHORUS_CHEST_RAFT.get(), properties),
-            () -> new Properties()
+            Properties::new
     );
 
     // Block Items

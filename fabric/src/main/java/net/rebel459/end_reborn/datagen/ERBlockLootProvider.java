@@ -15,6 +15,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
 import net.rebel459.end_reborn.registry.ERBlocks;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -61,7 +62,7 @@ public final class ERBlockLootProvider extends FabricBlockLootSubProvider {
 		this.add(ERBlocks.CUT_AMETRUR_SLAB.get(), this::createSlabItemTable);
 	}
 
-	public LootTable.@NotNull Builder createMultifaceBlockDrops(Block drop) {
+	public LootTable.@NonNull Builder createMultifaceBlockDrops(@NonNull Block drop) {
 		return LootTable.lootTable()
 			.withPool(
 				LootPool.lootPool()

@@ -15,8 +15,8 @@ public final class EndRebornClient {
     }
 
     public static void init() {
-        UnifiedClientHelpers.LEGACY_BABY_ARMOR.add(EREquipmentAssets.REMNANT, true);
-        UnifiedClientHelpers.LEGACY_BABY_ARMOR.add(EREquipmentAssets.FEATHERZEAL, true);
+        UnifiedClientHelpers.LEGACY_BABY_ARMOR.add(EREquipmentAssets.REMNANT);
+        UnifiedClientHelpers.LEGACY_BABY_ARMOR.add(EREquipmentAssets.FEATHERZEAL);
         if (UnifiedPlatform.isModLoaded("enderscape") && ERConfig.get().enderscape_integration) {
             UnifiedHelpers.PACKS.add(EndReborn.id("enderscape_integration"), PackType.REQUIRED_RESOURCES);
         }
