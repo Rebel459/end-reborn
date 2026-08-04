@@ -1,5 +1,6 @@
 package net.rebel459.end_reborn.mixin.entity;
 
+import com.llamalad7.mixinextras.injector.ModifyReturnValue;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import net.minecraft.core.Holder;
@@ -14,9 +15,7 @@ import org.jspecify.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public abstract class LivingEntityMixin {
@@ -57,12 +56,11 @@ public abstract class LivingEntityMixin {
         return original.call(entity, attribute) + fallResistance * 3D;
     }
 
-    @Inject(method = "createLivingAttributes", at = @At(value = "TAIL"), cancellable = true)
-    private static void addERAttributes(CallbackInfoReturnable<AttributeSupplier.Builder> cir) {
-        cir.setReturnValue(cir.getReturnValue()
+    @ModifyReturnValue(method = "createLivingAttributes", at = @At("RETURN"))
+    private static AttributeSupplier.Builder addERAttributes(AttributeSupplier.Builder builder) {
+        return builder
                 .add(ERAttributes.MAGIC_RESISTANCE)
                 .add(ERAttributes.BURNING_RESISTANCE)
-                .add(ERAttributes.FALL_RESISTANCE)
-        );
+                .add(ERAttributes.FALL_RESISTANCE);
     }
 }
