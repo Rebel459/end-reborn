@@ -3,9 +3,15 @@
   "category": "misc",
   "group": "remnant_template",
   "key": {
-    "#": "minecraft:diamond",
-    "U": "end_reborn:remnant_upgrade_smithing_template",
-    "X": "minecraft:cobbled_deepslate"
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "U": {
+      "item": "end_reborn:remnant_upgrade_smithing_template"
+    },
+    "X": {
+      "item": "minecraft:cobbled_deepslate"
+    }
   },
   "pattern": [
     "#U#",

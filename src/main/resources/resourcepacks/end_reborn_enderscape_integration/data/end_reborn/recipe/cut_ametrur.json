@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "end_reborn:ametrur"
+    "#": {
+      "item": "end_reborn:ametrur"
+    }
   },
   "pattern": [
     "##",

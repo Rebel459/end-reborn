@@ -3,8 +3,12 @@
   "category": "misc",
   "group": "hanging_sign",
   "key": {
-    "#": "end_reborn:stripped_chorus_block",
-    "X": "minecraft:chain"
+    "#": {
+      "item": "end_reborn:stripped_chorus_block"
+    },
+    "X": {
+      "item": "minecraft:chain"
+    }
   },
   "pattern": [
     "X X",

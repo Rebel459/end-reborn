@@ -2,5 +2,85 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "end_reborn:item/remnant_helmet"
-  }
+  },
+  "overrides": [
+    {
+      "model": "end_reborn:item/remnant_helmet_remnant_ingot_trim",
+      "predicate": {
+        "trim_type": 0.05
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_quartz_trim",
+      "predicate": {
+        "trim_type": 0.1
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_iron_trim",
+      "predicate": {
+        "trim_type": 0.2
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_featherzeal_ingot_trim",
+      "predicate": {
+        "trim_type": 0.25
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_netherite_trim",
+      "predicate": {
+        "trim_type": 0.3
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_redstone_trim",
+      "predicate": {
+        "trim_type": 0.4
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_crystalline_shard_trim",
+      "predicate": {
+        "trim_type": 0.45
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_copper_trim",
+      "predicate": {
+        "trim_type": 0.5
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_gold_trim",
+      "predicate": {
+        "trim_type": 0.6
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_emerald_trim",
+      "predicate": {
+        "trim_type": 0.7
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_diamond_trim",
+      "predicate": {
+        "trim_type": 0.8
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_lapis_trim",
+      "predicate": {
+        "trim_type": 0.9
+      }
+    },
+    {
+      "model": "end_reborn:item/remnant_helmet_amethyst_trim",
+      "predicate": {
+        "trim_type": 1.0
+      }
+    }
+  ]
 }

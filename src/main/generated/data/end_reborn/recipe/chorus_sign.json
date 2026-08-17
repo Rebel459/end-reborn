@@ -3,8 +3,12 @@
   "category": "misc",
   "group": "wooden_sign",
   "key": {
-    "#": "end_reborn:chorus_planks",
-    "X": "minecraft:stick"
+    "#": {
+      "item": "end_reborn:chorus_planks"
+    },
+    "X": {
+      "item": "minecraft:stick"
+    }
   },
   "pattern": [
     "###",

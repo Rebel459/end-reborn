@@ -3,8 +3,12 @@
   "category": "misc",
   "group": "wooden_fence",
   "key": {
-    "#": "minecraft:stick",
-    "W": "end_reborn:chorus_planks"
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "W": {
+      "item": "end_reborn:chorus_planks"
+    }
   },
   "pattern": [
     "W#W",

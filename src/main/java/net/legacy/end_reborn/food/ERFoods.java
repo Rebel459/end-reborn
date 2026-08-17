@@ -9,7 +9,7 @@ public class ERFoods {
     }
 
     static {
-        POPPED_CHORUS_FRUIT = (new FoodProperties.Builder()).nutrition(5).saturationModifier(0.6F).alwaysEdible().build();
+        POPPED_CHORUS_FRUIT = (new FoodProperties.Builder()).nutrition(5).saturationModifier(0.6F).alwaysEdible().fast().build();
     }
 
 }

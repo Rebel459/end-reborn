@@ -2,14 +2,30 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "minecraft:iron_ingot",
-    "minecraft:iron_ingot",
-    "minecraft:iron_ingot",
-    "minecraft:iron_ingot",
-    "end_reborn:featherzeal_scrap",
-    "end_reborn:featherzeal_scrap",
-    "end_reborn:featherzeal_scrap",
-    "end_reborn:featherzeal_scrap"
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "end_reborn:featherzeal_scrap"
+    },
+    {
+      "item": "end_reborn:featherzeal_scrap"
+    },
+    {
+      "item": "end_reborn:featherzeal_scrap"
+    },
+    {
+      "item": "end_reborn:featherzeal_scrap"
+    }
   ],
   "result": {
     "count": 1,

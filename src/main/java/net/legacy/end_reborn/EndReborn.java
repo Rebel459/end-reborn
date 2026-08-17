@@ -34,6 +34,7 @@ public class EndReborn implements ModInitializer {
 	public void onInitialize() {
 		Optional<ModContainer> modContainer = FabricLoader.getInstance().getModContainer("end_reborn");
 
+		EREntityTypes.init();
 		ERItems.init();
 		EREquipmentItems.init();
 		ERItemComponents.init();
@@ -45,11 +46,6 @@ public class EndReborn implements ModInitializer {
 		ERLootTables.init();
 		ERConfig.initClient();
 
-		ResourceManagerHelper.registerBuiltinResourcePack(
-				ResourceLocation.fromNamespaceAndPath(ERConstants.MOD_ID, "end_reborn_asset_overrides"), modContainer.get(),
-				Component.translatable("pack.end_reborn.end_reborn_asset_overrides"),
-				ResourcePackActivationType.ALWAYS_ENABLED
-		);
 		if (FabricLoader.getInstance().isModLoaded("progression_reborn")) {
 			isProgressionRebornLoaded = true;
 		}

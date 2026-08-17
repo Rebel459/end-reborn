@@ -3,7 +3,9 @@
   "category": "redstone",
   "group": "wooden_pressure_plate",
   "key": {
-    "#": "end_reborn:chorus_planks"
+    "#": {
+      "item": "end_reborn:chorus_planks"
+    }
   },
   "pattern": [
     "##"

@@ -2,15 +2,33 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "end_reborn:remnant_ingot",
-    "end_reborn:remnant_ingot",
-    "end_reborn:remnant_ingot",
-    "end_reborn:remnant_ingot",
-    "end_reborn:remnant_ingot",
-    "end_reborn:remnant_ingot",
-    "end_reborn:remnant_ingot",
-    "end_reborn:remnant_ingot",
-    "end_reborn:remnant_ingot"
+    {
+      "item": "end_reborn:remnant_ingot"
+    },
+    {
+      "item": "end_reborn:remnant_ingot"
+    },
+    {
+      "item": "end_reborn:remnant_ingot"
+    },
+    {
+      "item": "end_reborn:remnant_ingot"
+    },
+    {
+      "item": "end_reborn:remnant_ingot"
+    },
+    {
+      "item": "end_reborn:remnant_ingot"
+    },
+    {
+      "item": "end_reborn:remnant_ingot"
+    },
+    {
+      "item": "end_reborn:remnant_ingot"
+    },
+    {
+      "item": "end_reborn:remnant_ingot"
+    }
   ],
   "result": {
     "count": 1,

@@ -1,8 +1,14 @@
 {
   "type": "minecraft:smithing_transform",
-  "template": "end_reborn:featherzeal_upgrade_smithing_template",
-  "base": "minecraft:diamond_axe",
-  "addition": "end_reborn:featherzeal_ingot",
+  "template": {
+    "item": "end_reborn:featherzeal_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "minecraft:diamond_axe"
+  },
+  "addition": {
+    "item": "end_reborn:featherzeal_ingot"
+  },
   "result": {
     "id": "end_reborn:featherzeal_axe"
   }

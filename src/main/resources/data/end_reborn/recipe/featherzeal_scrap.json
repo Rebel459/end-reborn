@@ -3,7 +3,9 @@
   "category": "misc",
   "cookingtime": 200,
   "experience": 2.0,
-  "ingredient": "end_reborn:timelost_fragments",
+  "ingredient": {
+    "item": "end_reborn:timelost_fragments"
+  },
   "result": {
     "id": "end_reborn:featherzeal_scrap"
   }

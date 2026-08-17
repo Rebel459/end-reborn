@@ -3,7 +3,9 @@
   "category": "building",
   "group": "wooden_stairs",
   "key": {
-    "#": "end_reborn:chorus_planks"
+    "#": {
+      "item": "end_reborn:chorus_planks"
+    }
   },
   "pattern": [
     "#  ",

@@ -4,5 +4,6 @@
     "color": "#555555",
     "translate": "trim_material.end_reborn.remnant_ingot"
   },
-  "ingredient": "end_reborn:remnant_ingot"
+  "ingredient": "end_reborn:remnant_ingot",
+  "item_model_index": 0.05
 }

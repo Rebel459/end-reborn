@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "end_reborn:remnant_block"
+    {
+      "item": "end_reborn:remnant_block"
+    }
   ],
   "result": {
     "count": 9,

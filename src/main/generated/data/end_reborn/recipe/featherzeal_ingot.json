@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    "end_reborn:featherzeal_block"
+    {
+      "item": "end_reborn:featherzeal_block"
+    }
   ],
   "result": {
     "count": 9,

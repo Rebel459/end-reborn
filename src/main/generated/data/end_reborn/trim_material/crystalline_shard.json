@@ -4,5 +4,6 @@
     "color": "#FFFFFF",
     "translate": "trim_material.end_reborn.crystalline_shard"
   },
-  "ingredient": "end_reborn:crystalline_shard"
+  "ingredient": "end_reborn:crystalline_shard",
+  "item_model_index": 0.45
 }

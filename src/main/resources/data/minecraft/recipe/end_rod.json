@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:iron_ingot",
-    "/": "end_reborn:crystalline_shard"
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "/": {
+      "item": "end_reborn:crystalline_shard"
+    }
   },
   "pattern": [
     "/",
