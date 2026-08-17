@@ -16,6 +16,9 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SignItem;
 import net.minecraft.world.item.HangingSignItem;
 import net.minecraft.world.item.SmithingTemplateItem;
+import net.minecraft.world.entity.vehicle.Boat;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.Vec3;
 import net.legacy.end_reborn.item.ERBoatItem;
 import net.legacy.end_reborn.entity.ChorusChestRaft;
 import net.legacy.end_reborn.entity.ChorusRaft;
@@ -71,12 +74,12 @@ public final class ERItems {
 
     // Boats
     public static final Item CHORUS_RAFT = register("chorus_raft",
-            properties -> new ERBoatItem((level, pos) -> new ChorusRaft(level, pos.x, pos.y, pos.z), properties),
+            properties -> new ERBoatItem((level, pos) -> createBoat(EREntityTypes.CHORUS_RAFT, level, pos), properties),
             new Item.Properties()
                     .stacksTo(1)
     );
     public static final Item CHORUS_CHEST_RAFT = register("chorus_chest_raft",
-            properties -> new ERBoatItem((level, pos) -> new ChorusChestRaft(level, pos.x, pos.y, pos.z), properties),
+            properties -> new ERBoatItem((level, pos) -> createBoat(EREntityTypes.CHORUS_CHEST_RAFT, level, pos), properties),
             new Item.Properties()
                     .stacksTo(1)
     );
@@ -182,6 +185,15 @@ public final class ERItems {
     );
 
     public static void init() {
+    }
+
+    private static Boat createBoat(net.minecraft.world.entity.EntityType<? extends Boat> type, Level level, Vec3 position) {
+        Boat boat = type.create(level);
+        if (boat == null) {
+            throw new IllegalStateException("Unable to create " + type);
+        }
+        boat.setPos(position);
+        return boat;
     }
 
     private static @NotNull <T extends Item> T register(String name, @NotNull Function<Item.Properties, Item> function, Item.@NotNull Properties properties) {
