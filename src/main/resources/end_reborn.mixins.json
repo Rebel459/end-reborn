@@ -4,7 +4,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "ItemEntityMixin",
-    "ToolMaterialMixin"
+    "TiersMixin"
   ],
   "injectors": {
     "defaultRequire": 1

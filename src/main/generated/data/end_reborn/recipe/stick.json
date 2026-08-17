@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "end_reborn:chorus_spine"
+    "#": {
+      "item": "end_reborn:chorus_spine"
+    }
   },
   "pattern": [
     "#",

@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:iron_nugget",
-    "X": "end_reborn:crystalline_shard"
+    "#": {
+      "item": "minecraft:iron_nugget"
+    },
+    "X": {
+      "item": "end_reborn:crystalline_shard"
+    }
   },
   "pattern": [
     "###",

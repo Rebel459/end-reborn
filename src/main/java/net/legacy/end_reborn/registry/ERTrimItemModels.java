@@ -7,6 +7,8 @@ import net.legacy.end_reborn.ERConstants;
 import net.minecraft.resources.ResourceLocation;
 import net.ramixin.mixson.inline.Mixson;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 public final class ERTrimItemModels {
@@ -35,24 +37,46 @@ public final class ERTrimItemModels {
     private static void registerItemModelModification(String armorPieceType, ResourceLocation armorMaterial) {
         Mixson.registerEvent(
                 1,
-                ResourceLocation.fromNamespaceAndPath(armorMaterial.getNamespace(), "items/" + armorMaterial.getPath() + "_" + armorPieceType).toString(),
+                ResourceLocation.fromNamespaceAndPath(armorMaterial.getNamespace(), "models/item/" + armorMaterial.getPath() + "_" + armorPieceType).toString(),
                 ERConstants.id("add_trims_to_" + armorMaterial.getPath() + "_" + armorPieceType).toString(),
                 (context) -> {
                     JsonObject rootJson = context.getFile().getAsJsonObject();
-                    JsonObject modelJson = rootJson.getAsJsonObject("model");
-                    JsonArray casesArray = modelJson.getAsJsonArray("cases");
-                    JsonObject baseCase = casesArray.get(0).getAsJsonObject();
+                    JsonArray overridesArray = rootJson.getAsJsonArray("overrides");
+                    if (overridesArray == null) {
+                        overridesArray = new JsonArray();
+                        rootJson.add("overrides", overridesArray);
+                    }
+
+                    List<JsonElement> entries = new ArrayList<>();
+                    overridesArray.asList().forEach(entries::add);
 
                     ERTrimMaterials.TRIM_MATERIALS.forEach(trimMaterial -> {
-                        JsonObject newCase = baseCase.deepCopy();
-
-                        newCase.addProperty("when", trimMaterial.location().toString());
-                        newCase.getAsJsonObject("model").addProperty("model", ERConstants.id("item/" + armorMaterial.getPath() + "_" + armorPieceType + "_" + trimMaterial.location().getPath() + "_trim").toString());
-
-                        casesArray.add(newCase);
+                        String trimName = trimMaterial.location().getPath();
+                        if (trimName.endsWith("_darker")) {
+                            return;
+                        }
+                        entries.add(createTrimOverride(
+                                ERTrimMaterials.ITEM_MODEL_INDICES.get(trimMaterial.location()),
+                                ERConstants.id("item/" + armorMaterial.getPath() + "_" + armorPieceType + "_" + trimName + "_trim")
+                        ));
                     });
+
+                    entries.sort(Comparator.comparingDouble(entry -> entry.getAsJsonObject().getAsJsonObject("predicate").get("trim_type").getAsFloat()));
+
+                    JsonArray sortedArray = new JsonArray();
+                    entries.forEach(sortedArray::add);
+                    rootJson.add("overrides", sortedArray);
                 }
         );
+    }
+
+    private static JsonObject createTrimOverride(float trimTypeIndex, ResourceLocation model) {
+        JsonObject override = new JsonObject();
+        JsonObject predicate = new JsonObject();
+        predicate.addProperty("trim_type", trimTypeIndex);
+        override.add("predicate", predicate);
+        override.addProperty("model", model.toString());
+        return override;
     }
 
     private static void registerAtlasModification(String atlasName) {

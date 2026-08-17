@@ -34,9 +34,9 @@ public abstract class ItemEntityMixin extends Entity {
 
     @Inject(at = @At("HEAD"), method = "tick")
     private void damageItem(CallbackInfo info) {
-        if (this.getY() < this.level().getMinY() && this.getItem().is(ERItemTags.VOID_IMMUNE)) {
+        if (this.getY() < this.level().getMinBuildHeight() && this.getItem().is(ERItemTags.VOID_IMMUNE)) {
             this.unsetRemoved();
-            this.teleportTo(this.getX(), this.level().getMinY(), this.getZ());
+            this.teleportTo(this.getX(), this.level().getMinBuildHeight(), this.getZ());
             this.setDeltaMovement(0, 0, 0);
             this.setNoGravity(true);
         }

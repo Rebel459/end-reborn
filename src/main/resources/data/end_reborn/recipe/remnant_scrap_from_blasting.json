@@ -3,7 +3,9 @@
   "category": "misc",
   "cookingtime": 100,
   "experience": 2.0,
-  "ingredient": "end_reborn:forgotten_remains",
+  "ingredient": {
+    "item": "end_reborn:forgotten_remains"
+  },
   "result": {
     "id": "end_reborn:remnant_scrap"
   }

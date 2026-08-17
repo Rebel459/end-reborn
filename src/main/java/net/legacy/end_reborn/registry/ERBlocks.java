@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityT
 import net.fabricmc.fabric.api.object.builder.v1.block.type.BlockSetTypeBuilder;
 import net.fabricmc.fabric.api.object.builder.v1.block.type.WoodTypeBuilder;
 import net.fabricmc.fabric.api.registry.FlammableBlockRegistry;
-import net.fabricmc.fabric.api.registry.FuelRegistryEvents;
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.legacy.end_reborn.ERConstants;
 import net.legacy.end_reborn.sound.ERBlockSounds;
@@ -212,10 +212,8 @@ public class ERBlocks {
     );
     public static final SignBlock CHORUS_WALL_SIGN = registerWithoutItem("chorus_wall_sign",
             properties -> new WallSignBlock(CHORUS_WOOD_TYPE, properties),
-            Properties.ofFullCopy(Blocks.OAK_WALL_SIGN)
+            Properties.ofFullCopy(CHORUS_SIGN)
                     .mapColor(CHORUS_PLANKS.defaultMapColor())
-                    .overrideDescription(CHORUS_SIGN.getDescriptionId())
-                    .overrideLootTable(CHORUS_SIGN.getLootTable())
     );
     public static final CeilingHangingSignBlock CHORUS_HANGING_SIGN = registerWithoutItem("chorus_hanging_sign",
             properties -> new CeilingHangingSignBlock(CHORUS_WOOD_TYPE, properties),
@@ -224,10 +222,8 @@ public class ERBlocks {
     );
     public static final WallHangingSignBlock CHORUS_WALL_HANGING_SIGN = registerWithoutItem("chorus_wall_hanging_sign",
             properties -> new WallHangingSignBlock(CHORUS_WOOD_TYPE, properties),
-            Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN)
+            Properties.ofFullCopy(CHORUS_HANGING_SIGN)
                     .mapColor(CHORUS_PLANKS.defaultMapColor())
-                    .overrideDescription(CHORUS_HANGING_SIGN.getDescriptionId())
-                    .overrideLootTable(CHORUS_HANGING_SIGN.getLootTable())
     );
     public static final Block CHORUS_PRESSURE_PLATE = register(
             "chorus_pressure_plate",
@@ -370,24 +366,23 @@ public class ERBlocks {
     }
 
     private static void registerFuels() {
-        FuelRegistryEvents.BUILD.register((builder, context) -> {
-            builder.add(CHORUS_BLOCK.asItem(), 300);
-            builder.add(STRIPPED_CHORUS_BLOCK.asItem(), 300);
-            builder.add(CHORUS_PLANKS.asItem(), 300);
-            builder.add(CHORUS_MOSAIC.asItem(), 300);
-            builder.add(CHORUS_SLAB.asItem(), 150);
-            builder.add(CHORUS_MOSAIC_SLAB.asItem(), 150);
-            builder.add(CHORUS_STAIRS.asItem(), 300);
-            builder.add(CHORUS_MOSAIC_STAIRS.asItem(), 300);
-            builder.add(CHORUS_PRESSURE_PLATE.asItem(), 300);
-            builder.add(CHORUS_BUTTON.asItem(), 100);
-            builder.add(CHORUS_TRAPDOOR.asItem(), 300);
-            builder.add(CHORUS_FENCE_GATE.asItem(), 300);
-            builder.add(CHORUS_FENCE.asItem(), 300);
-            builder.add(ERItems.CHORUS_SIGN, 300);
-            builder.add(ERItems.CHORUS_HANGING_SIGN, 800);
-            builder.add(ERItems.CHORUS_SPINE, 100);
-        });
+        FuelRegistry fuelRegistry = FuelRegistry.INSTANCE;
+        fuelRegistry.add(CHORUS_BLOCK.asItem(), 300);
+        fuelRegistry.add(STRIPPED_CHORUS_BLOCK.asItem(), 300);
+        fuelRegistry.add(CHORUS_PLANKS.asItem(), 300);
+        fuelRegistry.add(CHORUS_MOSAIC.asItem(), 300);
+        fuelRegistry.add(CHORUS_SLAB.asItem(), 150);
+        fuelRegistry.add(CHORUS_MOSAIC_SLAB.asItem(), 150);
+        fuelRegistry.add(CHORUS_STAIRS.asItem(), 300);
+        fuelRegistry.add(CHORUS_MOSAIC_STAIRS.asItem(), 300);
+        fuelRegistry.add(CHORUS_PRESSURE_PLATE.asItem(), 300);
+        fuelRegistry.add(CHORUS_BUTTON.asItem(), 100);
+        fuelRegistry.add(CHORUS_TRAPDOOR.asItem(), 300);
+        fuelRegistry.add(CHORUS_FENCE_GATE.asItem(), 300);
+        fuelRegistry.add(CHORUS_FENCE.asItem(), 300);
+        fuelRegistry.add(ERItems.CHORUS_SIGN, 300);
+        fuelRegistry.add(ERItems.CHORUS_HANGING_SIGN, 800);
+        fuelRegistry.add(ERItems.CHORUS_SPINE, 100);
 
     }
 
@@ -410,7 +405,7 @@ public class ERBlocks {
     }
 
     private static <T extends Block> T makeBlock(@NotNull Function<Properties, T> function, @NotNull Properties properties, ResourceLocation id) {
-        return function.apply(properties.setId(ResourceKey.create(Registries.BLOCK, id)));
+        return function.apply(properties);
     }
 
     public static BlockBehaviour.Properties logProperties(MapColor sideColor, MapColor topColor, SoundType sound) {
@@ -423,13 +418,7 @@ public class ERBlocks {
     }
 
     private static BlockBehaviour.Properties wallVariant(Block baseBlock, boolean overrideDescription) {
-        BlockBehaviour.Properties properties = baseBlock.properties();
-        BlockBehaviour.Properties properties2 = BlockBehaviour.Properties.of().overrideLootTable(baseBlock.getLootTable());
-        if (overrideDescription) {
-            properties2 = properties2.overrideDescription(baseBlock.getDescriptionId());
-        }
-
-        return properties2;
+        return BlockBehaviour.Properties.ofFullCopy(baseBlock);
     }
 
     public static BlockBehaviour.Properties buttonProperties() {

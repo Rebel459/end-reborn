@@ -2,8 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": "minecraft:iron_ingot",
-    "X": "end_reborn:raw_crystalline_block"
+    "#": {
+      "item": "minecraft:iron_ingot"
+    },
+    "X": {
+      "item": "end_reborn:raw_crystalline_block"
+    }
   },
   "pattern": [
     "###",

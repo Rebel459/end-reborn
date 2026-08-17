@@ -3,9 +3,15 @@
   "category": "misc",
   "group": "featherzeal_template",
   "key": {
-    "#": "minecraft:diamond",
-    "U": "end_reborn:featherzeal_upgrade_smithing_template",
-    "X": "minecraft:end_stone"
+    "#": {
+      "item": "minecraft:diamond"
+    },
+    "U": {
+      "item": "end_reborn:featherzeal_upgrade_smithing_template"
+    },
+    "X": {
+      "item": "minecraft:end_stone"
+    }
   },
   "pattern": [
     "#U#",

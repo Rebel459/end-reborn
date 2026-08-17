@@ -2,7 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "F": "end_reborn:purpur"
+    "F": {
+      "item": "end_reborn:purpur"
+    }
   },
   "pattern": [
     "FF",

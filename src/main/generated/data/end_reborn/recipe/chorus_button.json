@@ -3,7 +3,9 @@
   "category": "redstone",
   "group": "wooden_button",
   "ingredients": [
-    "end_reborn:chorus_planks"
+    {
+      "item": "end_reborn:chorus_planks"
+    }
   ],
   "result": {
     "count": 1,

@@ -21,9 +21,6 @@
 		"client": [
 			"net.legacy.end_reborn.EndRebornClient"
 		],
-		"fabric-datagen": [
-			"net.legacy.end_reborn.datagen.ERDataGenerator"
-		],
 		"modmenu": [
 			"net.legacy.end_reborn.config.ERModMenuIntegration"
 		]
@@ -33,7 +30,7 @@
 		"end_reborn.mixins.json"
 	],
 	"depends": {
-		"minecraft": "1.21.4",
+		"minecraft": "1.21.1",
 		"fabric-api": "*",
 		"frozenlib": "*",
 		"cloth-config": "*"
