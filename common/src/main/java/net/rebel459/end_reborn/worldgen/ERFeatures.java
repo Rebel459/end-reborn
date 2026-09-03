@@ -6,6 +6,7 @@ import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.rebel459.end_reborn.EndReborn;
 import net.rebel459.end_reborn.tag.ERBiomeTags;
 import net.rebel459.unified.platform.UnifiedHelpers;
+import net.rebel459.unified.platform.UnifiedPlatform;
 
 import static net.minecraft.core.registries.Registries.PLACED_FEATURE;
 
@@ -30,6 +31,7 @@ public class ERFeatures {
             var features = context.getFeatures();
             features.addFeature(TIMELOST_FRAGMENTS, GenerationStep.Decoration.UNDERGROUND_ORES);
             features.addFeature(TIMELOST_FRAGMENTS_SPREAD, GenerationStep.Decoration.UNDERGROUND_ORES);
+            if (UnifiedPlatform.isModLoaded("enderscape")) features.addFeature(ResourceKey.create(PLACED_FEATURE, EndReborn.id("timelost_fragments_void")), GenerationStep.Decoration.UNDERGROUND_ORES);
             features.addFeature(END_IRON_ORE, GenerationStep.Decoration.UNDERGROUND_DECORATION);
         });
 
